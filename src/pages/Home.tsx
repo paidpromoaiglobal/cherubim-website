@@ -180,10 +180,10 @@ export default function Home() {
             Work we're<br />
             <span style={{ color: '#1B3990' }}>proud of.</span>
           </h2>
-          <Link to="/work"
+          <Link to="/portfolio"
             className="inline-block text-base font-semibold cursor-pointer transition-colors hover:opacity-70"
             style={{ color: '#E8187A' }}>
-            Our Work →
+            View All Projects →
           </Link>
         </div>
 
