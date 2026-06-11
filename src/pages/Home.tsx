@@ -143,7 +143,7 @@ export default function Home() {
       </section>
 
       {/* Trusted by */}
-      <section className="py-16 px-6" style={{ background: 'white', borderTop: '1px solid rgba(0,0,0,0.05)', borderBottom: '1px solid rgba(0,0,0,0.05)' }}>
+      <section className="py-16 px-8 md:px-14 xl:px-20" style={{ background: 'white', borderTop: '1px solid rgba(0,0,0,0.05)', borderBottom: '1px solid rgba(0,0,0,0.05)' }}>
         <div className="w-full">
           <p className="text-center text-xs font-bold tracking-widest uppercase mb-8" style={{ color: 'rgba(0,0,0,0.25)' }}>
             Trusted by businesses across India & beyond

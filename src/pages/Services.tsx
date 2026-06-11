@@ -81,14 +81,14 @@ export default function Services() {
   return (
     <>
       {/* Page hero */}
-      <section className="pt-36 pb-20 px-6 relative overflow-hidden" style={{ background: '#0A0A0A' }}>
+      <section className="pt-36 pb-20 px-8 md:px-14 xl:px-20 relative overflow-hidden" style={{ background: '#0A0A0A' }}>
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full opacity-10"
             style={{ background: 'radial-gradient(circle, #E8187A, transparent)' }} />
           <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full opacity-10"
             style={{ background: 'radial-gradient(circle, #1B3990, transparent)' }} />
         </div>
-        <div className="w-full relative z-10">
+        <div className="max-w-5xl mx-auto relative z-10">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}
             className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-bold mb-8"
             style={{ background: 'rgba(232,24,122,0.12)', border: '1px solid rgba(232,24,122,0.25)', color: '#E8187A' }}>
@@ -97,7 +97,7 @@ export default function Services() {
           <motion.h1
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.1 }}
             className="font-black text-white mb-6"
-            style={{ fontFamily: 'Outfit, sans-serif', fontSize: 'clamp(2.2rem, 5vw, 4rem)', letterSpacing: '-0.03em', maxWidth: '700px' }}>
+            style={{ fontFamily: 'Outfit, sans-serif', fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', letterSpacing: '-0.03em', maxWidth: '700px' }}>
             Services built for<br />
             <span style={{ background: 'linear-gradient(135deg, #E8187A, #2BA4D4)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
               the intelligent era.
@@ -112,7 +112,7 @@ export default function Services() {
       </section>
 
       {/* Services grid */}
-      <section className="py-24 px-6" style={{ background: '#F7F8FF' }}>
+      <section className="py-24 px-8 md:px-14 xl:px-20" style={{ background: '#F7F8FF' }}>
         <div className="w-full">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((s, i) => (
@@ -146,7 +146,7 @@ export default function Services() {
       </section>
 
       {/* Process */}
-      <section className="py-24 px-6" style={{ background: 'white' }}>
+      <section className="py-24 px-8 md:px-14 xl:px-20" style={{ background: 'white' }}>
         <div className="w-full">
           <div className="mb-14 text-center">
             <p className="text-xs font-bold tracking-widest uppercase mb-3" style={{ color: '#E8187A' }}>How we work</p>
@@ -174,7 +174,7 @@ export default function Services() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 px-6" style={{ background: 'linear-gradient(135deg, #1B3990 0%, #0A0A0A 60%, #E8187A 100%)' }}>
+      <section className="py-20 px-8 md:px-14 xl:px-20" style={{ background: 'linear-gradient(135deg, #1B3990 0%, #0A0A0A 60%, #E8187A 100%)' }}>
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="font-black text-white mb-4"
             style={{ fontFamily: 'Outfit, sans-serif', fontSize: 'clamp(1.6rem, 3.5vw, 2.5rem)', letterSpacing: '-0.03em' }}>
