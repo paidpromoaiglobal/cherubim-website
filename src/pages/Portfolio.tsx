@@ -11,7 +11,7 @@ const projects = [
     desc: 'Multi-step enrollment system for a summer yoga camp with Razorpay payments, email notifications, and a weekly enrollment report dashboard.',
     services: ['Next.js', 'MySQL', 'Razorpay', 'Vercel'],
     highlight: '40+ enrollments in first week',
-    emoji: '🧘',
+    image: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800&h=380&fit=crop&auto=format&q=80',
   },
   {
     name: 'Petal & Pin',
@@ -21,7 +21,7 @@ const projects = [
     desc: 'Elegant product landing page for a floral gifting brand with online booking, gallery showcase, and WhatsApp inquiry flow.',
     services: ['React', 'Tailwind CSS', 'Vercel'],
     highlight: '3x inquiry conversion rate',
-    emoji: '🌸',
+    image: 'https://images.unsplash.com/photo-1490750967868-88df5691cc2a?w=800&h=380&fit=crop&auto=format&q=80',
   },
   {
     name: 'Sri Hayagreeva Coaching',
@@ -31,7 +31,7 @@ const projects = [
     desc: 'Academic coaching centre website featuring teacher profiles, board exam results gallery, Google Reviews integration, and course enquiry form.',
     services: ['HTML', 'CSS', 'JavaScript', 'GitHub Pages'],
     highlight: 'Live student results showcase',
-    emoji: '📚',
+    image: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&h=380&fit=crop&auto=format&q=80',
   },
   {
     name: 'Raj Construction',
@@ -41,7 +41,7 @@ const projects = [
     desc: 'Professional business website for a construction firm featuring project portfolio, service listings, and client testimonials.',
     services: ['HTML', 'CSS', 'Vercel'],
     highlight: 'SEO-optimised local presence',
-    emoji: '🏗️',
+    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&h=380&fit=crop&auto=format&q=80',
   },
   {
     name: 'Guruji Platform',
@@ -51,7 +51,7 @@ const projects = [
     desc: 'Educator platform connecting tutors with students — featuring course management, live session booking, and integrated payment processing.',
     services: ['Next.js', 'Node.js', 'PostgreSQL', 'Stripe'],
     highlight: '500+ active users at launch',
-    emoji: '🎓',
+    image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=380&fit=crop&auto=format&q=80',
   },
   {
     name: 'PaidPromo AI',
@@ -61,7 +61,7 @@ const projects = [
     desc: 'Our own AI product — a platform that generates complete business websites from a single prompt, using n8n workflows and LLMs to produce and deploy static sites automatically.',
     services: ['n8n', 'LLMs', 'GitHub API', 'Vercel API'],
     highlight: 'Built by Cherubim internally',
-    emoji: '🤖',
+    image: 'https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=800&h=380&fit=crop&auto=format&q=80',
   },
 ];
 
@@ -171,13 +171,17 @@ export default function Portfolio() {
               className="rounded-3xl overflow-hidden group hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 cursor-pointer"
               style={{ background: 'white', border: '1px solid rgba(0,0,0,0.06)', boxShadow: '0 4px 24px rgba(0,0,0,0.06)' }}>
 
-              {/* Card colour banner */}
-              <div className="h-36 flex items-center justify-center text-6xl relative overflow-hidden"
-                style={{ background: `linear-gradient(135deg, ${tagColors[p.tag]?.color ?? '#1B3990'}18, ${tagColors[p.tag]?.color ?? '#1B3990'}08)` }}>
-                <span className="group-hover:scale-110 transition-transform duration-300">{p.emoji}</span>
+              {/* Card image banner */}
+              <div className="relative overflow-hidden" style={{ height: '220px' }}>
+                <img
+                  src={p.image}
+                  alt={p.name}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
                 <div className="absolute top-4 right-4">
-                  <span className="text-xs font-mono px-2 py-1 rounded-lg"
-                    style={{ background: 'rgba(255,255,255,0.7)', color: '#94a3b8', backdropFilter: 'blur(4px)' }}>
+                  <span className="text-xs font-mono px-2.5 py-1 rounded-lg"
+                    style={{ background: 'rgba(255,255,255,0.85)', color: '#374151', backdropFilter: 'blur(6px)' }}>
                     {p.year}
                   </span>
                 </div>

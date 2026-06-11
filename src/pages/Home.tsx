@@ -1,36 +1,6 @@
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
 
-const featuredProjects = [
-  {
-    name: 'Sakthi Yogalaya',
-    type: 'Web Platform + Payments',
-    tag: 'Education',
-    year: '2026',
-    desc: 'Multi-step enrollment system for a summer yoga camp with Razorpay payments, email notifications, and a weekly enrollment report dashboard.',
-    highlight: '40+ enrollments in first week',
-    tagStyle: { bg: 'rgba(27,57,144,0.08)', color: '#1B3990' },
-  },
-  {
-    name: 'Guruji Platform',
-    type: 'Full-Stack SaaS',
-    tag: 'EdTech',
-    year: '2025',
-    desc: 'Educator platform connecting tutors with students — featuring course management, live session booking, and integrated payment processing.',
-    highlight: '500+ active users at launch',
-    tagStyle: { bg: 'rgba(27,57,144,0.08)', color: '#1B3990' },
-  },
-  {
-    name: 'PaidPromo AI',
-    type: 'AI Website Builder',
-    tag: 'AI Automation',
-    year: '2025',
-    desc: 'AI product that generates complete business websites from a single prompt using n8n workflows and LLMs to produce and deploy static sites automatically.',
-    highlight: 'Built by Cherubim internally',
-    tagStyle: { bg: 'rgba(232,24,122,0.08)', color: '#E8187A' },
-  },
-];
-
 const services = [
   { icon: '🤖', title: 'AI & Machine Learning', desc: 'Custom models, NLP, computer vision and intelligent automation.' },
   { icon: '🌐', title: 'Web Development', desc: 'React, Next.js and Node.js — from startups to enterprise scale.' },
@@ -167,51 +137,6 @@ export default function Home() {
               </div>
               <h3 className="font-black text-xl mb-3" style={{ color: '#0A0A0A', fontFamily: 'Outfit, sans-serif' }}>{s.title}</h3>
               <p className="text-base leading-relaxed" style={{ color: '#64748b' }}>{s.desc}</p>
-            </motion.div>
-          ))}
-        </div>
-      </section>
-
-      {/* Portfolio */}
-      <section className="py-24 px-8 md:px-14 xl:px-20" style={{ background: 'white' }}>
-        <div className="text-center mb-16">
-          <p className="text-sm font-bold tracking-widest uppercase mb-4" style={{ color: '#E8187A' }}>Portfolio</p>
-          <h2 className="font-black mb-6" style={{ fontFamily: 'Outfit, sans-serif', fontSize: 'clamp(2rem, 4.5vw, 3.5rem)', letterSpacing: '-0.03em', color: '#0A0A0A' }}>
-            Work we're<br />
-            <span style={{ color: '#1B3990' }}>proud of.</span>
-          </h2>
-          <Link to="/portfolio"
-            className="inline-block text-base font-semibold cursor-pointer transition-colors hover:opacity-70"
-            style={{ color: '#E8187A' }}>
-            View All Projects →
-          </Link>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {featuredProjects.map((p, i) => (
-            <motion.div key={p.name}
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.08 }}
-              className="p-10 rounded-3xl group hover:-translate-y-2 hover:shadow-xl transition-all duration-300 cursor-pointer"
-              style={{ background: '#F7F8FF', border: '1px solid rgba(0,0,0,0.06)', boxShadow: '0 4px 20px rgba(0,0,0,0.05)' }}>
-              <div className="flex items-start justify-between mb-5">
-                <span className="text-sm font-bold px-3 py-1.5 rounded-full"
-                  style={{ background: p.tagStyle.bg, color: p.tagStyle.color }}>
-                  {p.tag}
-                </span>
-                <span className="text-sm font-mono" style={{ color: '#94a3b8' }}>{p.year}</span>
-              </div>
-              <h3 className="font-black text-2xl mb-2" style={{ fontFamily: 'Outfit, sans-serif', color: '#0A0A0A' }}>{p.name}</h3>
-              <p className="text-sm font-semibold mb-4" style={{ color: '#E8187A' }}>{p.type}</p>
-              <p className="text-base leading-relaxed mb-5" style={{ color: '#64748b' }}>{p.desc}</p>
-              <div className="pt-4 flex items-center gap-2" style={{ borderTop: '1px solid rgba(0,0,0,0.08)' }}>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E8187A" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                  <polyline points="20 6 9 17 4 12"/>
-                </svg>
-                <span className="text-sm font-semibold" style={{ color: '#E8187A' }}>{p.highlight}</span>
-              </div>
             </motion.div>
           ))}
         </div>
