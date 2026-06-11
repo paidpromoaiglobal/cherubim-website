@@ -21,7 +21,7 @@ const projects = [
     desc: 'Elegant product landing page for a floral gifting brand with online booking, gallery showcase, and WhatsApp inquiry flow.',
     services: ['React', 'Tailwind CSS', 'Vercel'],
     highlight: '3x inquiry conversion rate',
-    image: 'https://images.unsplash.com/photo-1487530811015-780a8c5d4bf9?w=800&h=380&fit=crop&auto=format&q=80',
+    image: 'https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=800&h=380&fit=crop&auto=format&q=80',
   },
   {
     name: 'Sri Hayagreeva Coaching',
