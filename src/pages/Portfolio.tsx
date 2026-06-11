@@ -111,7 +111,7 @@ export default function Portfolio() {
 
           <motion.p
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.2 }}
-            className="text-xl max-w-2xl mb-12" style={{ color: 'rgba(255,255,255,0.6)', lineHeight: 1.8 }}>
+            className="text-lg max-w-2xl mb-12" style={{ color: 'rgba(255,255,255,0.8)', lineHeight: 1.8 }}>
             Real projects. Real clients. Real results — across education, retail, construction, and AI.
           </motion.p>
 
@@ -127,7 +127,7 @@ export default function Portfolio() {
             ].map(s => (
               <div key={s.n} className="text-center">
                 <div className="font-black text-4xl" style={{ fontFamily: 'Outfit, sans-serif', color: '#E8187A' }}>{s.n}</div>
-                <div className="text-sm mt-1 font-medium" style={{ color: 'rgba(255,255,255,0.45)' }}>{s.l}</div>
+                <div className="text-sm mt-1 font-semibold" style={{ color: 'rgba(255,255,255,0.75)' }}>{s.l}</div>
               </div>
             ))}
           </motion.div>
