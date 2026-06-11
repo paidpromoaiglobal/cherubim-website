@@ -138,92 +138,88 @@ export default function Home() {
       </section>
 
       {/* Services preview */}
-      <section className="py-24 px-6" style={{ background: '#F7F8FF' }}>
-        <div className="max-w-[1600px] mx-auto">
-          <div className="text-center mb-14">
-            <p className="text-xs font-bold tracking-widest uppercase mb-3" style={{ color: '#E8187A' }}>What we do</p>
-            <h2 className="font-black mb-5" style={{ fontFamily: 'Outfit, sans-serif', fontSize: 'clamp(1.8rem, 4vw, 3rem)', letterSpacing: '-0.03em', color: '#0A0A0A' }}>
-              Services built for<br />
-              <span style={{ color: '#1B3990' }}>the intelligent era.</span>
-            </h2>
-            <Link to="/services"
-              className="inline-block text-sm font-semibold cursor-pointer transition-colors hover:opacity-70"
-              style={{ color: '#E8187A' }}>
-              All services →
-            </Link>
-          </div>
+      <section className="py-24 px-8 md:px-14 xl:px-20" style={{ background: '#F7F8FF' }}>
+        <div className="text-center mb-16">
+          <p className="text-sm font-bold tracking-widest uppercase mb-4" style={{ color: '#E8187A' }}>What we do</p>
+          <h2 className="font-black mb-6" style={{ fontFamily: 'Outfit, sans-serif', fontSize: 'clamp(2rem, 4.5vw, 3.5rem)', letterSpacing: '-0.03em', color: '#0A0A0A' }}>
+            Services built for<br />
+            <span style={{ color: '#1B3990' }}>the intelligent era.</span>
+          </h2>
+          <Link to="/services"
+            className="inline-block text-base font-semibold cursor-pointer transition-colors hover:opacity-70"
+            style={{ color: '#E8187A' }}>
+            All services →
+          </Link>
+        </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {services.map((s, i) => (
-              <motion.div key={s.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.07 }}
-                className="p-7 rounded-2xl cursor-pointer group transition-all duration-300 hover:-translate-y-1 flex flex-col items-center text-center"
-                style={{ background: 'white', border: '1px solid rgba(0,0,0,0.06)', boxShadow: '0 2px 12px rgba(0,0,0,0.04)' }}>
-                <div className="w-11 h-11 rounded-xl flex items-center justify-center mb-4 text-xl"
-                  style={{ background: 'rgba(232,24,122,0.08)' }}>
-                  {s.icon}
-                </div>
-                <h3 className="font-bold text-base mb-2" style={{ color: '#0A0A0A' }}>{s.title}</h3>
-                <p className="text-sm leading-relaxed" style={{ color: '#64748b' }}>{s.desc}</p>
-              </motion.div>
-            ))}
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {services.map((s, i) => (
+            <motion.div key={s.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: i * 0.07 }}
+              className="p-10 rounded-3xl cursor-pointer group transition-all duration-300 hover:-translate-y-2 hover:shadow-xl flex flex-col items-center text-center"
+              style={{ background: 'white', border: '1px solid rgba(0,0,0,0.06)', boxShadow: '0 4px 20px rgba(0,0,0,0.05)' }}>
+              <div className="w-20 h-20 rounded-2xl flex items-center justify-center mb-6 text-4xl"
+                style={{ background: 'rgba(232,24,122,0.08)' }}>
+                {s.icon}
+              </div>
+              <h3 className="font-black text-xl mb-3" style={{ color: '#0A0A0A', fontFamily: 'Outfit, sans-serif' }}>{s.title}</h3>
+              <p className="text-base leading-relaxed" style={{ color: '#64748b' }}>{s.desc}</p>
+            </motion.div>
+          ))}
         </div>
       </section>
 
       {/* Portfolio */}
-      <section className="py-24 px-6" style={{ background: 'white' }}>
-        <div className="max-w-[1600px] mx-auto">
-          <div className="text-center mb-14">
-            <p className="text-xs font-bold tracking-widest uppercase mb-3" style={{ color: '#E8187A' }}>Portfolio</p>
-            <h2 className="font-black mb-5" style={{ fontFamily: 'Outfit, sans-serif', fontSize: 'clamp(1.8rem, 4vw, 3rem)', letterSpacing: '-0.03em', color: '#0A0A0A' }}>
-              Work we're<br />
-              <span style={{ color: '#1B3990' }}>proud of.</span>
-            </h2>
-            <Link to="/work"
-              className="inline-block text-sm font-semibold cursor-pointer transition-colors hover:opacity-70"
-              style={{ color: '#E8187A' }}>
-              Our Work →
-            </Link>
-          </div>
+      <section className="py-24 px-8 md:px-14 xl:px-20" style={{ background: 'white' }}>
+        <div className="text-center mb-16">
+          <p className="text-sm font-bold tracking-widest uppercase mb-4" style={{ color: '#E8187A' }}>Portfolio</p>
+          <h2 className="font-black mb-6" style={{ fontFamily: 'Outfit, sans-serif', fontSize: 'clamp(2rem, 4.5vw, 3.5rem)', letterSpacing: '-0.03em', color: '#0A0A0A' }}>
+            Work we're<br />
+            <span style={{ color: '#1B3990' }}>proud of.</span>
+          </h2>
+          <Link to="/work"
+            className="inline-block text-base font-semibold cursor-pointer transition-colors hover:opacity-70"
+            style={{ color: '#E8187A' }}>
+            Our Work →
+          </Link>
+        </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {featuredProjects.map((p, i) => (
-              <motion.div key={p.name}
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.08 }}
-                className="p-7 rounded-2xl group hover:-translate-y-1 transition-all duration-300 cursor-pointer"
-                style={{ background: '#F7F8FF', border: '1px solid rgba(0,0,0,0.06)', boxShadow: '0 2px 12px rgba(0,0,0,0.04)' }}>
-                <div className="flex items-start justify-between mb-4">
-                  <span className="text-xs font-bold px-2.5 py-1 rounded-full"
-                    style={{ background: p.tagStyle.bg, color: p.tagStyle.color }}>
-                    {p.tag}
-                  </span>
-                  <span className="text-xs font-mono" style={{ color: '#94a3b8' }}>{p.year}</span>
-                </div>
-                <h3 className="font-black text-lg mb-1" style={{ fontFamily: 'Outfit, sans-serif', color: '#0A0A0A' }}>{p.name}</h3>
-                <p className="text-xs font-medium mb-3" style={{ color: '#E8187A' }}>{p.type}</p>
-                <p className="text-sm leading-relaxed mb-4" style={{ color: '#64748b' }}>{p.desc}</p>
-                <div className="pt-3 flex items-center gap-2" style={{ borderTop: '1px solid rgba(0,0,0,0.06)' }}>
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#E8187A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <polyline points="20 6 9 17 4 12"/>
-                  </svg>
-                  <span className="text-xs font-semibold" style={{ color: '#E8187A' }}>{p.highlight}</span>
-                </div>
-              </motion.div>
-            ))}
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {featuredProjects.map((p, i) => (
+            <motion.div key={p.name}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: i * 0.08 }}
+              className="p-10 rounded-3xl group hover:-translate-y-2 hover:shadow-xl transition-all duration-300 cursor-pointer"
+              style={{ background: '#F7F8FF', border: '1px solid rgba(0,0,0,0.06)', boxShadow: '0 4px 20px rgba(0,0,0,0.05)' }}>
+              <div className="flex items-start justify-between mb-5">
+                <span className="text-sm font-bold px-3 py-1.5 rounded-full"
+                  style={{ background: p.tagStyle.bg, color: p.tagStyle.color }}>
+                  {p.tag}
+                </span>
+                <span className="text-sm font-mono" style={{ color: '#94a3b8' }}>{p.year}</span>
+              </div>
+              <h3 className="font-black text-2xl mb-2" style={{ fontFamily: 'Outfit, sans-serif', color: '#0A0A0A' }}>{p.name}</h3>
+              <p className="text-sm font-semibold mb-4" style={{ color: '#E8187A' }}>{p.type}</p>
+              <p className="text-base leading-relaxed mb-5" style={{ color: '#64748b' }}>{p.desc}</p>
+              <div className="pt-4 flex items-center gap-2" style={{ borderTop: '1px solid rgba(0,0,0,0.08)' }}>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E8187A" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                <span className="text-sm font-semibold" style={{ color: '#E8187A' }}>{p.highlight}</span>
+              </div>
+            </motion.div>
+          ))}
         </div>
       </section>
 
       {/* Trusted by */}
       <section className="py-16 px-6" style={{ background: 'white', borderTop: '1px solid rgba(0,0,0,0.05)', borderBottom: '1px solid rgba(0,0,0,0.05)' }}>
-        <div className="max-w-[1600px] mx-auto">
+        <div className="w-full">
           <p className="text-center text-xs font-bold tracking-widest uppercase mb-8" style={{ color: 'rgba(0,0,0,0.25)' }}>
             Trusted by businesses across India & beyond
           </p>

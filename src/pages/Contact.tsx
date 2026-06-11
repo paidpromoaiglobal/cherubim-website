@@ -31,7 +31,7 @@ export default function Contact() {
           <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full opacity-10"
             style={{ background: 'radial-gradient(circle, #1B3990, transparent)' }} />
         </div>
-        <div className="max-w-[1600px] mx-auto relative z-10">
+        <div className="w-full relative z-10">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}
             className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-bold mb-8"
             style={{ background: 'rgba(232,24,122,0.12)', border: '1px solid rgba(232,24,122,0.25)', color: '#E8187A' }}>
@@ -56,7 +56,7 @@ export default function Contact() {
 
       {/* Contact content */}
       <section className="py-24 px-6" style={{ background: '#F7F8FF' }}>
-        <div className="max-w-[1600px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-16">
 
           {/* Left: info */}
           <motion.div

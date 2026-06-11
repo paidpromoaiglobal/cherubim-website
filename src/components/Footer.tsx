@@ -11,7 +11,7 @@ const company = [
 export default function Footer() {
   return (
     <footer style={{ background: '#0A0A0A' }}>
-      <div className="max-w-[1600px] mx-auto px-6 lg:px-10 pt-16 pb-8">
+      <div className="px-8 lg:px-14 xl:px-20 pt-16 pb-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
 
           {/* Brand */}

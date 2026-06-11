@@ -60,7 +60,7 @@ const services = [
 export default function Services() {
   return (
     <section id="services" className="py-24 px-6" style={{ background: '#EDEEF5' }}>
-      <div className="max-w-[1600px] mx-auto">
+      <div className="w-full">
         <div className="mb-16">
           <p className="text-xs font-semibold tracking-widest uppercase text-zinc-400 mb-3">What we do</p>
           <h2 className="font-light text-[#1a1a1a]"

@@ -3,7 +3,7 @@ import { motion } from 'motion/react';
 export default function Contact() {
   return (
     <section id="contact" className="py-24 px-6" style={{ background: '#1a1a1a' }}>
-      <div className="max-w-[1600px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+      <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}

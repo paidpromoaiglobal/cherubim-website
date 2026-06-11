@@ -88,7 +88,7 @@ export default function Services() {
           <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full opacity-10"
             style={{ background: 'radial-gradient(circle, #1B3990, transparent)' }} />
         </div>
-        <div className="max-w-[1600px] mx-auto relative z-10">
+        <div className="w-full relative z-10">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}
             className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-bold mb-8"
             style={{ background: 'rgba(232,24,122,0.12)', border: '1px solid rgba(232,24,122,0.25)', color: '#E8187A' }}>
@@ -113,7 +113,7 @@ export default function Services() {
 
       {/* Services grid */}
       <section className="py-24 px-6" style={{ background: '#F7F8FF' }}>
-        <div className="max-w-[1600px] mx-auto">
+        <div className="w-full">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((s, i) => (
               <motion.div
@@ -147,7 +147,7 @@ export default function Services() {
 
       {/* Process */}
       <section className="py-24 px-6" style={{ background: 'white' }}>
-        <div className="max-w-[1600px] mx-auto">
+        <div className="w-full">
           <div className="mb-14 text-center">
             <p className="text-xs font-bold tracking-widest uppercase mb-3" style={{ color: '#E8187A' }}>How we work</p>
             <h2 className="font-black" style={{ fontFamily: 'Outfit, sans-serif', fontSize: 'clamp(1.8rem, 3.5vw, 3rem)', letterSpacing: '-0.03em', color: '#0A0A0A' }}>
