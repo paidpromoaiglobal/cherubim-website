@@ -1,26 +1,29 @@
-import './index.css'
-import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import Services from './components/Services'
-import About from './components/About'
-import Clients from './components/Clients'
-import Contact from './components/Contact'
-import Footer from './components/Footer'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import Home from './pages/Home';
+import Services from './pages/Services';
+import About from './pages/About';
+import Work from './pages/Work';
+import Contact from './pages/Contact';
+import './index.css';
 
-function App() {
+export default function App() {
   return (
-    <div className="min-h-screen" style={{ background: '#EDEEF5' }}>
-      <Navbar />
-      <main>
-        <Hero />
-        <Services />
-        <About />
-        <Clients />
-        <Contact />
-      </main>
-      <Footer />
-    </div>
-  )
+    <BrowserRouter>
+      <div className="min-h-screen" style={{ background: '#F7F8FF' }}>
+        <Navbar />
+        <main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/work" element={<Work />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </BrowserRouter>
+  );
 }
-
-export default App

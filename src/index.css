@@ -1,26 +1,32 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
 @import "tailwindcss";
 
 @theme {
   --font-sans: 'Inter', sans-serif;
   --font-display: 'Outfit', sans-serif;
-  --color-brand-green: #9fff00;
-  --color-bg-base: #EDEEF5;
+  --color-pink: #E8187A;
+  --color-pink-light: #FF4DA6;
+  --color-blue-dark: #1B3990;
+  --color-blue-mid: #2563EB;
+  --color-blue-light: #2BA4D4;
+  --color-bg: #F7F8FF;
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+html { scroll-behavior: smooth; }
+
 body {
-  background: #EDEEF5;
-  color: #0f172a;
+  background: #F7F8FF;
+  color: #0A0A0A;
   font-family: 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
 }
 
-#root {
-  width: 100%;
-  min-height: 100vh;
-}
+#root { width: 100%; min-height: 100vh; }
 
-input:focus { outline: none; }
+input:focus, textarea:focus { outline: none; }
+
+::selection { background: #E8187A; color: white; }

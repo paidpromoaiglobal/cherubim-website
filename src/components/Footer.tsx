@@ -1,26 +1,99 @@
+import { Link } from 'react-router-dom';
+
+const services = ['AI & Machine Learning', 'Web Development', 'n8n Automation', 'Chatbot & Voicebot', 'Mobile Apps', 'Digital Transformation'];
+const company = [
+  { label: 'About Us', to: '/about' },
+  { label: 'Our Work', to: '/work' },
+  { label: 'Services', to: '/services' },
+  { label: 'Contact', to: '/contact' },
+];
+
 export default function Footer() {
   return (
-    <footer className="py-10 px-6" style={{ background: '#1a1a1a', borderTop: '1px solid rgba(255,255,255,0.05)' }}>
-      <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-        <div className="flex items-center gap-2.5">
-          <svg width="20" height="20" viewBox="0 0 28 28" fill="none">
-            <path d="M14 2C14 2 10 6 6 8C6 8 2 12 2 14C2 16 6 20 6 20C8 22 12 26 14 26C16 26 20 22 22 20C24 18 26 16 26 14C26 12 24 10 22 8C20 6 16 2 14 2Z" fill="rgba(255,255,255,0.3)"/>
-            <path d="M14 7C14 7 11 10 9 11.5C7 13 7 14 7 14C7 15 9 17 11.5 18.5C13 19.5 14 21 14 21C15 19.5 16 19 18.5 17.5C21 16 21 15 21 14C21 13 19 11 17 9.5C15.5 8 14 7 14 7Z" fill="#1a1a1a"/>
-          </svg>
-          <span className="text-sm font-medium" style={{ color: 'rgba(255,255,255,0.4)', fontFamily: 'Outfit, sans-serif' }}>
-            Cherubim AI Infosoft Pvt Ltd
-          </span>
+    <footer style={{ background: '#0A0A0A' }}>
+      <div className="max-w-7xl mx-auto px-6 lg:px-10 pt-16 pb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+
+          {/* Brand */}
+          <div className="lg:col-span-2">
+            <div className="flex items-center gap-3 mb-4">
+              <img src="/logo-icon.png" alt="Cherubim" className="h-10 w-auto" />
+              <div>
+                <div className="font-black text-base" style={{ fontFamily: 'Outfit, sans-serif', color: '#E8187A' }}>
+                  CHERUBIM AI INFOSOFT
+                </div>
+                <div className="text-[10px] font-bold tracking-widest uppercase" style={{ color: '#2BA4D4' }}>
+                  Let's AImagine Together!
+                </div>
+              </div>
+            </div>
+            <p className="text-sm leading-relaxed mb-6" style={{ color: 'rgba(255,255,255,0.4)' }}>
+              Cherubim AI Infosoft Pvt Ltd is a Chennai-based technology company building AI-powered software, automation workflows, and digital products since 2019.
+            </p>
+            <div className="flex items-center gap-3">
+              {[
+                { label: 'LinkedIn', href: '#', icon: 'in' },
+                { label: 'Twitter', href: '#', icon: 'X' },
+                { label: 'WhatsApp', href: 'https://wa.me/919384888421', icon: 'W' },
+              ].map(s => (
+                <a key={s.label} href={s.href} aria-label={s.label}
+                  className="w-9 h-9 rounded-full flex items-center justify-center text-xs font-bold transition-all duration-200 hover:opacity-80 cursor-pointer"
+                  style={{ background: 'rgba(255,255,255,0.08)', color: 'rgba(255,255,255,0.6)' }}>
+                  {s.icon}
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* Services */}
+          <div>
+            <h4 className="text-xs font-bold tracking-widest uppercase mb-4" style={{ color: '#E8187A' }}>Services</h4>
+            <ul className="space-y-2.5">
+              {services.map(s => (
+                <li key={s}>
+                  <Link to="/services" className="text-sm transition-colors duration-200 cursor-pointer hover:text-white"
+                    style={{ color: 'rgba(255,255,255,0.4)' }}>
+                    {s}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Company */}
+          <div>
+            <h4 className="text-xs font-bold tracking-widest uppercase mb-4" style={{ color: '#E8187A' }}>Company</h4>
+            <ul className="space-y-2.5 mb-6">
+              {company.map(c => (
+                <li key={c.label}>
+                  <Link to={c.to} className="text-sm transition-colors duration-200 cursor-pointer hover:text-white"
+                    style={{ color: 'rgba(255,255,255,0.4)' }}>
+                    {c.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <div className="space-y-2 text-sm" style={{ color: 'rgba(255,255,255,0.4)' }}>
+              <a href="tel:+919384888421" className="block hover:text-white transition-colors cursor-pointer">+91 93848 88421</a>
+              <a href="mailto:info@cherubim.in" className="block hover:text-white transition-colors cursor-pointer">info@cherubim.in</a>
+              <p>Chennai, Tamil Nadu, India</p>
+            </div>
+          </div>
         </div>
-        <p className="text-xs" style={{ color: 'rgba(255,255,255,0.2)' }}>
-          © {new Date().getFullYear()} Cherubim AI Infosoft Pvt Ltd · Chennai, India · CIN: U72900TN2019PTC000000
-        </p>
-        <div className="flex items-center gap-5">
-          {['Privacy', 'Terms'].map(l => (
-            <a key={l} href="#" className="text-xs transition-colors duration-200 cursor-pointer"
-              style={{ color: 'rgba(255,255,255,0.3)' }}>
-              {l}
-            </a>
-          ))}
+
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4"
+          style={{ borderTop: '1px solid rgba(255,255,255,0.06)' }}>
+          <p className="text-xs" style={{ color: 'rgba(255,255,255,0.2)' }}>
+            © {new Date().getFullYear()} Cherubim AI Infosoft Pvt Ltd · All rights reserved
+          </p>
+          <div className="flex items-center gap-4">
+            {['Privacy Policy', 'Terms of Service'].map(l => (
+              <a key={l} href="#" className="text-xs transition-colors cursor-pointer hover:text-white"
+                style={{ color: 'rgba(255,255,255,0.2)' }}>
+                {l}
+              </a>
+            ))}
+          </div>
         </div>
       </div>
     </footer>
