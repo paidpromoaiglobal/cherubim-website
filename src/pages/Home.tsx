@@ -140,16 +140,14 @@ export default function Home() {
       {/* Services preview */}
       <section className="py-24 px-6" style={{ background: '#F7F8FF' }}>
         <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between mb-14 gap-4 text-center sm:text-left">
-            <div>
-              <p className="text-xs font-bold tracking-widest uppercase mb-2" style={{ color: '#E8187A' }}>What we do</p>
-              <h2 className="font-black" style={{ fontFamily: 'Outfit, sans-serif', fontSize: 'clamp(1.8rem, 4vw, 3rem)', letterSpacing: '-0.03em', color: '#0A0A0A' }}>
-                Services built for<br />
-                <span style={{ color: '#1B3990' }}>the intelligent era.</span>
-              </h2>
-            </div>
+          <div className="text-center mb-14">
+            <p className="text-xs font-bold tracking-widest uppercase mb-3" style={{ color: '#E8187A' }}>What we do</p>
+            <h2 className="font-black mb-5" style={{ fontFamily: 'Outfit, sans-serif', fontSize: 'clamp(1.8rem, 4vw, 3rem)', letterSpacing: '-0.03em', color: '#0A0A0A' }}>
+              Services built for<br />
+              <span style={{ color: '#1B3990' }}>the intelligent era.</span>
+            </h2>
             <Link to="/services"
-              className="text-sm font-semibold cursor-pointer transition-colors hover:opacity-70 self-center sm:self-auto"
+              className="inline-block text-sm font-semibold cursor-pointer transition-colors hover:opacity-70"
               style={{ color: '#E8187A' }}>
               All services →
             </Link>
@@ -179,16 +177,14 @@ export default function Home() {
       {/* Portfolio */}
       <section className="py-24 px-6" style={{ background: 'white' }}>
         <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between mb-14 gap-4 text-center sm:text-left">
-            <div>
-              <p className="text-xs font-bold tracking-widest uppercase mb-2" style={{ color: '#E8187A' }}>Portfolio</p>
-              <h2 className="font-black" style={{ fontFamily: 'Outfit, sans-serif', fontSize: 'clamp(1.8rem, 4vw, 3rem)', letterSpacing: '-0.03em', color: '#0A0A0A' }}>
-                Work we're<br />
-                <span style={{ color: '#1B3990' }}>proud of.</span>
-              </h2>
-            </div>
+          <div className="text-center mb-14">
+            <p className="text-xs font-bold tracking-widest uppercase mb-3" style={{ color: '#E8187A' }}>Portfolio</p>
+            <h2 className="font-black mb-5" style={{ fontFamily: 'Outfit, sans-serif', fontSize: 'clamp(1.8rem, 4vw, 3rem)', letterSpacing: '-0.03em', color: '#0A0A0A' }}>
+              Work we're<br />
+              <span style={{ color: '#1B3990' }}>proud of.</span>
+            </h2>
             <Link to="/work"
-              className="text-sm font-semibold cursor-pointer transition-colors hover:opacity-70 self-center sm:self-auto"
+              className="inline-block text-sm font-semibold cursor-pointer transition-colors hover:opacity-70"
               style={{ color: '#E8187A' }}>
               Our Work →
             </Link>
