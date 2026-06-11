@@ -184,7 +184,7 @@ export default function Work() {
 
       {/* CTA */}
       <section className="py-20 px-6" style={{ background: 'linear-gradient(135deg, #1B3990 0%, #0A0A0A 60%, #E8187A 100%)' }}>
-        <div className="max-w-3xl mx-auto text-center">
+        <div className="max-w-3xl mx-auto flex flex-col items-center text-center">
           <h2 className="font-black text-white mb-4"
             style={{ fontFamily: 'Outfit, sans-serif', fontSize: 'clamp(1.6rem, 3.5vw, 2.5rem)', letterSpacing: '-0.03em' }}>
             Ready to be our next success story?

@@ -1,6 +1,36 @@
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
 
+const featuredProjects = [
+  {
+    name: 'Sakthi Yogalaya',
+    type: 'Web Platform + Payments',
+    tag: 'Education',
+    year: '2026',
+    desc: 'Multi-step enrollment system for a summer yoga camp with Razorpay payments, email notifications, and a weekly enrollment report dashboard.',
+    highlight: '40+ enrollments in first week',
+    tagStyle: { bg: 'rgba(27,57,144,0.08)', color: '#1B3990' },
+  },
+  {
+    name: 'Guruji Platform',
+    type: 'Full-Stack SaaS',
+    tag: 'EdTech',
+    year: '2025',
+    desc: 'Educator platform connecting tutors with students — featuring course management, live session booking, and integrated payment processing.',
+    highlight: '500+ active users at launch',
+    tagStyle: { bg: 'rgba(27,57,144,0.08)', color: '#1B3990' },
+  },
+  {
+    name: 'PaidPromo AI',
+    type: 'AI Website Builder',
+    tag: 'AI Automation',
+    year: '2025',
+    desc: 'AI product that generates complete business websites from a single prompt using n8n workflows and LLMs to produce and deploy static sites automatically.',
+    highlight: 'Built by Cherubim internally',
+    tagStyle: { bg: 'rgba(232,24,122,0.08)', color: '#E8187A' },
+  },
+];
+
 const services = [
   { icon: '🤖', title: 'AI & Machine Learning', desc: 'Custom models, NLP, computer vision and intelligent automation.' },
   { icon: '🌐', title: 'Web Development', desc: 'React, Next.js and Node.js — from startups to enterprise scale.' },
@@ -110,7 +140,7 @@ export default function Home() {
       {/* Services preview */}
       <section className="py-24 px-6" style={{ background: '#F7F8FF' }}>
         <div className="max-w-7xl mx-auto">
-          <div className="flex items-end justify-between mb-14 flex-wrap gap-4">
+          <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between mb-14 gap-4 text-center sm:text-left">
             <div>
               <p className="text-xs font-bold tracking-widest uppercase mb-2" style={{ color: '#E8187A' }}>What we do</p>
               <h2 className="font-black" style={{ fontFamily: 'Outfit, sans-serif', fontSize: 'clamp(1.8rem, 4vw, 3rem)', letterSpacing: '-0.03em', color: '#0A0A0A' }}>
@@ -119,7 +149,7 @@ export default function Home() {
               </h2>
             </div>
             <Link to="/services"
-              className="text-sm font-semibold cursor-pointer transition-colors hover:opacity-70"
+              className="text-sm font-semibold cursor-pointer transition-colors hover:opacity-70 self-center sm:self-auto"
               style={{ color: '#E8187A' }}>
               All services →
             </Link>
@@ -132,7 +162,7 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.07 }}
-                className="p-7 rounded-2xl cursor-pointer group transition-all duration-300 hover:-translate-y-1"
+                className="p-7 rounded-2xl cursor-pointer group transition-all duration-300 hover:-translate-y-1 flex flex-col items-center text-center"
                 style={{ background: 'white', border: '1px solid rgba(0,0,0,0.06)', boxShadow: '0 2px 12px rgba(0,0,0,0.04)' }}>
                 <div className="w-11 h-11 rounded-xl flex items-center justify-center mb-4 text-xl"
                   style={{ background: 'rgba(232,24,122,0.08)' }}>
@@ -140,6 +170,55 @@ export default function Home() {
                 </div>
                 <h3 className="font-bold text-base mb-2" style={{ color: '#0A0A0A' }}>{s.title}</h3>
                 <p className="text-sm leading-relaxed" style={{ color: '#64748b' }}>{s.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Portfolio */}
+      <section className="py-24 px-6" style={{ background: 'white' }}>
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between mb-14 gap-4 text-center sm:text-left">
+            <div>
+              <p className="text-xs font-bold tracking-widest uppercase mb-2" style={{ color: '#E8187A' }}>Portfolio</p>
+              <h2 className="font-black" style={{ fontFamily: 'Outfit, sans-serif', fontSize: 'clamp(1.8rem, 4vw, 3rem)', letterSpacing: '-0.03em', color: '#0A0A0A' }}>
+                Work we're<br />
+                <span style={{ color: '#1B3990' }}>proud of.</span>
+              </h2>
+            </div>
+            <Link to="/work"
+              className="text-sm font-semibold cursor-pointer transition-colors hover:opacity-70 self-center sm:self-auto"
+              style={{ color: '#E8187A' }}>
+              Our Work →
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {featuredProjects.map((p, i) => (
+              <motion.div key={p.name}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.08 }}
+                className="p-7 rounded-2xl group hover:-translate-y-1 transition-all duration-300 cursor-pointer"
+                style={{ background: '#F7F8FF', border: '1px solid rgba(0,0,0,0.06)', boxShadow: '0 2px 12px rgba(0,0,0,0.04)' }}>
+                <div className="flex items-start justify-between mb-4">
+                  <span className="text-xs font-bold px-2.5 py-1 rounded-full"
+                    style={{ background: p.tagStyle.bg, color: p.tagStyle.color }}>
+                    {p.tag}
+                  </span>
+                  <span className="text-xs font-mono" style={{ color: '#94a3b8' }}>{p.year}</span>
+                </div>
+                <h3 className="font-black text-lg mb-1" style={{ fontFamily: 'Outfit, sans-serif', color: '#0A0A0A' }}>{p.name}</h3>
+                <p className="text-xs font-medium mb-3" style={{ color: '#E8187A' }}>{p.type}</p>
+                <p className="text-sm leading-relaxed mb-4" style={{ color: '#64748b' }}>{p.desc}</p>
+                <div className="pt-3 flex items-center gap-2" style={{ borderTop: '1px solid rgba(0,0,0,0.06)' }}>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#E8187A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg>
+                  <span className="text-xs font-semibold" style={{ color: '#E8187A' }}>{p.highlight}</span>
+                </div>
               </motion.div>
             ))}
           </div>
@@ -162,8 +241,9 @@ export default function Home() {
 
       {/* CTA */}
       <section className="py-24 px-6" style={{ background: 'linear-gradient(135deg, #1B3990 0%, #0A0A0A 60%, #E8187A 100%)' }}>
-        <div className="max-w-3xl mx-auto text-center">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+        <div className="max-w-3xl mx-auto">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}
+            className="flex flex-col items-center text-center">
             <h2 className="font-black text-white mb-4"
               style={{ fontFamily: 'Outfit, sans-serif', fontSize: 'clamp(1.8rem, 4vw, 3rem)', letterSpacing: '-0.03em' }}>
               Ready to AImagine your business?
