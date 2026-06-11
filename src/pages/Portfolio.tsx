@@ -11,7 +11,7 @@ const projects = [
     desc: 'Multi-step enrollment system for a summer yoga camp with Razorpay payments, email notifications, and a weekly enrollment report dashboard.',
     services: ['Next.js', 'MySQL', 'Razorpay', 'Vercel'],
     highlight: '40+ enrollments in first week',
-    image: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800&h=380&fit=crop&auto=format&q=80',
+    image: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&h=380&fit=crop&auto=format&q=80',
   },
   {
     name: 'Petal & Pin',
@@ -21,7 +21,7 @@ const projects = [
     desc: 'Elegant product landing page for a floral gifting brand with online booking, gallery showcase, and WhatsApp inquiry flow.',
     services: ['React', 'Tailwind CSS', 'Vercel'],
     highlight: '3x inquiry conversion rate',
-    image: 'https://images.unsplash.com/photo-1490750967868-88df5691cc2a?w=800&h=380&fit=crop&auto=format&q=80',
+    image: 'https://images.unsplash.com/photo-1487530811015-780a8c5d4bf9?w=800&h=380&fit=crop&auto=format&q=80',
   },
   {
     name: 'Sri Hayagreeva Coaching',
@@ -31,7 +31,7 @@ const projects = [
     desc: 'Academic coaching centre website featuring teacher profiles, board exam results gallery, Google Reviews integration, and course enquiry form.',
     services: ['HTML', 'CSS', 'JavaScript', 'GitHub Pages'],
     highlight: 'Live student results showcase',
-    image: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&h=380&fit=crop&auto=format&q=80',
+    image: 'https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=800&h=380&fit=crop&auto=format&q=80',
   },
   {
     name: 'Raj Construction',
@@ -41,7 +41,7 @@ const projects = [
     desc: 'Professional business website for a construction firm featuring project portfolio, service listings, and client testimonials.',
     services: ['HTML', 'CSS', 'Vercel'],
     highlight: 'SEO-optimised local presence',
-    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&h=380&fit=crop&auto=format&q=80',
+    image: 'https://images.unsplash.com/photo-1590674899484-d5640e854abe?w=800&h=380&fit=crop&auto=format&q=80',
   },
   {
     name: 'Guruji Platform',
@@ -51,7 +51,7 @@ const projects = [
     desc: 'Educator platform connecting tutors with students — featuring course management, live session booking, and integrated payment processing.',
     services: ['Next.js', 'Node.js', 'PostgreSQL', 'Stripe'],
     highlight: '500+ active users at launch',
-    image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=380&fit=crop&auto=format&q=80',
+    image: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?w=800&h=380&fit=crop&auto=format&q=80',
   },
   {
     name: 'PaidPromo AI',
@@ -61,7 +61,7 @@ const projects = [
     desc: 'Our own AI product — a platform that generates complete business websites from a single prompt, using n8n workflows and LLMs to produce and deploy static sites automatically.',
     services: ['n8n', 'LLMs', 'GitHub API', 'Vercel API'],
     highlight: 'Built by Cherubim internally',
-    image: 'https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=800&h=380&fit=crop&auto=format&q=80',
+    image: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&h=380&fit=crop&auto=format&q=80',
   },
 ];
 
@@ -91,7 +91,7 @@ export default function Portfolio() {
             style={{ background: 'radial-gradient(circle, #1B3990, transparent)' }} />
         </div>
 
-        <div className="relative z-10">
+        <div className="relative z-10 flex flex-col items-center text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-bold mb-8"
             style={{ background: 'rgba(232,24,122,0.12)', border: '1px solid rgba(232,24,122,0.25)', color: '#E8187A' }}>
@@ -102,7 +102,7 @@ export default function Portfolio() {
           <motion.h1
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.1 }}
             className="font-black text-white mb-6"
-            style={{ fontFamily: 'Outfit, sans-serif', fontSize: 'clamp(2.5rem, 5.5vw, 5rem)', letterSpacing: '-0.03em', maxWidth: '800px' }}>
+            style={{ fontFamily: 'Outfit, sans-serif', fontSize: 'clamp(2rem, 4vw, 3.5rem)', letterSpacing: '-0.03em' }}>
             Work we're{' '}
             <span style={{ background: 'linear-gradient(135deg, #E8187A, #2BA4D4)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
               proud of.
@@ -111,23 +111,23 @@ export default function Portfolio() {
 
           <motion.p
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.2 }}
-            className="text-lg max-w-2xl mb-10" style={{ color: 'rgba(255,255,255,0.5)', lineHeight: 1.8 }}>
+            className="text-xl max-w-2xl mb-12" style={{ color: 'rgba(255,255,255,0.6)', lineHeight: 1.8 }}>
             Real projects. Real clients. Real results — across education, retail, construction, and AI.
           </motion.p>
 
           {/* Stats */}
           <motion.div
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.3 }}
-            className="flex flex-wrap gap-10">
+            className="flex flex-wrap justify-center gap-12">
             {[
               { n: '6+', l: 'Completed Projects' },
               { n: '5', l: 'Industries Served' },
               { n: '100%', l: 'Client Satisfaction' },
               { n: '2025–26', l: 'Active Projects' },
             ].map(s => (
-              <div key={s.n}>
-                <div className="font-black text-3xl" style={{ fontFamily: 'Outfit, sans-serif', color: '#E8187A' }}>{s.n}</div>
-                <div className="text-sm mt-1" style={{ color: 'rgba(255,255,255,0.35)' }}>{s.l}</div>
+              <div key={s.n} className="text-center">
+                <div className="font-black text-4xl" style={{ fontFamily: 'Outfit, sans-serif', color: '#E8187A' }}>{s.n}</div>
+                <div className="text-sm mt-1 font-medium" style={{ color: 'rgba(255,255,255,0.45)' }}>{s.l}</div>
               </div>
             ))}
           </motion.div>
@@ -229,9 +229,9 @@ export default function Portfolio() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 px-8 md:px-14 xl:px-20" style={{ background: 'white' }}>
-        <div className="text-center mb-14">
-          <p className="text-sm font-bold tracking-widest uppercase mb-3" style={{ color: '#E8187A' }}>What clients say</p>
+      <section className="py-24 px-8 md:px-14 xl:px-20" style={{ background: 'white' }}>
+        <div className="text-center mb-16">
+          <p className="text-sm font-bold tracking-widest uppercase mb-4" style={{ color: '#E8187A' }}>What clients say</p>
           <h2 className="font-black" style={{ fontFamily: 'Outfit, sans-serif', fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)', letterSpacing: '-0.03em', color: '#0A0A0A' }}>
             Words from our clients
           </h2>
@@ -246,19 +246,32 @@ export default function Portfolio() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="p-8 rounded-3xl"
-              style={{ background: '#F7F8FF', border: '1px solid rgba(0,0,0,0.06)' }}>
-              <div className="flex gap-1 mb-5">
+              transition={{ duration: 0.5, delay: i * 0.12 }}
+              className="p-10 rounded-3xl flex flex-col"
+              style={{ background: '#F7F8FF', border: '1px solid rgba(0,0,0,0.07)', boxShadow: '0 4px 20px rgba(0,0,0,0.05)' }}>
+              {/* Stars */}
+              <div className="flex gap-1.5 mb-6">
                 {[1,2,3,4,5].map(s => (
-                  <svg key={s} width="16" height="16" viewBox="0 0 24 24" fill="#E8187A" stroke="none">
+                  <svg key={s} width="22" height="22" viewBox="0 0 24 24" fill="#E8187A" stroke="none">
                     <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
                   </svg>
                 ))}
               </div>
-              <p className="text-base leading-relaxed mb-5" style={{ color: '#374151' }}>"{t.text}"</p>
-              <div className="text-sm font-black" style={{ color: '#0A0A0A', fontFamily: 'Outfit, sans-serif' }}>{t.author}</div>
-              <div className="text-sm mt-0.5" style={{ color: '#94a3b8' }}>{t.role}</div>
+              {/* Quote */}
+              <p className="text-lg font-medium leading-relaxed mb-8 flex-1" style={{ color: '#1a1a1a', lineHeight: 1.75 }}>
+                "{t.text}"
+              </p>
+              {/* Author */}
+              <div className="flex items-center gap-3 pt-6" style={{ borderTop: '1px solid rgba(0,0,0,0.08)' }}>
+                <div className="w-11 h-11 rounded-full flex items-center justify-center flex-shrink-0 font-black text-white text-base"
+                  style={{ background: 'linear-gradient(135deg, #E8187A, #1B3990)', fontFamily: 'Outfit, sans-serif' }}>
+                  {t.author[0]}
+                </div>
+                <div>
+                  <div className="font-black text-base" style={{ color: '#0A0A0A', fontFamily: 'Outfit, sans-serif' }}>{t.author}</div>
+                  <div className="text-sm mt-0.5 font-medium" style={{ color: '#94a3b8' }}>{t.role}</div>
+                </div>
+              </div>
             </motion.div>
           ))}
         </div>

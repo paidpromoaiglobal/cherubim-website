@@ -157,24 +157,22 @@ export default function Home() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 px-6" style={{ background: 'linear-gradient(135deg, #1B3990 0%, #0A0A0A 60%, #E8187A 100%)' }}>
-        <div className="max-w-3xl mx-auto">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}
-            className="flex flex-col items-center text-center">
-            <h2 className="font-black text-white mb-4"
-              style={{ fontFamily: 'Outfit, sans-serif', fontSize: 'clamp(1.8rem, 4vw, 3rem)', letterSpacing: '-0.03em' }}>
-              Ready to AImagine your business?
-            </h2>
-            <p className="mb-8" style={{ color: 'rgba(255,255,255,0.6)' }}>
-              Let's talk about your project. We'll get back to you within 24 hours.
-            </p>
-            <Link to="/contact"
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-full font-bold text-sm cursor-pointer transition-all duration-200 hover:opacity-90 hover:scale-105"
-              style={{ background: '#E8187A', color: 'white' }}>
-              Book a Free Consultation →
-            </Link>
-          </motion.div>
-        </div>
+      <section className="py-24 px-8 md:px-14 xl:px-20 flex justify-center" style={{ background: 'linear-gradient(135deg, #1B3990 0%, #0A0A0A 60%, #E8187A 100%)' }}>
+        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}
+          className="flex flex-col items-center text-center max-w-2xl w-full">
+          <h2 className="font-black text-white mb-5"
+            style={{ fontFamily: 'Outfit, sans-serif', fontSize: 'clamp(2rem, 4vw, 3.2rem)', letterSpacing: '-0.03em' }}>
+            Ready to AImagine your business?
+          </h2>
+          <p className="text-lg mb-10" style={{ color: 'rgba(255,255,255,0.65)', lineHeight: 1.7 }}>
+            Let's talk about your project. We'll get back to you within 24 hours.
+          </p>
+          <Link to="/contact"
+            className="inline-flex items-center gap-2 px-10 py-4 rounded-full font-bold text-base cursor-pointer transition-all duration-200 hover:opacity-90 hover:scale-105"
+            style={{ background: '#E8187A', color: 'white', boxShadow: '0 4px 20px rgba(232,24,122,0.4)' }}>
+            Book a Free Consultation →
+          </Link>
+        </motion.div>
       </section>
     </>
   );

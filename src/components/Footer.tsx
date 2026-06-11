@@ -17,7 +17,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-4">
-              <img src="/logo-icon.png" alt="Cherubim" className="h-10 w-auto" />
+              <img src="/favicon.svg" alt="Cherubim" className="h-10 w-auto" />
               <div>
                 <div className="font-black text-base" style={{ fontFamily: 'Outfit, sans-serif', color: '#E8187A' }}>
                   CHERUBIM AI INFOSOFT
