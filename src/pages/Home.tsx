@@ -139,7 +139,7 @@ export default function Home() {
 
       {/* Services preview */}
       <section className="py-24 px-6" style={{ background: '#F7F8FF' }}>
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-[1600px] mx-auto">
           <div className="text-center mb-14">
             <p className="text-xs font-bold tracking-widest uppercase mb-3" style={{ color: '#E8187A' }}>What we do</p>
             <h2 className="font-black mb-5" style={{ fontFamily: 'Outfit, sans-serif', fontSize: 'clamp(1.8rem, 4vw, 3rem)', letterSpacing: '-0.03em', color: '#0A0A0A' }}>
@@ -176,7 +176,7 @@ export default function Home() {
 
       {/* Portfolio */}
       <section className="py-24 px-6" style={{ background: 'white' }}>
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-[1600px] mx-auto">
           <div className="text-center mb-14">
             <p className="text-xs font-bold tracking-widest uppercase mb-3" style={{ color: '#E8187A' }}>Portfolio</p>
             <h2 className="font-black mb-5" style={{ fontFamily: 'Outfit, sans-serif', fontSize: 'clamp(1.8rem, 4vw, 3rem)', letterSpacing: '-0.03em', color: '#0A0A0A' }}>
@@ -223,7 +223,7 @@ export default function Home() {
 
       {/* Trusted by */}
       <section className="py-16 px-6" style={{ background: 'white', borderTop: '1px solid rgba(0,0,0,0.05)', borderBottom: '1px solid rgba(0,0,0,0.05)' }}>
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-[1600px] mx-auto">
           <p className="text-center text-xs font-bold tracking-widest uppercase mb-8" style={{ color: 'rgba(0,0,0,0.25)' }}>
             Trusted by businesses across India & beyond
           </p>

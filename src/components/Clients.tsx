@@ -12,7 +12,7 @@ const projects = [
 export default function Clients() {
   return (
     <section id="clients" className="py-24 px-6" style={{ background: '#EDEEF5' }}>
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-[1600px] mx-auto">
         <div className="mb-16 flex items-end justify-between flex-wrap gap-4">
           <div>
             <p className="text-xs font-semibold tracking-widest uppercase text-zinc-400 mb-3">Our work</p>

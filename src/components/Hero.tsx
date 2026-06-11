@@ -20,7 +20,7 @@ export default function Hero() {
       </div>
 
       {/* Hero content */}
-      <div className="max-w-7xl w-full mx-auto px-8 md:px-16 lg:px-20 relative z-10 grid gap-x-4 md:gap-x-8"
+      <div className="max-w-[1600px] w-full mx-auto px-8 md:px-16 lg:px-20 relative z-10 grid gap-x-4 md:gap-x-8"
         style={{ gridTemplateColumns: 'repeat(12, minmax(0, 1fr))', paddingTop: '28vh' }}>
         <div className="col-span-12 md:col-span-10" style={{ gridColumnStart: 1 }}>
 
