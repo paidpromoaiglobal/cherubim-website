@@ -37,7 +37,7 @@ export default function Navbar() {
 
         {/* Logo */}
         <Link to="/" className="flex items-center gap-3 cursor-pointer flex-shrink-0">
-          <img src="/favicon.svg" alt="Cherubim" className="h-9 w-auto" />
+          <img src="/logo-icon.jpg" alt="Cherubim" className="h-10 w-auto object-contain" />
           <div className="hidden sm:block">
             <div className="font-black text-base leading-tight tracking-tight" style={{ fontFamily: 'Outfit, sans-serif', color: '#E8187A' }}>
               CHERUBIM AI INFOSOFT
