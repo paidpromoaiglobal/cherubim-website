@@ -48,7 +48,7 @@ export default function Contact() {
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.2 }}
-            className="text-base max-w-xl" style={{ color: 'rgba(255,255,255,0.45)', lineHeight: 1.7 }}>
+            className="text-base max-w-xl" style={{ color: 'rgba(255,255,255,0.80)', lineHeight: 1.7 }}>
             Tell us about your project. We'll get back to you within 24 hours with an initial assessment.
           </motion.p>
         </div>

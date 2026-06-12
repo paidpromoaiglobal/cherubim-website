@@ -105,7 +105,7 @@ export default function Services() {
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.2 }}
-            className="text-base max-w-xl" style={{ color: 'rgba(255,255,255,0.45)', lineHeight: 1.7 }}>
+            className="text-base max-w-xl" style={{ color: 'rgba(255,255,255,0.80)', lineHeight: 1.7 }}>
             From AI models to automation workflows to production apps — we are the end-to-end technology partner for ambitious businesses.
           </motion.p>
         </div>
@@ -174,13 +174,13 @@ export default function Services() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 px-8 md:px-14 xl:px-20" style={{ background: 'linear-gradient(135deg, #1B3990 0%, #0A0A0A 60%, #E8187A 100%)' }}>
-        <div className="max-w-3xl mx-auto text-center">
+      <section className="py-20 px-8 md:px-14 xl:px-20 flex justify-center" style={{ background: 'linear-gradient(135deg, #1B3990 0%, #0A0A0A 60%, #E8187A 100%)' }}>
+        <div className="max-w-3xl w-full flex flex-col items-center text-center">
           <h2 className="font-black text-white mb-4"
             style={{ fontFamily: 'Outfit, sans-serif', fontSize: 'clamp(1.6rem, 3.5vw, 2.5rem)', letterSpacing: '-0.03em' }}>
             Not sure which service fits?
           </h2>
-          <p className="mb-8 text-sm" style={{ color: 'rgba(255,255,255,0.55)' }}>
+          <p className="mb-8 text-sm" style={{ color: 'rgba(255,255,255,0.75)' }}>
             Tell us your challenge and we'll recommend the right approach — no obligation.
           </p>
           <Link to="/contact"

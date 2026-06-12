@@ -65,7 +65,7 @@ export default function Home() {
           <motion.p
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.2 }}
             className="text-lg mb-10 mx-auto max-w-2xl"
-            style={{ color: 'rgba(255,255,255,0.55)', lineHeight: 1.7 }}>
+            style={{ color: 'rgba(255,255,255,0.75)', lineHeight: 1.7 }}>
             We build intelligent software — AI models, automation workflows, and digital products — that help businesses grow faster and work smarter.
           </motion.p>
 
@@ -129,13 +129,13 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.07 }}
-              className="p-10 rounded-3xl cursor-pointer group transition-all duration-300 hover:-translate-y-2 hover:shadow-xl flex flex-col items-center text-center"
+              className="pt-12 px-10 pb-14 rounded-3xl cursor-pointer group transition-all duration-300 hover:-translate-y-2 hover:shadow-xl flex flex-col items-center text-center"
               style={{ background: 'white', border: '1px solid rgba(0,0,0,0.06)', boxShadow: '0 4px 20px rgba(0,0,0,0.05)' }}>
-              <div className="w-20 h-20 rounded-2xl flex items-center justify-center mb-6 text-4xl"
+              <div className="w-24 h-24 rounded-2xl flex items-center justify-center mb-7 text-5xl"
                 style={{ background: 'rgba(232,24,122,0.08)' }}>
                 {s.icon}
               </div>
-              <h3 className="font-black text-xl mb-3" style={{ color: '#0A0A0A', fontFamily: 'Outfit, sans-serif' }}>{s.title}</h3>
+              <h3 className="font-black text-2xl mb-4" style={{ color: '#0A0A0A', fontFamily: 'Outfit, sans-serif' }}>{s.title}</h3>
               <p className="text-base leading-relaxed" style={{ color: '#64748b' }}>{s.desc}</p>
             </motion.div>
           ))}

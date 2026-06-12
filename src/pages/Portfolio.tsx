@@ -285,7 +285,7 @@ export default function Portfolio() {
               style={{ fontFamily: 'Outfit, sans-serif', fontSize: 'clamp(1.8rem, 4vw, 3rem)', letterSpacing: '-0.03em' }}>
               Ready to be our next success story?
             </h2>
-            <p className="text-lg mb-10 max-w-xl mx-auto" style={{ color: 'rgba(255,255,255,0.55)' }}>
+            <p className="text-lg mb-10 max-w-xl mx-auto" style={{ color: 'rgba(255,255,255,0.75)' }}>
               Tell us about your project and let's figure out how we can help.
             </p>
             <Link to="/contact"

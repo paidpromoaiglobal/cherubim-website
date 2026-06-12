@@ -94,7 +94,7 @@ export default function Work() {
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.2 }}
-            className="text-base max-w-xl" style={{ color: 'rgba(255,255,255,0.45)', lineHeight: 1.7 }}>
+            className="text-base max-w-xl" style={{ color: 'rgba(255,255,255,0.80)', lineHeight: 1.7 }}>
             A selection of projects across education, retail, construction, and AI — each one built with a specific business outcome in mind.
           </motion.p>
         </div>
@@ -189,7 +189,7 @@ export default function Work() {
             style={{ fontFamily: 'Outfit, sans-serif', fontSize: 'clamp(1.6rem, 3.5vw, 2.5rem)', letterSpacing: '-0.03em' }}>
             Ready to be our next success story?
           </h2>
-          <p className="mb-8 text-sm" style={{ color: 'rgba(255,255,255,0.55)' }}>
+          <p className="mb-8 text-sm" style={{ color: 'rgba(255,255,255,0.75)' }}>
             Tell us about your project and let's figure out how we can help.
           </p>
           <Link to="/contact"
