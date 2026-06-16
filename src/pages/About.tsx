@@ -48,7 +48,7 @@ export default function About() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-36 pb-24 px-8 md:px-14 xl:px-20 relative overflow-hidden" style={{ background: '#0A0A0A' }}>
+      <section className="pt-24 md:pt-36 pb-12 md:pb-24 px-8 md:px-14 xl:px-20 relative overflow-hidden" style={{ background: '#0A0A0A' }}>
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute -top-40 right-0 w-[600px] h-[600px] rounded-full opacity-10"
             style={{ background: 'radial-gradient(circle, #1B3990, transparent)' }} />
@@ -56,12 +56,12 @@ export default function About() {
             style={{ background: 'radial-gradient(circle, #E8187A, transparent)' }} />
         </div>
         <div className="w-full relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+            <div className="text-center lg:text-left">
               <motion.h1
                 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.1 }}
                 className="font-black text-white mb-6"
-                style={{ fontFamily: 'Outfit, sans-serif', fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', letterSpacing: '-0.03em' }}>
+                style={{ fontFamily: 'Outfit, sans-serif', fontSize: 'clamp(2rem, 5vw, 2.8rem)', letterSpacing: '-0.03em' }}>
                 We are Cherubim.<br />
                 <span style={{ background: 'linear-gradient(135deg, #E8187A, #2BA4D4)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
                   Built in Chennai.
@@ -69,13 +69,13 @@ export default function About() {
               </motion.h1>
               <motion.p
                 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.2 }}
-                className="text-base leading-relaxed mb-8"
+                className="text-base leading-relaxed mb-8 mx-auto lg:mx-0"
                 style={{ color: '#d1d5db', maxWidth: '480px' }}>
                 Since 2019, we've been building AI-powered software, automation workflows, and digital products that help businesses grow faster and work smarter.
               </motion.p>
               <motion.div
                 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.3 }}
-                className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                className="grid grid-cols-2 sm:grid-cols-4 gap-4 justify-items-center lg:justify-items-start">
                 {stats.map(s => (
                   <div key={s.n}>
                     <div className="font-black text-2xl mb-0.5" style={{ fontFamily: 'Outfit, sans-serif', color: '#E8187A' }}>{s.n}</div>

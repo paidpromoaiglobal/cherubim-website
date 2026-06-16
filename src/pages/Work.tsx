@@ -70,23 +70,18 @@ export default function Work() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-36 pb-24 px-8 md:px-14 xl:px-20 relative overflow-hidden" style={{ background: '#0A0A0A' }}>
+      <section className="pt-24 md:pt-36 pb-12 md:pb-24 px-8 md:px-14 xl:px-20 relative overflow-hidden" style={{ background: '#0A0A0A' }}>
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-0 left-0 w-[500px] h-[500px] rounded-full opacity-10"
             style={{ background: 'radial-gradient(circle, #2BA4D4, transparent)' }} />
           <div className="absolute bottom-0 right-0 w-[400px] h-[400px] rounded-full opacity-10"
             style={{ background: 'radial-gradient(circle, #E8187A, transparent)' }} />
         </div>
-        <div className="w-full relative z-10">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-bold mb-8"
-            style={{ background: 'rgba(232,24,122,0.12)', border: '1px solid rgba(232,24,122,0.25)', color: '#E8187A' }}>
-            Portfolio
-          </motion.div>
+        <div className="w-full relative z-10 text-center md:text-left">
           <motion.h1
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.1 }}
-            className="font-black text-white mb-6"
-            style={{ fontFamily: 'Outfit, sans-serif', fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', letterSpacing: '-0.03em', maxWidth: '700px' }}>
+            className="font-black text-white mb-6 mx-auto md:mx-0"
+            style={{ fontFamily: 'Outfit, sans-serif', fontSize: 'clamp(2rem, 5vw, 2.8rem)', letterSpacing: '-0.03em', maxWidth: '700px' }}>
             Work we're{' '}
             <span style={{ background: 'linear-gradient(135deg, #E8187A, #2BA4D4)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
               proud of.
@@ -94,7 +89,7 @@ export default function Work() {
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.2 }}
-            className="text-base max-w-xl" style={{ color: '#d1d5db', lineHeight: 1.7 }}>
+            className="text-base max-w-xl mx-auto md:mx-0" style={{ color: '#d1d5db', lineHeight: 1.7 }}>
             A selection of projects across education, retail, construction, and AI — each one built with a specific business outcome in mind.
           </motion.p>
         </div>
