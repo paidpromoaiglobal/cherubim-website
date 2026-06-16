@@ -46,6 +46,9 @@ input:focus, textarea:focus { outline: none; }
 @media (min-width: 1024px) {
   .services-grid { grid-template-columns: repeat(3, 1fr); }
 }
+@media (max-width: 640px) {
+  .services-grid { gap: 1.25rem; }
+}
 
 /* Service card hover */
 .services-card:hover {
@@ -477,9 +480,15 @@ input:focus, textarea:focus { outline: none; }
   .hero-cta-buttons a { width: 100%; text-align: center; box-sizing: border-box; }
 }
 
+/* Home: hero — full viewport on desktop, auto-height with padding on mobile */
+.home-hero { min-height: 100vh; }
+@media (max-width: 640px) {
+  .home-hero { min-height: auto; padding-top: 3.5rem; padding-bottom: 2.5rem; }
+}
+
 /* Home: services section */
 .home-services-section { background: #F7F8FF; padding: 4rem 2rem; }
-@media (max-width: 600px) { .home-services-section { padding: 3rem 1.25rem; } }
+@media (max-width: 600px) { .home-services-section { padding: 2.5rem 1.25rem; } }
 
 /* Home: service card responsive padding */
 .home-service-card { padding: 1.75rem; }

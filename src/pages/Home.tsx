@@ -76,7 +76,7 @@ export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden"
+      <section className="home-hero relative flex flex-col items-center justify-center overflow-hidden"
         style={{ background: '#0A0A0A' }}>
 
         {/* Background gradient orbs */}
@@ -100,7 +100,7 @@ export default function Home() {
 
           {/* Badge — max-w-full + ellipsis so it never overflows on small phones */}
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-bold mb-5 md:mb-8"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-bold mb-3 md:mb-8"
             style={{ background: 'rgba(232,24,122,0.15)', border: '1px solid rgba(232,24,122,0.3)', color: '#E8187A', maxWidth: '100%', overflow: 'hidden' }}>
             <span className="w-1.5 h-1.5 rounded-full bg-current animate-pulse flex-shrink-0" />
             <span style={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
@@ -111,7 +111,7 @@ export default function Home() {
           {/* Heading */}
           <motion.h1
             initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.1 }}
-            className="font-black leading-tight mb-5 md:mb-6"
+            className="font-black leading-tight mb-3 md:mb-6"
             style={{ fontFamily: 'Outfit, sans-serif', fontSize: 'clamp(2.2rem, 8vw, 5.5rem)', letterSpacing: '-0.04em' }}>
             <span className="text-white">Let's </span>
             <span style={{ background: 'linear-gradient(135deg, #E8187A, #FF4DA6)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>AI</span>
@@ -123,7 +123,7 @@ export default function Home() {
           {/* Paragraph — text-base (16px) on mobile, text-lg on md+ */}
           <motion.p
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.2 }}
-            className="text-base md:text-lg mb-7 md:mb-10 mx-auto max-w-2xl"
+            className="text-base md:text-lg mb-4 md:mb-10 mx-auto max-w-2xl"
             style={{ color: '#d1d5db', lineHeight: 1.7 }}>
             We build intelligent software — AI models, automation workflows, and digital products — that help businesses grow faster and work smarter.
           </motion.p>
@@ -147,7 +147,7 @@ export default function Home() {
           {/* Stats grid */}
           <motion.div
             initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.7, delay: 0.5 }}
-            className="mt-10 md:mt-20 grid grid-cols-2 sm:grid-cols-4 gap-px max-w-xl mx-auto"
+            className="mt-5 md:mt-20 grid grid-cols-2 sm:grid-cols-4 gap-px max-w-xl mx-auto"
             style={{ background: 'rgba(255,255,255,0.08)', borderRadius: 16 }}>
             {stats.map(s => (
               <div key={s.n} className="py-5 text-center" style={{ background: 'transparent' }}>
@@ -170,7 +170,7 @@ export default function Home() {
       {/* Services preview */}
       <section className="home-services-section">
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-          <div className="text-center mb-8 md:mb-12">
+          <div className="text-center mb-5 md:mb-12">
             <p className="text-sm font-bold tracking-widest uppercase mb-3" style={{ color: '#E8187A' }}>What we do</p>
             <h2 className="font-black mb-5 md:mb-6" style={{ fontFamily: 'Outfit, sans-serif', fontSize: 'clamp(1.75rem, 4.5vw, 3.5rem)', letterSpacing: '-0.03em', color: '#0A0A0A' }}>
               Services built for the intelligent era.
