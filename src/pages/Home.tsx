@@ -147,7 +147,7 @@ export default function Home() {
           {/* Stats grid */}
           <motion.div
             initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.7, delay: 0.5 }}
-            className="mt-5 md:mt-20 grid grid-cols-2 sm:grid-cols-4 gap-0 max-w-lg mx-auto w-full"
+            className="mt-5 md:mt-20 grid grid-cols-2 sm:grid-cols-4 gap-0 max-w-2xl mx-auto w-full"
             style={{ borderTop: '1px solid rgba(255,255,255,0.12)' }}>
             {stats.map(s => (
               <div key={s.n} className="home-stat-cell py-4 text-center">
