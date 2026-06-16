@@ -222,16 +222,14 @@ export default function Home() {
       </section>
 
       {/* Trusted by */}
-      <section className="py-8 md:py-16 px-8 md:px-14 xl:px-20" style={{ background: 'white', borderTop: '1px solid rgba(0,0,0,0.05)', borderBottom: '1px solid rgba(0,0,0,0.05)' }}>
-        <div className="w-full">
-          <p className="text-center text-xs font-bold tracking-widest uppercase mb-8" style={{ color: '#94a3b8' }}>
-            Trusted by businesses across India & beyond
-          </p>
-          <div className="flex items-center justify-center flex-wrap gap-8 md:gap-14">
-            {clients.map(c => (
-              <span key={c} className="text-sm font-bold" style={{ color: '#94a3b8' }}>{c}</span>
-            ))}
-          </div>
+      <section style={{ background: 'white', borderTop: '1px solid rgba(0,0,0,0.08)', padding: '2.5rem 0' }}>
+        <span style={{ display: 'block', textAlign: 'center', fontSize: '0.7rem', letterSpacing: '0.15em', textTransform: 'uppercase', opacity: 0.45, marginBottom: '1.25rem', color: '#374151' }}>
+          Trusted by businesses across India & beyond
+        </span>
+        <div className="trusted-clients">
+          {clients.map(c => (
+            <span key={c} className="trusted-client">{c}</span>
+          ))}
         </div>
       </section>
 
