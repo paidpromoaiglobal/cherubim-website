@@ -33,7 +33,7 @@ export default function Navbar() {
         boxShadow: scrolled ? '0 1px 12px rgba(0,0,0,0.05)' : 'none',
       }}
     >
-      <div className="px-6 md:px-8 lg:px-14 xl:px-20 h-12 md:h-14 flex items-center justify-between">
+      <div className="pl-6 pr-3 md:pl-8 md:pr-4 lg:pl-14 lg:pr-8 xl:pl-20 xl:pr-12 h-12 md:h-14 flex items-center justify-between">
 
         {/* Logo — only on home */}
         {location.pathname === '/' ? (
