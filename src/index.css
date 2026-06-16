@@ -480,6 +480,17 @@ input:focus, textarea:focus { outline: none; }
   .hero-cta-buttons a { width: 100%; text-align: center; box-sizing: border-box; }
 }
 
+/* Home: stats flex row — shrinks to content width, centred by justify-content */
+.home-stats-flex {
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid rgba(255,255,255,0.12);
+}
+@media (max-width: 640px) {
+  .home-stats-flex { flex-wrap: wrap; }
+  .home-stats-flex > .home-stat-cell { flex: 0 0 50%; }
+}
+
 /* Home: stat cell dividers — responsive for 2-col mobile and 4-col desktop */
 .home-stat-cell { border-right: 1px solid rgba(255,255,255,0.12); }
 /* Mobile 2-col: remove right border on right-column items (2nd, 4th), add row separator */
