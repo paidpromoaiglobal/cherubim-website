@@ -33,9 +33,9 @@ export default function Navbar() {
         boxShadow: scrolled ? '0 1px 12px rgba(0,0,0,0.05)' : 'none',
       }}
     >
-      <div className="px-8 lg:px-14 xl:px-20 h-12 md:h-14 flex items-center justify-between">
+      <div className="px-6 md:px-8 lg:px-14 xl:px-20 h-12 md:h-14 flex items-center justify-between">
 
-        {/* Logo */}
+        {/* Logo — only on home */}
         {location.pathname === '/' ? (
           <Link to="/" className="flex items-center gap-2 cursor-pointer flex-shrink-0">
             <img src="/logo-icon.jpg" alt="Cherubim" className="h-6 w-auto object-contain" />
@@ -53,51 +53,37 @@ export default function Navbar() {
           <div />
         )}
 
-        {/* Desktop nav */}
-        <nav className="hidden md:flex items-center gap-2">
-          {links.map(l => (
-            <Link
-              key={l.to}
-              to={l.to}
-              className="px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200 cursor-pointer"
-              style={{
-                color: location.pathname === l.to
-                  ? '#E8187A'
-                  : scrolled ? '#374151' : 'rgba(255,255,255,0.85)',
-                background: location.pathname === l.to ? 'rgba(232,24,122,0.12)' : 'transparent',
-              }}
-            >
-              {l.label}
-            </Link>
-          ))}
-        </nav>
-
-        {/* CTA */}
-        <div className="hidden md:flex items-center gap-3">
-          <Link to="/contact"
-            className="px-4 py-2 rounded-full text-xs font-bold text-white cursor-pointer transition-all duration-200 hover:opacity-90 hover:scale-105"
-            style={{ background: 'linear-gradient(135deg, #E8187A, #1B3990)' }}>
-            Get Started →
-          </Link>
-        </div>
-
-        {/* Hamburger */}
-        <button className="md:hidden p-2 cursor-pointer" onClick={() => setOpen(o => !o)} aria-label="Menu">
+        {/* Hamburger — always visible on all screen sizes */}
+        <button
+          className="p-2 cursor-pointer rounded-lg transition-colors"
+          onClick={() => setOpen(o => !o)}
+          aria-label="Menu"
+          style={{ background: open ? 'rgba(232,24,122,0.1)' : 'transparent' }}
+        >
           <div className="flex flex-col gap-1.5">
-            <motion.span animate={{ rotate: open ? 45 : 0, y: open ? 8 : 0 }} transition={{ duration: 0.2 }}
+            <motion.span
+              animate={{ rotate: open ? 45 : 0, y: open ? 8 : 0 }}
+              transition={{ duration: 0.2 }}
               className="block w-6 h-0.5"
-              style={{ background: scrolled ? '#1f2937' : 'white' }} />
-            <motion.span animate={{ opacity: open ? 0 : 1, scaleX: open ? 0 : 1 }} transition={{ duration: 0.2 }}
+              style={{ background: scrolled || open ? '#1f2937' : 'white' }}
+            />
+            <motion.span
+              animate={{ opacity: open ? 0 : 1, scaleX: open ? 0 : 1 }}
+              transition={{ duration: 0.2 }}
               className="block w-6 h-0.5"
-              style={{ background: scrolled ? '#1f2937' : 'white' }} />
-            <motion.span animate={{ rotate: open ? -45 : 0, y: open ? -8 : 0 }} transition={{ duration: 0.2 }}
+              style={{ background: scrolled || open ? '#1f2937' : 'white' }}
+            />
+            <motion.span
+              animate={{ rotate: open ? -45 : 0, y: open ? -8 : 0 }}
+              transition={{ duration: 0.2 }}
               className="block w-6 h-0.5"
-              style={{ background: scrolled ? '#1f2937' : 'white' }} />
+              style={{ background: scrolled || open ? '#1f2937' : 'white' }}
+            />
           </div>
         </button>
       </div>
 
-      {/* Mobile drawer */}
+      {/* Drawer — full width dropdown on all screen sizes */}
       <AnimatePresence>
         {open && (
           <motion.div
@@ -105,19 +91,22 @@ export default function Navbar() {
             animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.25 }}
-            className="md:hidden overflow-hidden bg-white border-t"
-            style={{ borderColor: 'rgba(0,0,0,0.06)' }}
+            className="overflow-hidden border-t"
+            style={{ background: 'rgba(255,255,255,0.98)', backdropFilter: 'blur(16px)', borderColor: 'rgba(0,0,0,0.06)' }}
           >
-            <div className="px-6 py-4 flex flex-col gap-1">
+            <div className="px-6 md:px-14 xl:px-20 py-4 flex flex-col gap-1">
               {links.map(l => (
                 <Link key={l.to} to={l.to}
-                  className="py-3 px-4 rounded-lg text-sm font-medium transition-colors cursor-pointer"
-                  style={{ color: location.pathname === l.to ? '#E8187A' : '#374151', background: location.pathname === l.to ? 'rgba(232,24,122,0.08)' : 'transparent' }}>
+                  className="py-3 px-4 rounded-xl text-sm font-medium transition-colors cursor-pointer"
+                  style={{
+                    color: location.pathname === l.to ? '#E8187A' : '#374151',
+                    background: location.pathname === l.to ? 'rgba(232,24,122,0.08)' : 'transparent',
+                  }}>
                   {l.label}
                 </Link>
               ))}
               <Link to="/contact"
-                className="mt-2 py-3 text-center rounded-full text-sm font-bold text-white cursor-pointer"
+                className="mt-3 py-3 text-center rounded-full text-sm font-bold text-white cursor-pointer"
                 style={{ background: 'linear-gradient(135deg, #E8187A, #1B3990)' }}>
                 Get Started →
               </Link>
