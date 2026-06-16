@@ -128,12 +128,12 @@ export default function Portfolio() {
       </section>
 
       {/* Filter + Projects */}
-      <section className="py-20 px-8 md:px-14 xl:px-20" style={{ background: '#F7F8FF' }}>
+      <section className="py-10 md:py-20 px-8 md:px-14 xl:px-20" style={{ background: '#F7F8FF' }}>
 
         {/* Filter tabs */}
         <motion.div
           initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}
-          className="flex flex-wrap justify-center gap-3 mb-16">
+          className="flex flex-wrap justify-center gap-3 mb-8 md:mb-16">
           {allTags.map(tag => (
             <button
               key={tag}
@@ -222,8 +222,8 @@ export default function Portfolio() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-24 px-8 md:px-14 xl:px-20" style={{ background: 'white' }}>
-        <div className="text-center mb-16">
+      <section className="py-12 md:py-24 px-8 md:px-14 xl:px-20" style={{ background: 'white' }}>
+        <div className="text-center mb-8 md:mb-16">
           <p className="text-sm font-bold tracking-widest uppercase mb-4" style={{ color: '#E8187A' }}>What clients say</p>
           <h2 className="font-black" style={{ fontFamily: 'Outfit, sans-serif', fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)', letterSpacing: '-0.03em', color: '#0A0A0A' }}>
             Words from our clients
@@ -271,7 +271,7 @@ export default function Portfolio() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 px-8 md:px-14 xl:px-20" style={{ background: 'linear-gradient(135deg, #1B3990 0%, #0A0A0A 60%, #E8187A 100%)' }}>
+      <section className="py-12 md:py-24 px-8 md:px-14 xl:px-20" style={{ background: 'linear-gradient(135deg, #1B3990 0%, #0A0A0A 60%, #E8187A 100%)' }}>
         <div className="flex flex-col items-center text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
             <h2 className="font-black text-white mb-4"

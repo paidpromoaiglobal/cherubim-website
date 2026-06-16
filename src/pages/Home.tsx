@@ -64,7 +64,7 @@ export default function Home() {
 
           <motion.p
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.2 }}
-            className="text-lg mb-10 mx-auto max-w-2xl"
+            className="text-sm md:text-lg mb-8 md:mb-10 mx-auto max-w-2xl"
             style={{ color: '#d1d5db', lineHeight: 1.7 }}>
             We build intelligent software — AI models, automation workflows, and digital products — that help businesses grow faster and work smarter.
           </motion.p>
@@ -87,7 +87,7 @@ export default function Home() {
           {/* Stats */}
           <motion.div
             initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.7, delay: 0.5 }}
-            className="mt-20 grid grid-cols-2 sm:grid-cols-4 gap-px max-w-xl mx-auto"
+            className="mt-10 md:mt-20 grid grid-cols-2 sm:grid-cols-4 gap-px max-w-xl mx-auto"
             style={{ background: 'rgba(255,255,255,0.08)', borderRadius: 16 }}>
             {stats.map(s => (
               <div key={s.n} className="py-5 text-center" style={{ background: 'transparent' }}>
@@ -108,8 +108,8 @@ export default function Home() {
       </section>
 
       {/* Services preview */}
-      <section className="py-24 px-8 md:px-14 xl:px-20" style={{ background: '#F7F8FF' }}>
-        <div className="text-center mb-16">
+      <section className="py-12 md:py-24 px-8 md:px-14 xl:px-20" style={{ background: '#F7F8FF' }}>
+        <div className="text-center mb-8 md:mb-16">
           <p className="text-sm font-bold tracking-widest uppercase mb-4" style={{ color: '#E8187A' }}>What we do</p>
           <h2 className="font-black mb-6" style={{ fontFamily: 'Outfit, sans-serif', fontSize: 'clamp(2rem, 4.5vw, 3.5rem)', letterSpacing: '-0.03em', color: '#0A0A0A' }}>
             Services built for<br />
@@ -129,21 +129,21 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.07 }}
-              className="pt-12 px-10 pb-14 rounded-3xl cursor-pointer group transition-all duration-300 hover:-translate-y-2 hover:shadow-xl flex flex-col items-center text-center"
+              className="pt-8 px-6 pb-10 md:pt-12 md:px-10 md:pb-14 rounded-3xl cursor-pointer group transition-all duration-300 hover:-translate-y-2 hover:shadow-xl flex flex-col items-center text-center"
               style={{ background: 'white', border: '1px solid rgba(0,0,0,0.06)', boxShadow: '0 4px 20px rgba(0,0,0,0.05)' }}>
-              <div className="w-24 h-24 rounded-2xl flex items-center justify-center mb-7 text-5xl"
+              <div className="w-16 h-16 md:w-24 md:h-24 rounded-2xl flex items-center justify-center mb-5 md:mb-7 text-3xl md:text-5xl"
                 style={{ background: 'rgba(232,24,122,0.08)' }}>
                 {s.icon}
               </div>
-              <h3 className="font-black text-2xl mb-4" style={{ color: '#0A0A0A', fontFamily: 'Outfit, sans-serif' }}>{s.title}</h3>
-              <p className="text-base leading-relaxed" style={{ color: '#64748b' }}>{s.desc}</p>
+              <h3 className="font-black text-xl md:text-2xl mb-3 md:mb-4" style={{ color: '#0A0A0A', fontFamily: 'Outfit, sans-serif' }}>{s.title}</h3>
+              <p className="text-sm md:text-base leading-relaxed" style={{ color: '#64748b' }}>{s.desc}</p>
             </motion.div>
           ))}
         </div>
       </section>
 
       {/* Trusted by */}
-      <section className="py-16 px-8 md:px-14 xl:px-20" style={{ background: 'white', borderTop: '1px solid rgba(0,0,0,0.05)', borderBottom: '1px solid rgba(0,0,0,0.05)' }}>
+      <section className="py-8 md:py-16 px-8 md:px-14 xl:px-20" style={{ background: 'white', borderTop: '1px solid rgba(0,0,0,0.05)', borderBottom: '1px solid rgba(0,0,0,0.05)' }}>
         <div className="w-full">
           <p className="text-center text-xs font-bold tracking-widest uppercase mb-8" style={{ color: '#94a3b8' }}>
             Trusted by businesses across India & beyond
@@ -157,7 +157,7 @@ export default function Home() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 px-8 md:px-14 xl:px-20 flex justify-center" style={{ background: 'linear-gradient(135deg, #1B3990 0%, #0A0A0A 60%, #E8187A 100%)' }}>
+      <section className="py-12 md:py-24 px-8 md:px-14 xl:px-20 flex justify-center" style={{ background: 'linear-gradient(135deg, #1B3990 0%, #0A0A0A 60%, #E8187A 100%)' }}>
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}
           className="flex flex-col items-center text-center max-w-2xl w-full">
           <h2 className="font-black text-white mb-5"

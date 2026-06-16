@@ -103,9 +103,9 @@ export default function About() {
       </section>
 
       {/* Values */}
-      <section className="py-24 px-8 md:px-14 xl:px-20" style={{ background: '#F7F8FF' }}>
+      <section className="py-12 md:py-24 px-8 md:px-14 xl:px-20" style={{ background: '#F7F8FF' }}>
         <div className="w-full">
-          <div className="mb-14">
+          <div className="mb-6 md:mb-14">
             <p className="text-xs font-bold tracking-widest uppercase mb-3" style={{ color: '#E8187A' }}>What drives us</p>
             <h2 className="font-black" style={{ fontFamily: 'Outfit, sans-serif', fontSize: 'clamp(1.8rem, 3.5vw, 3rem)', letterSpacing: '-0.03em', color: '#0A0A0A' }}>
               Our values
@@ -118,7 +118,7 @@ export default function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="p-8 rounded-2xl"
+                className="p-5 md:p-8 rounded-2xl"
                 style={{ background: 'white', border: '1px solid rgba(0,0,0,0.06)', boxShadow: '0 2px 12px rgba(0,0,0,0.04)' }}>
                 <div className="w-2 h-2 rounded-full mb-4" style={{ background: '#E8187A' }} />
                 <h3 className="font-bold text-lg mb-3" style={{ color: '#0A0A0A', fontFamily: 'Outfit, sans-serif' }}>{v.title}</h3>
@@ -130,9 +130,9 @@ export default function About() {
       </section>
 
       {/* Timeline */}
-      <section className="py-24 px-8 md:px-14 xl:px-20" style={{ background: 'white' }}>
+      <section className="py-12 md:py-24 px-8 md:px-14 xl:px-20" style={{ background: 'white' }}>
         <div className="w-full">
-          <div className="mb-14">
+          <div className="mb-6 md:mb-14">
             <p className="text-xs font-bold tracking-widest uppercase mb-3" style={{ color: '#E8187A' }}>Our journey</p>
             <h2 className="font-black" style={{ fontFamily: 'Outfit, sans-serif', fontSize: 'clamp(1.8rem, 3.5vw, 3rem)', letterSpacing: '-0.03em', color: '#0A0A0A' }}>
               From day one to today
@@ -163,9 +163,9 @@ export default function About() {
       </section>
 
       {/* Team */}
-      <section className="py-24 px-8 md:px-14 xl:px-20" style={{ background: '#F7F8FF' }}>
+      <section className="py-12 md:py-24 px-8 md:px-14 xl:px-20" style={{ background: '#F7F8FF' }}>
         <div className="w-full">
-          <div className="mb-14">
+          <div className="mb-6 md:mb-14">
             <p className="text-xs font-bold tracking-widest uppercase mb-3" style={{ color: '#E8187A' }}>The team</p>
             <h2 className="font-black" style={{ fontFamily: 'Outfit, sans-serif', fontSize: 'clamp(1.8rem, 3.5vw, 3rem)', letterSpacing: '-0.03em', color: '#0A0A0A' }}>
               People behind the work
@@ -194,7 +194,7 @@ export default function About() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 px-8 md:px-14 xl:px-20 flex justify-center" style={{ background: 'linear-gradient(135deg, #1B3990 0%, #0A0A0A 60%, #E8187A 100%)' }}>
+      <section className="py-10 md:py-20 px-8 md:px-14 xl:px-20 flex justify-center" style={{ background: 'linear-gradient(135deg, #1B3990 0%, #0A0A0A 60%, #E8187A 100%)' }}>
         <div className="max-w-3xl w-full flex flex-col items-center text-center">
           <h2 className="font-black text-white mb-4"
             style={{ fontFamily: 'Outfit, sans-serif', fontSize: 'clamp(1.6rem, 3.5vw, 2.5rem)', letterSpacing: '-0.03em' }}>

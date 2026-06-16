@@ -107,7 +107,7 @@ export default function Services() {
       </section>
 
       {/* Services grid */}
-      <section className="py-24 px-8 md:px-14 xl:px-20" style={{ background: '#F7F8FF' }}>
+      <section className="py-12 md:py-24 px-8 md:px-14 xl:px-20" style={{ background: '#F7F8FF' }}>
         <div className="w-full">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((s, i) => (
@@ -141,9 +141,9 @@ export default function Services() {
       </section>
 
       {/* Process */}
-      <section className="py-24 px-8 md:px-14 xl:px-20" style={{ background: 'white' }}>
+      <section className="py-12 md:py-24 px-8 md:px-14 xl:px-20" style={{ background: 'white' }}>
         <div className="w-full">
-          <div className="mb-14 text-center">
+          <div className="mb-6 md:mb-14 text-center">
             <p className="text-xs font-bold tracking-widest uppercase mb-3" style={{ color: '#E8187A' }}>How we work</p>
             <h2 className="font-black" style={{ fontFamily: 'Outfit, sans-serif', fontSize: 'clamp(1.8rem, 3.5vw, 3rem)', letterSpacing: '-0.03em', color: '#0A0A0A' }}>
               Our process
@@ -169,7 +169,7 @@ export default function Services() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 px-8 md:px-14 xl:px-20 flex justify-center" style={{ background: 'linear-gradient(135deg, #1B3990 0%, #0A0A0A 60%, #E8187A 100%)' }}>
+      <section className="py-10 md:py-20 px-8 md:px-14 xl:px-20 flex justify-center" style={{ background: 'linear-gradient(135deg, #1B3990 0%, #0A0A0A 60%, #E8187A 100%)' }}>
         <div className="max-w-3xl w-full flex flex-col items-center text-center">
           <h2 className="font-black text-white mb-4"
             style={{ fontFamily: 'Outfit, sans-serif', fontSize: 'clamp(1.6rem, 3.5vw, 2.5rem)', letterSpacing: '-0.03em' }}>

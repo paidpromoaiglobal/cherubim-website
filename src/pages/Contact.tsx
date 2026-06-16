@@ -50,8 +50,8 @@ export default function Contact() {
       </section>
 
       {/* Contact content */}
-      <section className="py-24 px-8 md:px-14 xl:px-20" style={{ background: '#F7F8FF' }}>
-        <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-16">
+      <section className="py-12 md:py-24 px-8 md:px-14 xl:px-20" style={{ background: '#F7F8FF' }}>
+        <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
 
           {/* Left: info */}
           <motion.div

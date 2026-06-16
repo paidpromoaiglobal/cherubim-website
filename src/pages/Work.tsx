@@ -96,7 +96,7 @@ export default function Work() {
       </section>
 
       {/* Projects list */}
-      <section className="py-24 px-8 md:px-14 xl:px-20" style={{ background: '#F7F8FF' }}>
+      <section className="py-12 md:py-24 px-8 md:px-14 xl:px-20" style={{ background: '#F7F8FF' }}>
         <div className="w-full">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {projects.map((p, i) => (
@@ -146,7 +146,7 @@ export default function Work() {
       </section>
 
       {/* Testimonial strip */}
-      <section className="py-20 px-8 md:px-14 xl:px-20" style={{ background: 'white' }}>
+      <section className="py-10 md:py-20 px-8 md:px-14 xl:px-20" style={{ background: 'white' }}>
         <div className="w-full">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
@@ -178,7 +178,7 @@ export default function Work() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 px-8 md:px-14 xl:px-20" style={{ background: 'linear-gradient(135deg, #1B3990 0%, #0A0A0A 60%, #E8187A 100%)' }}>
+      <section className="py-10 md:py-20 px-8 md:px-14 xl:px-20" style={{ background: 'linear-gradient(135deg, #1B3990 0%, #0A0A0A 60%, #E8187A 100%)' }}>
         <div className="max-w-3xl mx-auto flex flex-col items-center text-center">
           <h2 className="font-black text-white mb-4"
             style={{ fontFamily: 'Outfit, sans-serif', fontSize: 'clamp(1.6rem, 3.5vw, 2.5rem)', letterSpacing: '-0.03em' }}>
