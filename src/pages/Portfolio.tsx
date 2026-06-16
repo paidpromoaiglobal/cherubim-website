@@ -94,7 +94,7 @@ export default function Portfolio() {
           <div className="absolute bottom-0 left-0 w-[500px] h-[500px] rounded-full opacity-10"
             style={{ background: 'radial-gradient(circle, #1B3990, transparent)' }} />
         </div>
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', padding: '5rem 1.5rem 2rem', maxWidth: '900px', margin: '0 auto', position: 'relative', zIndex: 10 }}>
+        <div className="page-hero-inner" style={{ maxWidth: '900px' }}>
           <motion.h1
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.1 }}
             style={{ fontFamily: 'Outfit, sans-serif', fontSize: 'clamp(2.2rem, 5vw, 3.8rem)', fontWeight: 800, lineHeight: 1.2, color: 'white', margin: 0 }}>
@@ -216,7 +216,7 @@ export default function Portfolio() {
 
       {/* Testimonials */}
       <section style={{ background: 'white' }}>
-        <div style={{ textAlign: 'center', padding: '4rem 2rem', maxWidth: '1200px', margin: '0 auto' }}>
+        <div className="page-section-inner" style={{ textAlign: 'center', maxWidth: '1200px', margin: '0 auto' }}>
           <span style={{ fontSize: '0.75rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: '#ff007a', fontWeight: 600, display: 'block', marginBottom: '0.5rem' }}>
             What clients say
           </span>

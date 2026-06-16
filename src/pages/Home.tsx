@@ -124,7 +124,7 @@ export default function Home() {
 
           <motion.div
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.3 }}
-            className="flex items-center justify-center gap-4 flex-wrap">
+            className="hero-cta-buttons">
             <Link to="/contact"
               className="px-8 py-4 rounded-full font-bold text-white text-sm cursor-pointer transition-all duration-200 hover:opacity-90 hover:scale-105"
               style={{ background: 'linear-gradient(135deg, #E8187A, #C41060)' }}>
@@ -161,7 +161,7 @@ export default function Home() {
       </section>
 
       {/* Services preview */}
-      <section style={{ background: '#F7F8FF', padding: '4rem 2rem' }}>
+      <section className="home-services-section">
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           <div className="text-center mb-8 md:mb-12">
             <p className="text-sm font-bold tracking-widest uppercase mb-4" style={{ color: '#E8187A' }}>What we do</p>

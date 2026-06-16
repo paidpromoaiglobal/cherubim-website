@@ -106,7 +106,7 @@ export default function About() {
 
       {/* Values */}
       <section style={{ background: '#F7F8FF' }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '4rem 2rem' }}>
+        <div className="page-section-inner" style={{ maxWidth: '1200px', margin: '0 auto' }}>
           <div style={{ marginBottom: '2rem' }}>
             <span style={{ fontSize: '0.75rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: '#ff007a', fontWeight: 600, display: 'block', marginBottom: '0.5rem' }}>
               What drives us
@@ -139,7 +139,7 @@ export default function About() {
 
       {/* Timeline */}
       <section style={{ background: 'white' }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '4rem 2rem' }}>
+        <div className="page-section-inner" style={{ maxWidth: '1200px', margin: '0 auto' }}>
           <div style={{ marginBottom: '2rem' }}>
             <span style={{ fontSize: '0.75rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: '#ff007a', fontWeight: 600, display: 'block', marginBottom: '0.5rem' }}>
               Our journey
@@ -176,7 +176,7 @@ export default function About() {
 
       {/* Team */}
       <section style={{ background: '#F7F8FF' }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '4rem 2rem' }}>
+        <div className="page-section-inner" style={{ maxWidth: '1200px', margin: '0 auto' }}>
           <div style={{ marginBottom: '2rem' }}>
             <span style={{ fontSize: '0.75rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: '#ff007a', fontWeight: 600, display: 'block', marginBottom: '0.5rem' }}>
               The team

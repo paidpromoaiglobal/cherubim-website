@@ -13,6 +13,7 @@ export default function Navbar() {
 
   return (
     <header
+      className="navbar-header"
       style={{
         width: '100%',
         position: 'sticky',

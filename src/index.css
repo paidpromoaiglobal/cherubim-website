@@ -364,6 +364,83 @@ input:focus, textarea:focus { outline: none; }
 }
 .about-join-link:hover { opacity: 0.75; }
 
+/* ================================= */
+/* Comprehensive Mobile Optimization */
+/* ================================= */
+
+/* Navbar: reduce side padding on phones */
+@media (max-width: 600px) {
+  .navbar-header { padding-left: 1rem !important; padding-right: 1rem !important; }
+}
+@media (max-width: 380px) {
+  .navbar-nav { gap: 0.4rem; }
+  .nav-link { font-size: 0.62rem !important; }
+  .nav-get-started { font-size: 0.62rem !important; padding: 0.3rem 0.55rem !important; }
+}
+
+/* Sub-page hero inner container */
+.page-hero-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 5rem 1.5rem 3rem;
+  margin: 0 auto;
+  position: relative;
+  z-index: 10;
+}
+@media (max-width: 600px) {
+  .page-hero-inner { padding: 3rem 1.25rem 2rem; }
+}
+
+/* Generic section content inner */
+.page-section-inner { padding: 4rem 2rem; }
+@media (max-width: 600px) {
+  .page-section-inner { padding: 3rem 1.25rem; }
+}
+
+/* Home: hero CTA buttons — stack on small phones */
+.hero-cta-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+@media (max-width: 480px) {
+  .hero-cta-buttons { flex-direction: column; width: 100%; }
+  .hero-cta-buttons a { width: 100%; text-align: center; box-sizing: border-box; }
+}
+
+/* Home: services section */
+.home-services-section { background: #F7F8FF; padding: 4rem 2rem; }
+@media (max-width: 600px) { .home-services-section { padding: 3rem 1.25rem; } }
+
+/* About: hero gap when stacked */
+@media (max-width: 900px) { .about-hero-grid { gap: 2rem; } }
+
+/* About: 1-column team on small phones */
+@media (max-width: 480px) { .about-team-grid { grid-template-columns: 1fr; } }
+
+/* Timeline: compact spacing on mobile */
+@media (max-width: 480px) {
+  .timeline-row { grid-template-columns: 44px 14px 1fr; gap: 0.5rem; }
+}
+
+/* Grids: reduce side padding on mobile */
+@media (max-width: 600px) {
+  .services-page-grid { padding-left: 1.25rem; padding-right: 1.25rem; padding-bottom: 3rem; }
+  .portfolio-grid { padding-left: 1.25rem; padding-right: 1.25rem; }
+  .contact-grid { padding: 1.5rem 1.25rem 3rem; }
+  .contact-hero-wrapper { padding: 2.5rem 1.25rem 1.25rem; }
+}
+
+/* Footer: reduce side padding on mobile */
+@media (max-width: 600px) {
+  .footer-grid { padding: 2rem 1.25rem; }
+  .footer-bottom { padding: 1rem 1.25rem; }
+}
+
 /* CTA outline button */
 .cta-btn-outline {
   display: inline-block;
