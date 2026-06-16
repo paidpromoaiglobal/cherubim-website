@@ -27,8 +27,8 @@ export default function Navbar() {
     <header
       className="fixed top-0 left-0 w-full z-50 transition-all duration-300"
       style={{
-        background: scrolled ? 'rgba(255,255,255,0.95)' : 'rgba(255,255,255,0.15)',
-        backdropFilter: 'blur(16px)',
+        background: scrolled ? 'rgba(255,255,255,0.95)' : 'transparent',
+        backdropFilter: scrolled ? 'blur(16px)' : 'none',
         borderBottom: scrolled ? '1px solid rgba(0,0,0,0.06)' : '1px solid transparent',
         boxShadow: scrolled ? '0 1px 12px rgba(0,0,0,0.05)' : 'none',
       }}
@@ -42,7 +42,8 @@ export default function Navbar() {
             <div className="font-black text-xs leading-tight tracking-tight" style={{ fontFamily: 'Outfit, sans-serif', color: '#E8187A' }}>
               CHERUBIM AI INFOSOFT
             </div>
-            <div className="text-[8px] font-bold tracking-widest uppercase mt-0.5" style={{ color: '#1B3990' }}>
+            <div className="text-[8px] font-bold tracking-widest uppercase mt-0.5"
+              style={{ color: scrolled ? '#1B3990' : 'rgba(255,255,255,0.7)' }}>
               Let's AImagine Together!
             </div>
           </div>
@@ -56,8 +57,10 @@ export default function Navbar() {
               to={l.to}
               className="px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200 cursor-pointer"
               style={{
-                color: location.pathname === l.to ? '#E8187A' : '#374151',
-                background: location.pathname === l.to ? 'rgba(232,24,122,0.08)' : 'transparent',
+                color: location.pathname === l.to
+                  ? '#E8187A'
+                  : scrolled ? '#374151' : 'rgba(255,255,255,0.85)',
+                background: location.pathname === l.to ? 'rgba(232,24,122,0.12)' : 'transparent',
               }}
             >
               {l.label}
@@ -78,11 +81,14 @@ export default function Navbar() {
         <button className="md:hidden p-2 cursor-pointer" onClick={() => setOpen(o => !o)} aria-label="Menu">
           <div className="flex flex-col gap-1.5">
             <motion.span animate={{ rotate: open ? 45 : 0, y: open ? 8 : 0 }} transition={{ duration: 0.2 }}
-              className="block w-6 h-0.5 bg-zinc-800" />
+              className="block w-6 h-0.5"
+              style={{ background: scrolled ? '#1f2937' : 'white' }} />
             <motion.span animate={{ opacity: open ? 0 : 1, scaleX: open ? 0 : 1 }} transition={{ duration: 0.2 }}
-              className="block w-6 h-0.5 bg-zinc-800" />
+              className="block w-6 h-0.5"
+              style={{ background: scrolled ? '#1f2937' : 'white' }} />
             <motion.span animate={{ rotate: open ? -45 : 0, y: open ? -8 : 0 }} transition={{ duration: 0.2 }}
-              className="block w-6 h-0.5 bg-zinc-800" />
+              className="block w-6 h-0.5"
+              style={{ background: scrolled ? '#1f2937' : 'white' }} />
           </div>
         </button>
       </div>
