@@ -70,7 +70,7 @@ export default function Work() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-14 md:pt-20 pb-12 md:pb-24 px-8 md:px-14 xl:px-20 relative overflow-hidden" style={{ background: '#0A0A0A' }}>
+      <section className="pt-14 md:pt-20 pb-12 md:pb-24 px-4 md:px-14 xl:px-20 relative overflow-hidden" style={{ background: '#0A0A0A' }}>
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-0 left-0 w-[500px] h-[500px] rounded-full opacity-10"
             style={{ background: 'radial-gradient(circle, #2BA4D4, transparent)' }} />
@@ -96,7 +96,7 @@ export default function Work() {
       </section>
 
       {/* Projects list */}
-      <section className="py-12 md:py-24 px-8 md:px-14 xl:px-20" style={{ background: '#F7F8FF' }}>
+      <section className="py-10 md:py-24 px-4 md:px-14 xl:px-20" style={{ background: '#F7F8FF' }}>
         <div className="w-full">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {projects.map((p, i) => (
@@ -106,7 +106,7 @@ export default function Work() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.07 }}
-                className="p-8 rounded-2xl group hover:-translate-y-1 transition-all duration-300 cursor-pointer"
+                className="p-5 md:p-8 rounded-2xl group hover:-translate-y-1 transition-all duration-300 cursor-pointer"
                 style={{ background: 'white', border: '1px solid rgba(0,0,0,0.06)', boxShadow: '0 2px 20px rgba(0,0,0,0.04)' }}>
                 <div className="flex items-start justify-between mb-4">
                   <div>
@@ -146,7 +146,7 @@ export default function Work() {
       </section>
 
       {/* Testimonial strip */}
-      <section className="py-10 md:py-20 px-8 md:px-14 xl:px-20" style={{ background: 'white' }}>
+      <section className="py-10 md:py-20 px-4 md:px-14 xl:px-20" style={{ background: 'white' }}>
         <div className="w-full">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
@@ -159,7 +159,7 @@ export default function Work() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="p-7 rounded-2xl"
+                className="p-5 md:p-7 rounded-2xl"
                 style={{ background: '#F7F8FF', border: '1px solid rgba(0,0,0,0.06)' }}>
                 <div className="flex gap-0.5 mb-4">
                   {[1,2,3,4,5].map(s => (
@@ -178,7 +178,7 @@ export default function Work() {
       </section>
 
       {/* CTA */}
-      <section className="py-10 md:py-20 px-8 md:px-14 xl:px-20" style={{ background: 'linear-gradient(135deg, #1B3990 0%, #0A0A0A 60%, #E8187A 100%)' }}>
+      <section className="py-10 md:py-20 px-4 md:px-14 xl:px-20" style={{ background: 'linear-gradient(135deg, #1B3990 0%, #0A0A0A 60%, #E8187A 100%)' }}>
         <div className="max-w-3xl mx-auto flex flex-col items-center text-center">
           <h2 className="font-black text-white mb-4"
             style={{ fontFamily: 'Outfit, sans-serif', fontSize: 'clamp(1.6rem, 3.5vw, 2.5rem)', letterSpacing: '-0.03em' }}>
