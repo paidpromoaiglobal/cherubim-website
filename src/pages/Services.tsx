@@ -1,10 +1,10 @@
-﻿import { motion } from 'motion/react';
+import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
 
 const services = [
   {
     icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <path d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2z"/><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/>
       </svg>
     ),
@@ -15,7 +15,7 @@ const services = [
   },
   {
     icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
       </svg>
     ),
@@ -26,7 +26,7 @@ const services = [
   },
   {
     icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
       </svg>
     ),
@@ -37,7 +37,7 @@ const services = [
   },
   {
     icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
       </svg>
     ),
@@ -48,7 +48,7 @@ const services = [
   },
   {
     icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/>
       </svg>
     ),
@@ -59,7 +59,7 @@ const services = [
   },
   {
     icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
       </svg>
     ),
@@ -80,88 +80,119 @@ const process = [
 export default function Services() {
   return (
     <>
-      {/* Page hero */}
-      <section className="pt-14 md:pt-20 pb-12 md:pb-20 px-8 md:px-14 xl:px-20 relative overflow-hidden" style={{ background: '#0A0A0A' }}>
+      {/* Hero */}
+      <section style={{ background: '#0A0A0A', position: 'relative', overflow: 'hidden' }}>
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full opacity-10"
             style={{ background: 'radial-gradient(circle, #E8187A, transparent)' }} />
           <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full opacity-10"
             style={{ background: 'radial-gradient(circle, #1B3990, transparent)' }} />
         </div>
-        <div className="w-full relative z-10 text-center md:text-left">
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', padding: '5rem 1.5rem 3rem', maxWidth: '800px', margin: '0 auto', position: 'relative', zIndex: 10 }}>
           <motion.h1
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.1 }}
-            className="font-black text-white mb-6 mx-auto md:mx-0"
-            style={{ fontFamily: 'Outfit, sans-serif', fontSize: 'clamp(2rem, 5vw, 2.8rem)', letterSpacing: '-0.03em', maxWidth: '700px' }}>
+            style={{ fontFamily: 'Outfit, sans-serif', fontSize: 'clamp(2.2rem, 5vw, 3.8rem)', fontWeight: 800, lineHeight: 1.2, color: 'white', margin: 0 }}>
             Services built for<br />
-            <span style={{ background: 'linear-gradient(135deg, #E8187A, #2BA4D4)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+            <span style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', fontWeight: 800, background: 'linear-gradient(135deg, #E8187A, #2BA4D4)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
               the intelligent era.
             </span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.2 }}
-            className="text-base max-w-xl mx-auto md:mx-0" style={{ color: '#d1d5db', lineHeight: 1.7 }}>
+            style={{ fontSize: 'clamp(1rem, 2vw, 1.15rem)', maxWidth: '600px', margin: '1rem auto 0', lineHeight: 1.7, color: '#d1d5db', opacity: 0.85 }}>
             From AI models to automation workflows to production apps — we are the end-to-end technology partner for ambitious businesses.
           </motion.p>
         </div>
       </section>
 
       {/* Services grid */}
-      <section className="py-12 md:py-24 px-8 md:px-14 xl:px-20" style={{ background: '#F7F8FF' }}>
-        <div className="w-full">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {services.map((s, i) => (
-              <motion.div
-                key={s.title}
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.07 }}
-                className="p-8 rounded-2xl group hover:-translate-y-1 transition-all duration-300 cursor-pointer"
-                style={{ background: 'white', border: '1px solid rgba(0,0,0,0.06)', boxShadow: '0 2px 20px rgba(0,0,0,0.04)' }}>
-                <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-5 text-white"
-                  style={{ background: 'linear-gradient(135deg, #E8187A, #C41060)' }}>
-                  {s.icon}
-                </div>
-                <h3 className="font-bold text-lg mb-2" style={{ color: '#0A0A0A', fontFamily: 'Outfit, sans-serif' }}>{s.title}</h3>
-                <p className="text-sm leading-relaxed mb-5" style={{ color: '#64748b' }}>{s.desc}</p>
-                <p className="text-xs leading-relaxed mb-5" style={{ color: '#94a3b8' }}>{s.detail}</p>
-                <div className="flex flex-wrap gap-1.5">
-                  {s.tags.map(t => (
-                    <span key={t} className="text-xs px-2.5 py-1 rounded-full font-medium"
-                      style={{ background: 'rgba(27,57,144,0.07)', color: '#1B3990' }}>
-                      {t}
-                    </span>
-                  ))}
-                </div>
-              </motion.div>
-            ))}
-          </div>
+      <section style={{ background: '#F7F8FF' }}>
+        <div className="services-page-grid">
+          {services.map((s, i) => (
+            <motion.div key={s.title}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: i * 0.07 }}
+              className="services-page-card"
+              style={{
+                background: 'white',
+                border: '1px solid rgba(0,0,0,0.08)',
+                borderRadius: '16px',
+                padding: '1.75rem',
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '0.75rem',
+                height: '100%',
+                cursor: 'pointer',
+              }}>
+              <div style={{
+                width: '52px',
+                height: '52px',
+                borderRadius: '12px',
+                background: '#ff007a',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                marginBottom: '0.5rem',
+                flexShrink: 0,
+              }}>
+                {s.icon}
+              </div>
+              <h3 style={{ fontFamily: 'Outfit, sans-serif', fontSize: '1.15rem', fontWeight: 700, color: '#0A0A0A', margin: 0 }}>
+                {s.title}
+              </h3>
+              <p style={{ fontSize: '0.95rem', lineHeight: 1.65, color: '#374151', margin: 0 }}>
+                {s.desc}
+              </p>
+              <p style={{ fontSize: '0.85rem', lineHeight: 1.6, color: '#64748b', margin: 0, opacity: 0.7 }}>
+                {s.detail}
+              </p>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px', marginTop: 'auto', paddingTop: '1rem' }}>
+                {s.tags.map(t => (
+                  <span key={t} style={{
+                    fontSize: '0.75rem',
+                    fontWeight: 600,
+                    color: '#ff007a',
+                    background: 'rgba(255,0,122,0.08)',
+                    padding: '3px 10px',
+                    borderRadius: '999px',
+                  }}>
+                    {t}
+                  </span>
+                ))}
+              </div>
+            </motion.div>
+          ))}
         </div>
       </section>
 
       {/* Process */}
-      <section className="py-12 md:py-24 px-8 md:px-14 xl:px-20" style={{ background: 'white' }}>
-        <div className="w-full">
-          <div className="mb-6 md:mb-14 text-center">
-            <p className="text-xs font-bold tracking-widest uppercase mb-3" style={{ color: '#E8187A' }}>How we work</p>
-            <h2 className="font-black" style={{ fontFamily: 'Outfit, sans-serif', fontSize: 'clamp(1.8rem, 3.5vw, 3rem)', letterSpacing: '-0.03em', color: '#0A0A0A' }}>
-              Our process
-            </h2>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <section style={{ background: 'white' }}>
+        <div style={{ textAlign: 'center', padding: '4rem 2rem', maxWidth: '1200px', margin: '0 auto' }}>
+          <span style={{ fontSize: '0.75rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: '#ff007a', fontWeight: 600, display: 'block', marginBottom: '0.5rem' }}>
+            How we work
+          </span>
+          <h2 style={{ fontFamily: 'Outfit, sans-serif', fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', fontWeight: 800, color: '#0A0A0A', marginBottom: '3rem' }}>
+            Our process
+          </h2>
+          <div className="process-grid">
             {process.map((p, i) => (
               <motion.div key={p.step}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}>
-                <div className="text-5xl font-black mb-4"
-                  style={{ fontFamily: 'Outfit, sans-serif', color: 'rgba(232,24,122,0.12)', letterSpacing: '-0.04em' }}>
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                style={{ textAlign: 'left' }}>
+                <div style={{ fontFamily: 'Outfit, sans-serif', fontSize: '3rem', fontWeight: 900, color: '#ff007a', opacity: 0.25, lineHeight: 1, marginBottom: '0.5rem' }}>
                   {p.step}
                 </div>
-                <h3 className="font-bold text-base mb-2" style={{ color: '#0A0A0A' }}>{p.title}</h3>
-                <p className="text-sm leading-relaxed" style={{ color: '#64748b' }}>{p.desc}</p>
+                <h3 style={{ fontSize: '1.1rem', fontWeight: 700, color: '#0A0A0A', marginBottom: '0.4rem' }}>
+                  {p.title}
+                </h3>
+                <p style={{ fontSize: '0.9rem', lineHeight: 1.65, color: '#64748b', opacity: 0.7, margin: 0 }}>
+                  {p.desc}
+                </p>
               </motion.div>
             ))}
           </div>
@@ -169,18 +200,16 @@ export default function Services() {
       </section>
 
       {/* CTA */}
-      <section className="py-10 md:py-20 px-8 md:px-14 xl:px-20 flex justify-center" style={{ background: 'linear-gradient(135deg, #1B3990 0%, #0A0A0A 60%, #E8187A 100%)' }}>
-        <div className="max-w-3xl w-full flex flex-col items-center text-center">
-          <h2 className="font-black text-white mb-4"
-            style={{ fontFamily: 'Outfit, sans-serif', fontSize: 'clamp(1.6rem, 3.5vw, 2.5rem)', letterSpacing: '-0.03em' }}>
+      <section className="cta-section" style={{ background: 'linear-gradient(135deg, #1B3990 0%, #0A0A0A 60%, #E8187A 100%)' }}>
+        <div style={{ maxWidth: '700px', width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
+          <h2 style={{ fontFamily: 'Outfit, sans-serif', fontSize: 'clamp(2rem, 5vw, 3.5rem)', fontWeight: 800, lineHeight: 1.2, color: 'white' }}>
             Not sure which service fits?
           </h2>
-          <p className="mb-8 text-sm" style={{ color: '#d1d5db' }}>
+          <p style={{ fontSize: 'clamp(1rem, 2vw, 1.2rem)', maxWidth: '560px', margin: '1rem auto', color: '#d1d5db', lineHeight: 1.7 }}>
             Tell us your challenge and we'll recommend the right approach — no obligation.
           </p>
-          <Link to="/contact"
-            className="inline-flex items-center gap-2 px-8 py-4 rounded-full font-bold text-sm text-white transition-all duration-200 hover:opacity-90 hover:scale-105"
-            style={{ background: '#E8187A' }}>
+          <Link to="/contact" className="cta-btn cursor-pointer transition-opacity duration-200 hover:opacity-90"
+            style={{ background: '#ff007a', color: 'white', textDecoration: 'none' }}>
             Book a free consultation →
           </Link>
         </div>
@@ -188,4 +217,3 @@ export default function Services() {
     </>
   );
 }
-

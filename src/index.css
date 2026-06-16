@@ -123,3 +123,37 @@ input:focus, textarea:focus { outline: none; }
 /* Nav link hover */
 .nav-link:hover { color: #ff007a !important; }
 .nav-get-started:hover { opacity: 0.85 !important; }
+
+/* Services page grid */
+.services-page-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 2rem 4rem;
+}
+@media (max-width: 900px) {
+  .services-page-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .services-page-grid { grid-template-columns: 1fr; }
+}
+.services-page-card { transition: all 0.2s ease; }
+.services-page-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Process steps grid */
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+@media (max-width: 900px) {
+  .process-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .process-grid { grid-template-columns: 1fr; }
+}
