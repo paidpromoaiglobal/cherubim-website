@@ -29,16 +29,18 @@ export default function Navbar() {
     >
       {/* Logo */}
       <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '10px', textDecoration: 'none', flexShrink: 0, background: 'transparent' }}>
-        <img
-          src="/logo-icon.png"
-          alt="Cherubim"
-          style={{ width: '48px', height: '48px', objectFit: 'contain', flexShrink: 0, background: 'transparent', mixBlendMode: 'normal' }}
-        />
-        <div className="logo-text">
+        <div style={{ width: '52px', height: '44px', borderRadius: '50%', background: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+          <img
+            src="/logo-icon.png"
+            alt="Cherubim"
+            style={{ width: '42px', height: '38px', objectFit: 'contain' }}
+          />
+        </div>
+        <div className="logo-text" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
           <div style={{ fontFamily: 'Outfit, sans-serif', fontSize: '1rem', fontWeight: 700, color: '#ff007a', lineHeight: 1.2 }}>
             CHERUBIM AI INFOSOFT
           </div>
-          <div style={{ fontSize: '0.65rem', letterSpacing: '0.08em', textTransform: 'uppercase', color: '#ff007a', opacity: 0.85 }}>
+          <div style={{ fontSize: '0.65rem', letterSpacing: '0.08em', textTransform: 'uppercase', color: '#2BA4D4', opacity: 0.95 }}>
             Let's AImagine Together!
           </div>
         </div>
