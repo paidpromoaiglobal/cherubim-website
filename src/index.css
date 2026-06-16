@@ -480,10 +480,15 @@ input:focus, textarea:focus { outline: none; }
   .hero-cta-buttons a { width: 100%; text-align: center; box-sizing: border-box; }
 }
 
-/* Home: hero — full viewport on desktop, auto-height with padding on mobile */
+/* Home: hero — full viewport on desktop; full remaining viewport on mobile with top-aligned content */
 .home-hero { min-height: 100vh; }
 @media (max-width: 640px) {
-  .home-hero { min-height: auto; padding-top: 3.5rem; padding-bottom: 2.5rem; }
+  .home-hero {
+    min-height: calc(100vh - 72px);
+    justify-content: flex-start !important;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+  }
 }
 
 /* Home: services section */
