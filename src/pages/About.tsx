@@ -48,7 +48,7 @@ export default function About() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-24 md:pt-36 pb-12 md:pb-24 px-8 md:px-14 xl:px-20 relative overflow-hidden" style={{ background: '#0A0A0A' }}>
+      <section className="pt-14 md:pt-20 pb-12 md:pb-24 px-8 md:px-14 xl:px-20 relative overflow-hidden" style={{ background: '#0A0A0A' }}>
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute -top-40 right-0 w-[600px] h-[600px] rounded-full opacity-10"
             style={{ background: 'radial-gradient(circle, #1B3990, transparent)' }} />
@@ -213,3 +213,4 @@ export default function About() {
     </>
   );
 }
+

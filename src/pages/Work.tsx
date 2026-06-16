@@ -70,7 +70,7 @@ export default function Work() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-24 md:pt-36 pb-12 md:pb-24 px-8 md:px-14 xl:px-20 relative overflow-hidden" style={{ background: '#0A0A0A' }}>
+      <section className="pt-14 md:pt-20 pb-12 md:pb-24 px-8 md:px-14 xl:px-20 relative overflow-hidden" style={{ background: '#0A0A0A' }}>
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-0 left-0 w-[500px] h-[500px] rounded-full opacity-10"
             style={{ background: 'radial-gradient(circle, #2BA4D4, transparent)' }} />
@@ -197,3 +197,4 @@ export default function Work() {
     </>
   );
 }
+

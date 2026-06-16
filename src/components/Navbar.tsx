@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
 
@@ -12,113 +12,126 @@ const links = [
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40);
-    window.addEventListener('scroll', onScroll);
-    return () => window.removeEventListener('scroll', onScroll);
-  }, []);
-
-  useEffect(() => setOpen(false), [location]);
 
   return (
     <header
-      className="fixed top-0 left-0 w-full z-50 transition-all duration-500"
       style={{
-        background: scrolled ? 'rgba(10,10,10,0.85)' : 'transparent',
-        backdropFilter: scrolled ? 'blur(20px)' : 'none',
-        borderBottom: scrolled ? '1px solid rgba(255,255,255,0.06)' : '1px solid transparent',
+        width: '100%',
+        position: 'sticky',
+        top: 0,
+        zIndex: 1000,
+        background: '#0d0d0d',
+        padding: '0 2rem',
+        height: '70px',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        borderBottom: '1px solid rgba(255,255,255,0.08)',
       }}
     >
-      <div className="px-6 md:px-10 lg:px-16 xl:px-20 h-14 md:h-16 flex items-center justify-between">
-
-        {/* Logo — home only */}
-        {location.pathname === '/' ? (
-          <Link to="/" className="flex items-center gap-2 cursor-pointer flex-shrink-0">
-            <img src="/logo-icon.jpg" alt="Cherubim" className="h-7 w-auto object-contain" />
-            <div className="hidden sm:block">
-              <div className="font-black text-xs leading-tight" style={{ fontFamily: 'Outfit, sans-serif', color: '#E8187A' }}>
-                CHERUBIM AI INFOSOFT
-              </div>
-              <div className="text-[8px] font-bold tracking-widest uppercase mt-0.5" style={{ color: 'rgba(255,255,255,0.6)' }}>
-                Let's AImagine Together!
-              </div>
-            </div>
-          </Link>
-        ) : (
-          <div />
-        )}
-
-        {/* Desktop nav — always transparent style */}
-        <nav className="hidden md:flex items-center gap-1">
-          {links.map(l => (
-            <Link
-              key={l.to}
-              to={l.to}
-              className="px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 cursor-pointer"
-              style={{
-                color: location.pathname === l.to ? '#E8187A' : 'rgba(255,255,255,0.85)',
-                background: location.pathname === l.to ? 'rgba(232,24,122,0.12)' : 'transparent',
-              }}
-            >
-              {l.label}
-            </Link>
-          ))}
-          <Link to="/contact"
-            className="ml-3 px-5 py-2 rounded-full text-sm font-bold text-white cursor-pointer transition-all duration-200 hover:opacity-90 hover:scale-105"
-            style={{ background: 'linear-gradient(135deg, #E8187A, #1B3990)' }}>
-            Get Started →
-          </Link>
-        </nav>
-
-        {/* Mobile hamburger */}
-        <button
-          className="md:hidden p-2 cursor-pointer"
-          onClick={() => setOpen(o => !o)}
-          aria-label="Menu"
-        >
-          <div className="flex flex-col gap-1.5">
-            <motion.span animate={{ rotate: open ? 45 : 0, y: open ? 8 : 0 }} transition={{ duration: 0.2 }}
-              className="block w-6 h-0.5" style={{ background: 'white' }} />
-            <motion.span animate={{ opacity: open ? 0 : 1, scaleX: open ? 0 : 1 }} transition={{ duration: 0.2 }}
-              className="block w-6 h-0.5" style={{ background: 'white' }} />
-            <motion.span animate={{ rotate: open ? -45 : 0, y: open ? -8 : 0 }} transition={{ duration: 0.2 }}
-              className="block w-6 h-0.5" style={{ background: 'white' }} />
+      {/* Logo */}
+      <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '10px', textDecoration: 'none', flexShrink: 0 }}>
+        <img src="/logo-icon.jpg" alt="Cherubim" style={{ width: '36px', height: '36px', objectFit: 'contain', flexShrink: 0 }} />
+        <div>
+          <div style={{ fontFamily: 'Outfit, sans-serif', fontSize: '1rem', fontWeight: 700, color: '#ff007a', lineHeight: 1.2 }}>
+            CHERUBIM AI INFOSOFT
           </div>
-        </button>
-      </div>
+          <div style={{ fontSize: '0.65rem', letterSpacing: '0.08em', textTransform: 'uppercase', color: '#ff007a', opacity: 0.85 }}>
+            Let's AImagine Together!
+          </div>
+        </div>
+      </Link>
 
-      {/* Mobile drawer */}
+      {/* Desktop nav */}
+      <nav className="navbar-desktop">
+        {links.map(l => (
+          <Link key={l.to} to={l.to} className="nav-link"
+            style={{
+              fontSize: '0.95rem',
+              fontWeight: 500,
+              color: location.pathname === l.to ? '#ff007a' : '#ffffff',
+              textDecoration: 'none',
+              transition: 'color 0.2s',
+            }}>
+            {l.label}
+          </Link>
+        ))}
+        <Link to="/contact" className="nav-get-started"
+          style={{
+            padding: '0.5rem 1.25rem',
+            borderRadius: '999px',
+            background: '#ff007a',
+            color: '#fff',
+            fontWeight: 600,
+            fontSize: '0.9rem',
+            textDecoration: 'none',
+            transition: 'opacity 0.2s',
+            cursor: 'pointer',
+          }}>
+          Get Started
+        </Link>
+      </nav>
+
+      {/* Mobile hamburger */}
+      <button className="navbar-hamburger" onClick={() => setOpen(o => !o)} aria-label="Menu"
+        style={{ background: 'none', border: 'none', cursor: 'pointer', display: 'flex', flexDirection: 'column', gap: '5px', padding: '4px' }}>
+        <motion.span animate={{ rotate: open ? 45 : 0, y: open ? 7 : 0 }} transition={{ duration: 0.2 }}
+          style={{ width: '24px', height: '2px', background: '#ffffff', borderRadius: '2px', display: 'block' }} />
+        <motion.span animate={{ opacity: open ? 0 : 1, scaleX: open ? 0 : 1 }} transition={{ duration: 0.2 }}
+          style={{ width: '24px', height: '2px', background: '#ffffff', borderRadius: '2px', display: 'block' }} />
+        <motion.span animate={{ rotate: open ? -45 : 0, y: open ? -7 : 0 }} transition={{ duration: 0.2 }}
+          style={{ width: '24px', height: '2px', background: '#ffffff', borderRadius: '2px', display: 'block' }} />
+      </button>
+
+      {/* Mobile dropdown */}
       <AnimatePresence>
         {open && (
-          <motion.div
+          <motion.nav
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.25 }}
-            className="md:hidden overflow-hidden border-t"
-            style={{ background: 'rgba(10,10,10,0.95)', backdropFilter: 'blur(20px)', borderColor: 'rgba(255,255,255,0.08)' }}
-          >
-            <div className="px-6 py-5 flex flex-col gap-1">
-              {links.map(l => (
-                <Link key={l.to} to={l.to}
-                  className="py-3 px-4 rounded-xl text-sm font-medium transition-colors cursor-pointer"
-                  style={{
-                    color: location.pathname === l.to ? '#E8187A' : 'rgba(255,255,255,0.85)',
-                    background: location.pathname === l.to ? 'rgba(232,24,122,0.1)' : 'transparent',
-                  }}>
-                  {l.label}
-                </Link>
-              ))}
-              <Link to="/contact"
-                className="mt-3 py-3 text-center rounded-full text-sm font-bold text-white cursor-pointer"
-                style={{ background: 'linear-gradient(135deg, #E8187A, #1B3990)' }}>
-                Get Started →
+            style={{
+              position: 'absolute',
+              top: '70px',
+              left: 0,
+              width: '100%',
+              background: '#0d0d0d',
+              padding: '1.5rem 2rem',
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '1.25rem',
+              borderTop: '1px solid rgba(255,255,255,0.08)',
+              overflow: 'hidden',
+            }}>
+            {links.map(l => (
+              <Link key={l.to} to={l.to} onClick={() => setOpen(false)}
+                style={{
+                  fontSize: '1.1rem',
+                  color: location.pathname === l.to ? '#ff007a' : '#ffffff',
+                  textDecoration: 'none',
+                  transition: 'color 0.2s',
+                }}>
+                {l.label}
               </Link>
-            </div>
-          </motion.div>
+            ))}
+            <Link to="/contact" onClick={() => setOpen(false)}
+              style={{
+                padding: '0.65rem 1.25rem',
+                borderRadius: '999px',
+                background: '#ff007a',
+                color: '#fff',
+                fontWeight: 600,
+                fontSize: '1rem',
+                textDecoration: 'none',
+                textAlign: 'center',
+                marginTop: '0.5rem',
+                cursor: 'pointer',
+              }}>
+              Get Started
+            </Link>
+          </motion.nav>
         )}
       </AnimatePresence>
     </header>

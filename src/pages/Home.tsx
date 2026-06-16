@@ -76,7 +76,7 @@ export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden pt-20"
+      <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden"
         style={{ background: '#0A0A0A' }}>
 
         {/* Background gradient orbs */}

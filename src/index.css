@@ -106,3 +106,20 @@ input:focus, textarea:focus { outline: none; }
 @media (max-width: 600px) {
   .footer-bottom { flex-direction: column; text-align: center; }
 }
+
+/* Navbar responsive */
+.navbar-desktop {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.navbar-hamburger { display: none; }
+
+@media (max-width: 768px) {
+  .navbar-desktop { display: none; }
+  .navbar-hamburger { display: flex; }
+}
+
+/* Nav link hover */
+.nav-link:hover { color: #ff007a !important; }
+.nav-get-started:hover { opacity: 0.85 !important; }
