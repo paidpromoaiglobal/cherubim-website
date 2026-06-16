@@ -12,7 +12,7 @@ export default function Footer() {
   return (
     <footer style={{ background: '#0A0A0A' }}>
       {/* Top accent */}
-      <div style={{ height: '1px', width: '100%', background: 'linear-gradient(90deg, transparent, #E8187A, #1B3990, transparent)' }} />
+      <div style={{ height: '1px', width: '100%', background: 'linear-gradient(90deg, transparent, #ff007a, #1B3990, transparent)' }} />
 
       {/* Main grid */}
       <div className="footer-grid">
@@ -22,7 +22,7 @@ export default function Footer() {
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1rem' }}>
             <img src="/logo-icon.jpg" alt="Cherubim" style={{ height: '36px', width: 'auto', objectFit: 'contain' }} />
             <div>
-              <div style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 900, fontSize: '0.875rem', color: '#E8187A' }}>
+              <div style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 900, fontSize: '0.875rem', color: '#ff007a' }}>
                 CHERUBIM AI INFOSOFT
               </div>
               <div style={{ fontSize: '9px', fontWeight: 700, letterSpacing: '0.15em', textTransform: 'uppercase', marginTop: '2px', color: '#2BA4D4' }}>
@@ -30,7 +30,7 @@ export default function Footer() {
               </div>
             </div>
           </div>
-          <p style={{ fontSize: '0.875rem', lineHeight: 1.7, color: '#c9d6df', maxWidth: '320px', marginBottom: '1.25rem' }}>
+          <p style={{ fontSize: '0.875rem', lineHeight: 1.7, color: 'rgba(255,255,255,0.6)', maxWidth: '320px', marginBottom: '1.25rem' }}>
             Chennai-based AI & software company building intelligent products, automation workflows, and digital solutions since 2019.
           </p>
           <div style={{ display: 'flex', alignItems: 'center' }}>
@@ -39,22 +39,22 @@ export default function Footer() {
               { label: 'Twitter', href: '#', icon: 'X' },
               { label: 'WhatsApp', href: 'https://wa.me/919384888421', icon: 'W' },
             ].map(s => (
-              <a key={s.label} href={s.href} aria-label={s.label}
+              <a key={s.label} href={s.href} aria-label={s.label} className="footer-social"
                 style={{
-                  width: '36px',
-                  height: '36px',
+                  width: '34px',
+                  height: '34px',
                   borderRadius: '50%',
                   display: 'inline-flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  border: '1px solid rgba(255,255,255,0.2)',
+                  border: '1px solid rgba(255,255,255,0.25)',
                   marginRight: '8px',
                   color: 'rgba(255,255,255,0.85)',
                   fontSize: '0.75rem',
                   fontWeight: 700,
                   textDecoration: 'none',
                   cursor: 'pointer',
-                  transition: 'opacity 0.2s',
+                  transition: 'border-color 0.2s, color 0.2s',
                 }}>
                 {s.icon}
               </a>
@@ -64,13 +64,12 @@ export default function Footer() {
 
         {/* Services column */}
         <div>
-          <h4 style={{ fontSize: '0.75rem', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '1rem', fontWeight: 600, color: '#E8187A' }}>
+          <h4 style={{ fontSize: '0.72rem', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '1rem', fontWeight: 700, color: '#ff007a' }}>
             Services
           </h4>
           {serviceLinks.map(s => (
-            <Link key={s} to="/services"
-              style={{ fontSize: '0.95rem', lineHeight: 2, display: 'block', color: '#c9d6df', textDecoration: 'none' }}
-              className="hover:text-white transition-colors">
+            <Link key={s} to="/services" className="footer-link"
+              style={{ fontSize: '0.92rem', lineHeight: 2.2, display: 'block', color: 'rgba(255,255,255,0.85)', textDecoration: 'none', opacity: 0.75, transition: 'opacity 0.2s' }}>
               {s}
             </Link>
           ))}
@@ -78,42 +77,38 @@ export default function Footer() {
 
         {/* Company column */}
         <div>
-          <h4 style={{ fontSize: '0.75rem', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '1rem', fontWeight: 600, color: '#E8187A' }}>
+          <h4 style={{ fontSize: '0.72rem', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '1rem', fontWeight: 700, color: '#ff007a' }}>
             Company
           </h4>
           <div style={{ marginBottom: '1.5rem' }}>
             {companyLinks.map(c => (
-              <Link key={c.label} to={c.to}
-                style={{ fontSize: '0.95rem', lineHeight: 2, display: 'block', color: '#c9d6df', textDecoration: 'none' }}
-                className="hover:text-white transition-colors">
+              <Link key={c.label} to={c.to} className="footer-link"
+                style={{ fontSize: '0.92rem', lineHeight: 2.2, display: 'block', color: 'rgba(255,255,255,0.85)', textDecoration: 'none', opacity: 0.75, transition: 'opacity 0.2s' }}>
                 {c.label}
               </Link>
             ))}
           </div>
-          <a href="tel:+919384888421"
-            style={{ fontSize: '0.875rem', lineHeight: 2, display: 'block', color: '#c9d6df', textDecoration: 'none' }}
-            className="hover:text-white transition-colors">
+          <a href="tel:+919384888421" className="footer-link"
+            style={{ fontSize: '0.875rem', lineHeight: 2.2, display: 'block', color: 'rgba(255,255,255,0.85)', textDecoration: 'none', opacity: 0.75, transition: 'opacity 0.2s' }}>
             +91 93848 88421
           </a>
-          <a href="mailto:info@cherubim.in"
-            style={{ fontSize: '0.875rem', lineHeight: 2, display: 'block', color: '#c9d6df', textDecoration: 'none' }}
-            className="hover:text-white transition-colors">
+          <a href="mailto:info@cherubim.in" className="footer-link"
+            style={{ fontSize: '0.875rem', lineHeight: 2.2, display: 'block', color: 'rgba(255,255,255,0.85)', textDecoration: 'none', opacity: 0.75, transition: 'opacity 0.2s' }}>
             info@cherubim.in
           </a>
-          <p style={{ fontSize: '0.875rem', lineHeight: 2, color: '#c9d6df' }}>Chennai, Tamil Nadu, India</p>
+          <p style={{ fontSize: '0.875rem', lineHeight: 2.2, color: 'rgba(255,255,255,0.5)', margin: 0 }}>Chennai, Tamil Nadu, India</p>
         </div>
       </div>
 
       {/* Bottom bar */}
-      <div className="footer-bottom">
-        <p style={{ color: '#64748b' }}>
+      <div className="footer-bottom" style={{ fontSize: '0.78rem', color: 'rgba(255,255,255,0.5)' }}>
+        <p style={{ margin: 0 }}>
           © {new Date().getFullYear()} Cherubim AI Infosoft Pvt Ltd · All rights reserved
         </p>
         <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
           {['Privacy Policy', 'Terms of Service'].map(l => (
-            <a key={l} href="#"
-              style={{ color: '#64748b', textDecoration: 'none', cursor: 'pointer' }}
-              className="hover:text-white transition-colors">
+            <a key={l} href="#" className="footer-link"
+              style={{ color: 'rgba(255,255,255,0.5)', textDecoration: 'none', cursor: 'pointer', opacity: 0.75, transition: 'opacity 0.2s' }}>
               {l}
             </a>
           ))}
