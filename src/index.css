@@ -480,15 +480,22 @@ input:focus, textarea:focus { outline: none; }
   .hero-cta-buttons a { width: 100%; text-align: center; box-sizing: border-box; }
 }
 
-/* Home: hero — full viewport on desktop; full remaining viewport on mobile with top-aligned content */
+/* Home: stat cell dividers — responsive for 2-col mobile and 4-col desktop */
+.home-stat-cell { border-right: 1px solid rgba(255,255,255,0.12); }
+/* Mobile 2-col: remove right border on right-column items (2nd, 4th), add row separator */
+@media (max-width: 639px) {
+  .home-stat-cell:nth-child(2n) { border-right: none; }
+  .home-stat-cell:nth-child(n+3) { border-top: 1px solid rgba(255,255,255,0.12); }
+}
+/* Desktop 4-col: only remove border from last item */
+@media (min-width: 640px) {
+  .home-stat-cell:last-child { border-right: none; }
+}
+
+/* Home: hero — full viewport on desktop; full remaining viewport on mobile, content centred both axes */
 .home-hero { min-height: 100vh; }
 @media (max-width: 640px) {
-  .home-hero {
-    min-height: calc(100vh - 72px);
-    justify-content: flex-start !important;
-    padding-top: 3rem;
-    padding-bottom: 2rem;
-  }
+  .home-hero { min-height: calc(100vh - 72px); }
 }
 
 /* Home: services section */
