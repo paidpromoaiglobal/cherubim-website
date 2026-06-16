@@ -36,9 +36,9 @@ export default function Navbar() {
       <div className="px-8 lg:px-14 xl:px-20 h-12 md:h-14 flex items-center justify-between">
 
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-2 cursor-pointer flex-shrink-0">
-          <img src="/logo-icon.jpg" alt="Cherubim" className="h-6 w-auto object-contain" />
-          {location.pathname === '/' && (
+        {location.pathname === '/' ? (
+          <Link to="/" className="flex items-center gap-2 cursor-pointer flex-shrink-0">
+            <img src="/logo-icon.jpg" alt="Cherubim" className="h-6 w-auto object-contain" />
             <div className="hidden sm:block">
               <div className="font-black text-xs leading-tight tracking-tight" style={{ fontFamily: 'Outfit, sans-serif', color: '#E8187A' }}>
                 CHERUBIM AI INFOSOFT
@@ -48,8 +48,10 @@ export default function Navbar() {
                 Let's AImagine Together!
               </div>
             </div>
-          )}
-        </Link>
+          </Link>
+        ) : (
+          <div />
+        )}
 
         {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-2">
