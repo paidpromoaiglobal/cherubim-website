@@ -462,6 +462,21 @@ input:focus, textarea:focus { outline: none; }
 .home-services-section { background: #F7F8FF; padding: 4rem 2rem; }
 @media (max-width: 600px) { .home-services-section { padding: 3rem 1.25rem; } }
 
+/* Home: service card responsive padding */
+.home-service-card { padding: 1.75rem; }
+@media (max-width: 600px) { .home-service-card { padding: 1.25rem; } }
+
+/* Home: CTA buttons full-width + comfortable tap target on mobile */
+.home-cta-primary, .home-cta-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+}
+@media (max-width: 480px) {
+  .home-cta-primary, .home-cta-secondary { width: 100%; }
+}
+
 /* About: hero gap when stacked */
 @media (max-width: 900px) { .about-hero-grid { gap: 2rem; } }
 
