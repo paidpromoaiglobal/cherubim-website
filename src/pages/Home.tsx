@@ -100,7 +100,7 @@ export default function Home() {
 
           {/* Badge — max-w-full + ellipsis so it never overflows on small phones */}
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-bold mb-3 md:mb-8"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-bold mb-4 md:mb-6"
             style={{ background: 'rgba(232,24,122,0.15)', border: '1px solid rgba(232,24,122,0.3)', color: '#E8187A', maxWidth: '100%', overflow: 'hidden' }}>
             <span className="w-1.5 h-1.5 rounded-full bg-current animate-pulse flex-shrink-0" />
             <span style={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
@@ -111,8 +111,8 @@ export default function Home() {
           {/* Heading */}
           <motion.h1
             initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.1 }}
-            className="font-black leading-tight mb-3 md:mb-6"
-            style={{ fontFamily: 'Outfit, sans-serif', fontSize: 'clamp(2.2rem, 8vw, 5.5rem)', letterSpacing: '-0.04em' }}>
+            className="font-black leading-tight mb-4 md:mb-5"
+            style={{ fontFamily: 'Outfit, sans-serif', fontSize: 'clamp(2.2rem, 7vw, 5rem)', letterSpacing: '-0.04em' }}>
             <span className="text-white">Let's </span>
             <span style={{ background: 'linear-gradient(135deg, #E8187A, #FF4DA6)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>AI</span>
             <span style={{ background: 'linear-gradient(135deg, #2BA4D4, #1B3990)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>magine</span>
@@ -123,7 +123,7 @@ export default function Home() {
           {/* Paragraph — text-base (16px) on mobile, text-lg on md+ */}
           <motion.p
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.2 }}
-            className="text-base md:text-lg mb-4 md:mb-10 mx-auto max-w-2xl text-balance md:translate-x-6"
+            className="text-base md:text-lg mb-5 md:mb-8 mx-auto max-w-2xl text-balance"
             style={{ color: '#d1d5db', lineHeight: 1.7 }}>
             We build intelligent software — AI models, automation workflows, and digital products — that help businesses grow faster and work smarter.
           </motion.p>
@@ -147,9 +147,9 @@ export default function Home() {
           {/* Stats grid */}
           <motion.div
             initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.7, delay: 0.5 }}
-            className="mt-5 md:mt-20 home-stats-flex">
+            className="mt-6 md:mt-10 home-stats-flex">
             {stats.map(s => (
-              <div key={s.n} className="home-stat-cell text-center" style={{ padding: '0.75rem 1.75rem' }}>
+              <div key={s.n} className="home-stat-cell text-center">
                 <div className="font-black text-2xl" style={{ fontFamily: 'Outfit, sans-serif', color: '#E8187A' }}>{s.n}</div>
                 <div className="text-sm mt-1" style={{ color: '#d1d5db' }}>{s.l}</div>
               </div>
