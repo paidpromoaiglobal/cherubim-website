@@ -33,16 +33,16 @@ export default function Navbar() {
         boxShadow: scrolled ? '0 2px 20px rgba(0,0,0,0.06)' : 'none',
       }}
     >
-      <div className="px-8 lg:px-14 xl:px-20 h-16 md:h-20 flex items-center justify-between">
+      <div className="px-8 lg:px-14 xl:px-20 h-14 md:h-16 flex items-center justify-between">
 
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-3 cursor-pointer flex-shrink-0">
-          <img src="/logo-icon.jpg" alt="Cherubim" className="h-10 w-auto object-contain" />
+        <Link to="/" className="flex items-center gap-2 cursor-pointer flex-shrink-0">
+          <img src="/logo-icon.jpg" alt="Cherubim" className="h-7 w-auto object-contain" />
           <div className="hidden sm:block">
-            <div className="font-black text-base leading-tight tracking-tight" style={{ fontFamily: 'Outfit, sans-serif', color: '#E8187A' }}>
+            <div className="font-black text-sm leading-tight tracking-tight" style={{ fontFamily: 'Outfit, sans-serif', color: '#E8187A' }}>
               CHERUBIM AI INFOSOFT
             </div>
-            <div className="text-[10px] font-bold tracking-widest uppercase mt-0.5" style={{ color: '#1B3990' }}>
+            <div className="text-[9px] font-bold tracking-widest uppercase mt-0.5" style={{ color: '#1B3990' }}>
               Let's AImagine Together!
             </div>
           </div>
