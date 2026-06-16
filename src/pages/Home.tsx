@@ -54,7 +54,7 @@ export default function Home() {
           <motion.h1
             initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.1 }}
             className="font-black leading-none mb-6"
-            style={{ fontFamily: 'Outfit, sans-serif', fontSize: 'clamp(2.8rem, 7vw, 6rem)', letterSpacing: '-0.04em' }}>
+            style={{ fontFamily: 'Outfit, sans-serif', fontSize: 'clamp(2rem, 7vw, 5.5rem)', letterSpacing: '-0.04em' }}>
             <span className="text-white">Let's </span>
             <span style={{ background: 'linear-gradient(135deg, #E8187A, #FF4DA6)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>AI</span>
             <span style={{ background: 'linear-gradient(135deg, #2BA4D4, #1B3990)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>magine</span>
@@ -87,12 +87,12 @@ export default function Home() {
           {/* Stats */}
           <motion.div
             initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.7, delay: 0.5 }}
-            className="mt-20 grid grid-cols-4 gap-px max-w-xl mx-auto"
+            className="mt-20 grid grid-cols-2 sm:grid-cols-4 gap-px max-w-xl mx-auto"
             style={{ background: 'rgba(255,255,255,0.08)', borderRadius: 16 }}>
             {stats.map(s => (
               <div key={s.n} className="py-5 text-center" style={{ background: 'transparent' }}>
                 <div className="font-black text-2xl" style={{ fontFamily: 'Outfit, sans-serif', color: '#E8187A' }}>{s.n}</div>
-                <div className="text-xs mt-1" style={{ color: 'rgba(255,255,255,0.35)' }}>{s.l}</div>
+                <div className="text-xs mt-1" style={{ color: 'rgba(255,255,255,0.65)' }}>{s.l}</div>
               </div>
             ))}
           </motion.div>
@@ -164,7 +164,7 @@ export default function Home() {
             style={{ fontFamily: 'Outfit, sans-serif', fontSize: 'clamp(2rem, 4vw, 3.2rem)', letterSpacing: '-0.03em' }}>
             Ready to AImagine your business?
           </h2>
-          <p className="text-lg mb-10" style={{ color: 'rgba(255,255,255,0.65)', lineHeight: 1.7 }}>
+          <p className="text-lg mb-10" style={{ color: 'rgba(255,255,255,0.8)', lineHeight: 1.7 }}>
             Let's talk about your project. We'll get back to you within 24 hours.
           </p>
           <Link to="/contact"

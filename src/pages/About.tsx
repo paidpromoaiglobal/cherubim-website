@@ -80,7 +80,7 @@ export default function About() {
               </motion.p>
               <motion.div
                 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.3 }}
-                className="grid grid-cols-4 gap-4">
+                className="grid grid-cols-2 sm:grid-cols-4 gap-4">
                 {stats.map(s => (
                   <div key={s.n}>
                     <div className="font-black text-2xl mb-0.5" style={{ fontFamily: 'Outfit, sans-serif', color: '#E8187A' }}>{s.n}</div>
@@ -92,7 +92,7 @@ export default function About() {
             <motion.div
               initial={{ opacity: 0, x: 30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8, delay: 0.2 }}
               className="rounded-2xl overflow-hidden p-8"
-              style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)' }}>
+              style={{ background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.15)' }}>
               <p className="text-sm leading-relaxed mb-5" style={{ color: 'rgba(255,255,255,0.75)' }}>
                 Cherubim AI Infosoft Pvt Ltd is a Chennai-based technology company specialising in AI-driven software solutions, workflow automation, and digital product development.
               </p>

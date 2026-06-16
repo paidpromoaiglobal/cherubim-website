@@ -118,7 +118,7 @@ export default function Portfolio() {
           {/* Stats */}
           <motion.div
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.3 }}
-            className="flex flex-wrap justify-center gap-12">
+            className="flex flex-wrap justify-center gap-8 sm:gap-12">
             {[
               { n: '6+', l: 'Completed Projects' },
               { n: '5', l: 'Industries Served' },
