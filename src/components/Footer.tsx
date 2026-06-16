@@ -20,7 +20,7 @@ export default function Footer() {
         {/* Brand */}
         <div className="footer-brand">
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1rem' }}>
-            <img src="/logo-icon.jpg" alt="Cherubim" style={{ height: '36px', width: 'auto', objectFit: 'contain' }} />
+            <img src="/logo-icon.png" alt="Cherubim" style={{ height: '36px', width: 'auto', objectFit: 'contain' }} />
             <div>
               <div style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 900, fontSize: '0.875rem', color: '#ff007a' }}>
                 CHERUBIM AI INFOSOFT

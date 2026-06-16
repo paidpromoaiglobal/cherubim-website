@@ -30,7 +30,7 @@ export default function Navbar() {
       {/* Logo */}
       <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '10px', textDecoration: 'none', flexShrink: 0, background: 'transparent' }}>
         <img
-          src="/logo-icon.jpg"
+          src="/logo-icon.png"
           alt="Cherubim"
           style={{ width: '48px', height: '48px', objectFit: 'contain', flexShrink: 0, background: 'transparent', mixBlendMode: 'normal' }}
         />

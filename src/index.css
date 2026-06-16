@@ -151,9 +151,9 @@ input:focus, textarea:focus { outline: none; }
   white-space: nowrap;
   letter-spacing: 0.02em;
   color: #374151;
-  transition: opacity 0.2s;
+  transition: opacity 0.2s, color 0.2s;
 }
-.trusted-client:hover { opacity: 1; }
+.trusted-client:hover { opacity: 1; color: #1B3990; }
 
 /* Contact page */
 .contact-hero-wrapper {
