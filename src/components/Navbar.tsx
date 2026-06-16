@@ -27,22 +27,22 @@ export default function Navbar() {
     <header
       className="fixed top-0 left-0 w-full z-50 transition-all duration-300"
       style={{
-        background: scrolled ? 'rgba(255,255,255,0.97)' : 'rgba(255,255,255,0.85)',
-        backdropFilter: 'blur(12px)',
+        background: scrolled ? 'rgba(255,255,255,0.95)' : 'rgba(255,255,255,0.6)',
+        backdropFilter: 'blur(16px)',
         borderBottom: scrolled ? '1px solid rgba(0,0,0,0.06)' : '1px solid transparent',
-        boxShadow: scrolled ? '0 2px 20px rgba(0,0,0,0.06)' : 'none',
+        boxShadow: scrolled ? '0 1px 12px rgba(0,0,0,0.05)' : 'none',
       }}
     >
-      <div className="px-8 lg:px-14 xl:px-20 h-14 md:h-16 flex items-center justify-between">
+      <div className="px-8 lg:px-14 xl:px-20 h-12 md:h-14 flex items-center justify-between">
 
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2 cursor-pointer flex-shrink-0">
-          <img src="/logo-icon.jpg" alt="Cherubim" className="h-7 w-auto object-contain" />
+          <img src="/logo-icon.jpg" alt="Cherubim" className="h-6 w-auto object-contain" />
           <div className="hidden sm:block">
-            <div className="font-black text-sm leading-tight tracking-tight" style={{ fontFamily: 'Outfit, sans-serif', color: '#E8187A' }}>
+            <div className="font-black text-xs leading-tight tracking-tight" style={{ fontFamily: 'Outfit, sans-serif', color: '#E8187A' }}>
               CHERUBIM AI INFOSOFT
             </div>
-            <div className="text-[9px] font-bold tracking-widest uppercase mt-0.5" style={{ color: '#1B3990' }}>
+            <div className="text-[8px] font-bold tracking-widest uppercase mt-0.5" style={{ color: '#1B3990' }}>
               Let's AImagine Together!
             </div>
           </div>
@@ -68,7 +68,7 @@ export default function Navbar() {
         {/* CTA */}
         <div className="hidden md:flex items-center gap-3">
           <Link to="/contact"
-            className="px-5 py-2.5 rounded-full text-sm font-bold text-white cursor-pointer transition-all duration-200 hover:opacity-90 hover:scale-105"
+            className="px-4 py-2 rounded-full text-xs font-bold text-white cursor-pointer transition-all duration-200 hover:opacity-90 hover:scale-105"
             style={{ background: 'linear-gradient(135deg, #E8187A, #1B3990)' }}>
             Get Started →
           </Link>
