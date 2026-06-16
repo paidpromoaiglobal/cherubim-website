@@ -2,12 +2,65 @@
 import { Link } from 'react-router-dom';
 
 const services = [
-  { icon: '🤖', title: 'AI & Machine Learning', desc: 'Custom models, NLP, computer vision and intelligent automation.' },
-  { icon: '🌐', title: 'Web Development', desc: 'React, Next.js and Node.js — from startups to enterprise scale.' },
-  { icon: '⚙️', title: 'n8n Automation', desc: 'Connect your tools and eliminate repetitive manual work entirely.' },
-  { icon: '💬', title: 'Chatbot & Voicebot', desc: 'Conversational AI for support, sales and internal operations.' },
-  { icon: '📱', title: 'Mobile Apps', desc: 'Cross-platform iOS & Android apps with seamless backend.' },
-  { icon: '🚀', title: 'Digital Transformation', desc: 'End-to-end strategy and execution for going digital-first.' },
+  {
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E8187A" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="12" cy="4" r="2"/><circle cx="4" cy="20" r="2"/><circle cx="20" cy="20" r="2"/><circle cx="12" cy="13" r="2"/>
+        <line x1="12" y1="6" x2="12" y2="11"/><line x1="10.3" y1="14.3" x2="5.7" y2="18.3"/><line x1="13.7" y1="14.3" x2="18.3" y2="18.3"/><line x1="6" y1="20" x2="18" y2="20"/>
+      </svg>
+    ),
+    title: 'AI & Machine Learning',
+    desc: 'Custom models, NLP, computer vision and intelligent automation.',
+  },
+  {
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E8187A" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+        <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+      </svg>
+    ),
+    title: 'Web Development',
+    desc: 'React, Next.js and Node.js — from startups to enterprise scale.',
+  },
+  {
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E8187A" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/>
+        <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+      </svg>
+    ),
+    title: 'n8n Automation',
+    desc: 'Connect your tools and eliminate repetitive manual work entirely.',
+  },
+  {
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E8187A" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+        <line x1="8" y1="10" x2="16" y2="10"/><line x1="8" y1="14" x2="12" y2="14"/>
+      </svg>
+    ),
+    title: 'Chatbot & Voicebot',
+    desc: 'Conversational AI for support, sales and internal operations.',
+  },
+  {
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E8187A" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+        <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+        <line x1="12" y1="18" x2="12.01" y2="18"/>
+      </svg>
+    ),
+    title: 'Mobile Apps',
+    desc: 'Cross-platform iOS & Android apps with seamless backend.',
+  },
+  {
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E8187A" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+        <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
+        <polyline points="17 6 23 6 23 12"/>
+      </svg>
+    ),
+    title: 'Digital Transformation',
+    desc: 'End-to-end strategy and execution for going digital-first.',
+  },
 ];
 
 const stats = [
@@ -183,19 +236,17 @@ export default function Home() {
       </section>
 
       {/* CTA */}
-      <section className="py-12 md:py-24 px-8 md:px-14 xl:px-20 flex justify-center" style={{ background: 'linear-gradient(135deg, #1B3990 0%, #0A0A0A 60%, #E8187A 100%)' }}>
+      <section className="cta-section" style={{ background: 'linear-gradient(135deg, #1B3990 0%, #0A0A0A 60%, #E8187A 100%)' }}>
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}
-          className="flex flex-col items-center text-center max-w-2xl w-full">
-          <h2 className="font-black text-white mb-5"
-            style={{ fontFamily: 'Outfit, sans-serif', fontSize: 'clamp(2rem, 4vw, 3.2rem)', letterSpacing: '-0.03em' }}>
+          style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', maxWidth: '700px', width: '100%' }}>
+          <h2 style={{ fontFamily: 'Outfit, sans-serif', fontSize: 'clamp(2rem, 5vw, 3.5rem)', fontWeight: 800, lineHeight: 1.2, color: 'white' }}>
             Ready to AImagine your business?
           </h2>
-          <p className="text-lg mb-10" style={{ color: '#d1d5db', lineHeight: 1.7 }}>
+          <p style={{ fontSize: 'clamp(1rem, 2vw, 1.2rem)', maxWidth: '560px', margin: '1rem auto', color: '#d1d5db', lineHeight: 1.7 }}>
             Let's talk about your project. We'll get back to you within 24 hours.
           </p>
-          <Link to="/contact"
-            className="inline-flex items-center gap-2 px-10 py-4 rounded-full font-bold text-base cursor-pointer transition-all duration-200 hover:opacity-90 hover:scale-105"
-            style={{ background: '#E8187A', color: 'white', boxShadow: '0 4px 20px rgba(232,24,122,0.4)' }}>
+          <Link to="/contact" className="cta-btn cursor-pointer transition-opacity duration-200 hover:opacity-90"
+            style={{ background: '#E8187A', color: 'white', boxShadow: '0 4px 20px rgba(232,24,122,0.4)', textDecoration: 'none' }}>
             Book a Free Consultation →
           </Link>
         </motion.div>
