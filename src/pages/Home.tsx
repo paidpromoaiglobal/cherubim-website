@@ -1,4 +1,4 @@
-import { motion } from 'motion/react';
+﻿import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
 
 const services = [
@@ -65,7 +65,7 @@ export default function Home() {
           <motion.p
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.2 }}
             className="text-lg mb-10 mx-auto max-w-2xl"
-            style={{ color: 'rgba(255,255,255,0.75)', lineHeight: 1.7 }}>
+            style={{ color: '#d1d5db', lineHeight: 1.7 }}>
             We build intelligent software — AI models, automation workflows, and digital products — that help businesses grow faster and work smarter.
           </motion.p>
 
@@ -79,7 +79,7 @@ export default function Home() {
             </Link>
             <Link to="/work"
               className="px-8 py-4 rounded-full font-bold text-sm cursor-pointer transition-all duration-200 hover:bg-white/10"
-              style={{ border: '1px solid rgba(255,255,255,0.2)', color: 'rgba(255,255,255,0.8)' }}>
+              style={{ border: '1px solid rgba(255,255,255,0.2)', color: '#d1d5db' }}>
               See Our Work
             </Link>
           </motion.div>
@@ -92,7 +92,7 @@ export default function Home() {
             {stats.map(s => (
               <div key={s.n} className="py-5 text-center" style={{ background: 'transparent' }}>
                 <div className="font-black text-2xl" style={{ fontFamily: 'Outfit, sans-serif', color: '#E8187A' }}>{s.n}</div>
-                <div className="text-xs mt-1" style={{ color: 'rgba(255,255,255,0.82)' }}>{s.l}</div>
+                <div className="text-xs mt-1" style={{ color: '#d1d5db' }}>{s.l}</div>
               </div>
             ))}
           </motion.div>
@@ -101,7 +101,7 @@ export default function Home() {
         {/* Scroll cue */}
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.2 }}
           className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
-          <span className="text-xs tracking-widest uppercase" style={{ color: 'rgba(255,255,255,0.2)' }}>scroll</span>
+          <span className="text-xs tracking-widest uppercase" style={{ color: 'rgba(255,255,255,0.45)' }}>scroll</span>
           <motion.div animate={{ y: [0, 6, 0] }} transition={{ repeat: Infinity, duration: 1.5 }}
             className="w-px h-8" style={{ background: 'linear-gradient(to bottom, rgba(255,255,255,0.3), transparent)' }} />
         </motion.div>
@@ -145,12 +145,12 @@ export default function Home() {
       {/* Trusted by */}
       <section className="py-16 px-8 md:px-14 xl:px-20" style={{ background: 'white', borderTop: '1px solid rgba(0,0,0,0.05)', borderBottom: '1px solid rgba(0,0,0,0.05)' }}>
         <div className="w-full">
-          <p className="text-center text-xs font-bold tracking-widest uppercase mb-8" style={{ color: 'rgba(0,0,0,0.25)' }}>
+          <p className="text-center text-xs font-bold tracking-widest uppercase mb-8" style={{ color: '#94a3b8' }}>
             Trusted by businesses across India & beyond
           </p>
           <div className="flex items-center justify-center flex-wrap gap-8 md:gap-14">
             {clients.map(c => (
-              <span key={c} className="text-sm font-bold" style={{ color: 'rgba(0,0,0,0.25)' }}>{c}</span>
+              <span key={c} className="text-sm font-bold" style={{ color: '#94a3b8' }}>{c}</span>
             ))}
           </div>
         </div>
@@ -164,7 +164,7 @@ export default function Home() {
             style={{ fontFamily: 'Outfit, sans-serif', fontSize: 'clamp(2rem, 4vw, 3.2rem)', letterSpacing: '-0.03em' }}>
             Ready to AImagine your business?
           </h2>
-          <p className="text-lg mb-10" style={{ color: 'rgba(255,255,255,0.8)', lineHeight: 1.7 }}>
+          <p className="text-lg mb-10" style={{ color: '#d1d5db', lineHeight: 1.7 }}>
             Let's talk about your project. We'll get back to you within 24 hours.
           </p>
           <Link to="/contact"

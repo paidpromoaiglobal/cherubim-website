@@ -1,4 +1,4 @@
-import { motion } from 'motion/react';
+﻿import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
 
 const stats = [
@@ -75,7 +75,7 @@ export default function About() {
               <motion.p
                 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.2 }}
                 className="text-base leading-relaxed mb-8"
-                style={{ color: 'rgba(255,255,255,0.80)', maxWidth: '480px' }}>
+                style={{ color: '#d1d5db', maxWidth: '480px' }}>
                 Since 2019, we've been building AI-powered software, automation workflows, and digital products that help businesses grow faster and work smarter.
               </motion.p>
               <motion.div
@@ -84,7 +84,7 @@ export default function About() {
                 {stats.map(s => (
                   <div key={s.n}>
                     <div className="font-black text-2xl mb-0.5" style={{ fontFamily: 'Outfit, sans-serif', color: '#E8187A' }}>{s.n}</div>
-                    <div className="text-xs" style={{ color: 'rgba(255,255,255,0.82)' }}>{s.l}</div>
+                    <div className="text-xs" style={{ color: '#d1d5db' }}>{s.l}</div>
                   </div>
                 ))}
               </motion.div>
@@ -93,13 +93,13 @@ export default function About() {
               initial={{ opacity: 0, x: 30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8, delay: 0.2 }}
               className="rounded-2xl overflow-hidden p-8"
               style={{ background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.15)' }}>
-              <p className="text-sm leading-relaxed mb-5" style={{ color: 'rgba(255,255,255,0.75)' }}>
+              <p className="text-sm leading-relaxed mb-5" style={{ color: '#d1d5db' }}>
                 Cherubim AI Infosoft Pvt Ltd is a Chennai-based technology company specialising in AI-driven software solutions, workflow automation, and digital product development.
               </p>
-              <p className="text-sm leading-relaxed mb-5" style={{ color: 'rgba(255,255,255,0.75)' }}>
+              <p className="text-sm leading-relaxed mb-5" style={{ color: '#d1d5db' }}>
                 We partner with startups, SMEs, and enterprises to build intelligent systems that reduce manual effort, improve decision-making, and accelerate growth — from first prototype to production at scale.
               </p>
-              <p className="text-sm leading-relaxed" style={{ color: 'rgba(255,255,255,0.75)' }}>
+              <p className="text-sm leading-relaxed" style={{ color: '#d1d5db' }}>
                 Our team of engineers, designers, and AI specialists has delivered 80+ projects across e-commerce, education, real estate, healthcare, and SaaS — and we've built our own AI products along the way.
               </p>
             </motion.div>
@@ -205,7 +205,7 @@ export default function About() {
             style={{ fontFamily: 'Outfit, sans-serif', fontSize: 'clamp(1.6rem, 3.5vw, 2.5rem)', letterSpacing: '-0.03em' }}>
             Want to join us or work with us?
           </h2>
-          <p className="mb-8 text-sm" style={{ color: 'rgba(255,255,255,0.75)' }}>
+          <p className="mb-8 text-sm" style={{ color: '#d1d5db' }}>
             We're always open to talented engineers, designers, and AI specialists.
           </p>
           <Link to="/contact"

@@ -1,4 +1,4 @@
-import { motion } from 'motion/react';
+﻿import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
 
 const services = [
@@ -105,7 +105,7 @@ export default function Services() {
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.2 }}
-            className="text-base max-w-xl" style={{ color: 'rgba(255,255,255,0.80)', lineHeight: 1.7 }}>
+            className="text-base max-w-xl" style={{ color: '#d1d5db', lineHeight: 1.7 }}>
             From AI models to automation workflows to production apps — we are the end-to-end technology partner for ambitious businesses.
           </motion.p>
         </div>
@@ -180,7 +180,7 @@ export default function Services() {
             style={{ fontFamily: 'Outfit, sans-serif', fontSize: 'clamp(1.6rem, 3.5vw, 2.5rem)', letterSpacing: '-0.03em' }}>
             Not sure which service fits?
           </h2>
-          <p className="mb-8 text-sm" style={{ color: 'rgba(255,255,255,0.75)' }}>
+          <p className="mb-8 text-sm" style={{ color: '#d1d5db' }}>
             Tell us your challenge and we'll recommend the right approach — no obligation.
           </p>
           <Link to="/contact"

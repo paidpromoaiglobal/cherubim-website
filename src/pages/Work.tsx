@@ -1,4 +1,4 @@
-import { motion } from 'motion/react';
+﻿import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
 
 const projects = [
@@ -58,12 +58,12 @@ const projects = [
   },
 ];
 
-const tagColors: Record<string, { bg: string; color: string }> = {
-  'Education': { bg: 'rgba(27,57,144,0.08)', color: '#1B3990' },
-  'Retail': { bg: 'rgba(232,24,122,0.08)', color: '#E8187A' },
-  'Construction': { bg: 'rgba(43,164,212,0.08)', color: '#2BA4D4' },
-  'EdTech': { bg: 'rgba(27,57,144,0.08)', color: '#1B3990' },
-  'AI Automation': { bg: 'rgba(232,24,122,0.08)', color: '#E8187A' },
+const tagColors: Record<string, { background: string; color: string }> = {
+  'Education': { background: 'rgba(27,57,144,0.08)', color: '#1B3990' },
+  'Retail': { background: 'rgba(232,24,122,0.08)', color: '#E8187A' },
+  'Construction': { background: 'rgba(43,164,212,0.08)', color: '#2BA4D4' },
+  'EdTech': { background: 'rgba(27,57,144,0.08)', color: '#1B3990' },
+  'AI Automation': { background: 'rgba(232,24,122,0.08)', color: '#E8187A' },
 };
 
 export default function Work() {
@@ -94,7 +94,7 @@ export default function Work() {
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.2 }}
-            className="text-base max-w-xl" style={{ color: 'rgba(255,255,255,0.80)', lineHeight: 1.7 }}>
+            className="text-base max-w-xl" style={{ color: '#d1d5db', lineHeight: 1.7 }}>
             A selection of projects across education, retail, construction, and AI — each one built with a specific business outcome in mind.
           </motion.p>
         </div>
@@ -117,7 +117,7 @@ export default function Work() {
                   <div>
                     <span
                       className="text-xs font-bold px-2.5 py-1 rounded-full"
-                      style={tagColors[p.tag] || { bg: 'rgba(0,0,0,0.06)', color: '#555' }}>
+                      style={tagColors[p.tag] || { background: 'rgba(0,0,0,0.06)', color: '#555' }}>
                       {p.tag}
                     </span>
                   </div>
@@ -189,7 +189,7 @@ export default function Work() {
             style={{ fontFamily: 'Outfit, sans-serif', fontSize: 'clamp(1.6rem, 3.5vw, 2.5rem)', letterSpacing: '-0.03em' }}>
             Ready to be our next success story?
           </h2>
-          <p className="mb-8 text-sm" style={{ color: 'rgba(255,255,255,0.75)' }}>
+          <p className="mb-8 text-sm" style={{ color: '#d1d5db' }}>
             Tell us about your project and let's figure out how we can help.
           </p>
           <Link to="/contact"

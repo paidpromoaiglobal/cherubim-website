@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+﻿import { Link } from 'react-router-dom';
 
 const services = ['AI & Machine Learning', 'Web Development', 'n8n Automation', 'Chatbot & Voicebot', 'Mobile Apps', 'Digital Transformation'];
 const company = [
@@ -27,7 +27,7 @@ export default function Footer() {
                 </div>
               </div>
             </div>
-            <p className="text-sm leading-relaxed mb-6" style={{ color: 'rgba(255,255,255,0.72)' }}>
+            <p className="text-sm leading-relaxed mb-6" style={{ color: '#c9d6df' }}>
               Cherubim AI Infosoft Pvt Ltd is a Chennai-based technology company building AI-powered software, automation workflows, and digital products since 2019.
             </p>
             <div className="flex items-center gap-3">
@@ -52,7 +52,7 @@ export default function Footer() {
               {services.map(s => (
                 <li key={s}>
                   <Link to="/services" className="text-sm transition-colors duration-200 cursor-pointer hover:text-white"
-                    style={{ color: 'rgba(255,255,255,0.72)' }}>
+                    style={{ color: '#c9d6df' }}>
                     {s}
                   </Link>
                 </li>
@@ -67,13 +67,13 @@ export default function Footer() {
               {company.map(c => (
                 <li key={c.label}>
                   <Link to={c.to} className="text-sm transition-colors duration-200 cursor-pointer hover:text-white"
-                    style={{ color: 'rgba(255,255,255,0.72)' }}>
+                    style={{ color: '#c9d6df' }}>
                     {c.label}
                   </Link>
                 </li>
               ))}
             </ul>
-            <div className="space-y-2 text-sm" style={{ color: 'rgba(255,255,255,0.72)' }}>
+            <div className="space-y-2 text-sm" style={{ color: '#c9d6df' }}>
               <a href="tel:+919384888421" className="block hover:text-white transition-colors cursor-pointer">+91 93848 88421</a>
               <a href="mailto:info@cherubim.in" className="block hover:text-white transition-colors cursor-pointer">info@cherubim.in</a>
               <p>Chennai, Tamil Nadu, India</p>
@@ -82,14 +82,14 @@ export default function Footer() {
         </div>
 
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4"
-          style={{ borderTop: '1px solid rgba(255,255,255,0.12)' }}>
-          <p className="text-xs" style={{ color: 'rgba(255,255,255,0.5)' }}>
+          style={{ borderTop: '1px solid rgba(255,255,255,0.22)' }}>
+          <p className="text-xs" style={{ color: '#94a3b8' }}>
             © {new Date().getFullYear()} Cherubim AI Infosoft Pvt Ltd · All rights reserved
           </p>
           <div className="flex items-center gap-4">
             {['Privacy Policy', 'Terms of Service'].map(l => (
               <a key={l} href="#" className="text-xs transition-colors cursor-pointer hover:text-white"
-                style={{ color: 'rgba(255,255,255,0.5)' }}>
+                style={{ color: '#94a3b8' }}>
                 {l}
               </a>
             ))}
