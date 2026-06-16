@@ -84,7 +84,7 @@ export default function About() {
                 {stats.map(s => (
                   <div key={s.n}>
                     <div className="font-black text-2xl mb-0.5" style={{ fontFamily: 'Outfit, sans-serif', color: '#E8187A' }}>{s.n}</div>
-                    <div className="text-xs" style={{ color: 'rgba(255,255,255,0.65)' }}>{s.l}</div>
+                    <div className="text-xs" style={{ color: 'rgba(255,255,255,0.82)' }}>{s.l}</div>
                   </div>
                 ))}
               </motion.div>

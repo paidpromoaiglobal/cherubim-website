@@ -92,7 +92,7 @@ export default function Home() {
             {stats.map(s => (
               <div key={s.n} className="py-5 text-center" style={{ background: 'transparent' }}>
                 <div className="font-black text-2xl" style={{ fontFamily: 'Outfit, sans-serif', color: '#E8187A' }}>{s.n}</div>
-                <div className="text-xs mt-1" style={{ color: 'rgba(255,255,255,0.65)' }}>{s.l}</div>
+                <div className="text-xs mt-1" style={{ color: 'rgba(255,255,255,0.82)' }}>{s.l}</div>
               </div>
             ))}
           </motion.div>

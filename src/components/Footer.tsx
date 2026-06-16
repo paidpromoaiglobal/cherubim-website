@@ -16,7 +16,7 @@ export default function Footer() {
 
           {/* Brand */}
           <div className="lg:col-span-2">
-            <div className="flex items-center gap-3 mb-4">
+            <div className="flex items-center gap-3 mb-5">
               <img src="/logo-icon.jpg" alt="Cherubim" className="h-10 w-auto object-contain" />
               <div>
                 <div className="font-black text-base" style={{ fontFamily: 'Outfit, sans-serif', color: '#E8187A' }}>
@@ -27,7 +27,7 @@ export default function Footer() {
                 </div>
               </div>
             </div>
-            <p className="text-sm leading-relaxed mb-6" style={{ color: 'rgba(255,255,255,0.4)' }}>
+            <p className="text-sm leading-relaxed mb-6" style={{ color: 'rgba(255,255,255,0.72)' }}>
               Cherubim AI Infosoft Pvt Ltd is a Chennai-based technology company building AI-powered software, automation workflows, and digital products since 2019.
             </p>
             <div className="flex items-center gap-3">
@@ -38,7 +38,7 @@ export default function Footer() {
               ].map(s => (
                 <a key={s.label} href={s.href} aria-label={s.label}
                   className="w-9 h-9 rounded-full flex items-center justify-center text-xs font-bold transition-all duration-200 hover:opacity-80 cursor-pointer"
-                  style={{ background: 'rgba(255,255,255,0.08)', color: 'rgba(255,255,255,0.6)' }}>
+                  style={{ background: 'rgba(255,255,255,0.12)', color: 'rgba(255,255,255,0.85)' }}>
                   {s.icon}
                 </a>
               ))}
@@ -48,11 +48,11 @@ export default function Footer() {
           {/* Services */}
           <div>
             <h4 className="text-xs font-bold tracking-widest uppercase mb-4" style={{ color: '#E8187A' }}>Services</h4>
-            <ul className="space-y-2.5">
+            <ul className="space-y-3">
               {services.map(s => (
                 <li key={s}>
                   <Link to="/services" className="text-sm transition-colors duration-200 cursor-pointer hover:text-white"
-                    style={{ color: 'rgba(255,255,255,0.4)' }}>
+                    style={{ color: 'rgba(255,255,255,0.72)' }}>
                     {s}
                   </Link>
                 </li>
@@ -63,17 +63,17 @@ export default function Footer() {
           {/* Company */}
           <div>
             <h4 className="text-xs font-bold tracking-widest uppercase mb-4" style={{ color: '#E8187A' }}>Company</h4>
-            <ul className="space-y-2.5 mb-6">
+            <ul className="space-y-3 mb-6">
               {company.map(c => (
                 <li key={c.label}>
                   <Link to={c.to} className="text-sm transition-colors duration-200 cursor-pointer hover:text-white"
-                    style={{ color: 'rgba(255,255,255,0.4)' }}>
+                    style={{ color: 'rgba(255,255,255,0.72)' }}>
                     {c.label}
                   </Link>
                 </li>
               ))}
             </ul>
-            <div className="space-y-2 text-sm" style={{ color: 'rgba(255,255,255,0.4)' }}>
+            <div className="space-y-2 text-sm" style={{ color: 'rgba(255,255,255,0.72)' }}>
               <a href="tel:+919384888421" className="block hover:text-white transition-colors cursor-pointer">+91 93848 88421</a>
               <a href="mailto:info@cherubim.in" className="block hover:text-white transition-colors cursor-pointer">info@cherubim.in</a>
               <p>Chennai, Tamil Nadu, India</p>
@@ -82,14 +82,14 @@ export default function Footer() {
         </div>
 
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4"
-          style={{ borderTop: '1px solid rgba(255,255,255,0.06)' }}>
-          <p className="text-xs" style={{ color: 'rgba(255,255,255,0.2)' }}>
+          style={{ borderTop: '1px solid rgba(255,255,255,0.12)' }}>
+          <p className="text-xs" style={{ color: 'rgba(255,255,255,0.5)' }}>
             © {new Date().getFullYear()} Cherubim AI Infosoft Pvt Ltd · All rights reserved
           </p>
           <div className="flex items-center gap-4">
             {['Privacy Policy', 'Terms of Service'].map(l => (
               <a key={l} href="#" className="text-xs transition-colors cursor-pointer hover:text-white"
-                style={{ color: 'rgba(255,255,255,0.2)' }}>
+                style={{ color: 'rgba(255,255,255,0.5)' }}>
                 {l}
               </a>
             ))}
