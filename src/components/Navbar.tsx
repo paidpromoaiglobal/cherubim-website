@@ -38,15 +38,17 @@ export default function Navbar() {
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2 cursor-pointer flex-shrink-0">
           <img src="/logo-icon.jpg" alt="Cherubim" className="h-6 w-auto object-contain" />
-          <div className="hidden sm:block">
-            <div className="font-black text-xs leading-tight tracking-tight" style={{ fontFamily: 'Outfit, sans-serif', color: '#E8187A' }}>
-              CHERUBIM AI INFOSOFT
+          {location.pathname === '/' && (
+            <div className="hidden sm:block">
+              <div className="font-black text-xs leading-tight tracking-tight" style={{ fontFamily: 'Outfit, sans-serif', color: '#E8187A' }}>
+                CHERUBIM AI INFOSOFT
+              </div>
+              <div className="text-[8px] font-bold tracking-widest uppercase mt-0.5"
+                style={{ color: scrolled ? '#1B3990' : 'rgba(255,255,255,0.7)' }}>
+                Let's AImagine Together!
+              </div>
             </div>
-            <div className="text-[8px] font-bold tracking-widest uppercase mt-0.5"
-              style={{ color: scrolled ? '#1B3990' : 'rgba(255,255,255,0.7)' }}>
-              Let's AImagine Together!
-            </div>
-          </div>
+          )}
         </Link>
 
         {/* Desktop nav */}
