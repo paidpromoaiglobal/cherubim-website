@@ -1,4 +1,4 @@
-﻿import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const services = ['AI & Machine Learning', 'Web Development', 'n8n Automation', 'Chatbot & Voicebot', 'Mobile Apps', 'Digital Transformation'];
 const company = [
@@ -11,34 +11,39 @@ const company = [
 export default function Footer() {
   return (
     <footer style={{ background: '#0A0A0A' }}>
-      <div className="px-8 lg:px-14 xl:px-20 pt-16 pb-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+      {/* Top accent */}
+      <div className="h-px w-full" style={{ background: 'linear-gradient(90deg, transparent, #E8187A, #1B3990, transparent)' }} />
 
-          {/* Brand */}
-          <div className="lg:col-span-2">
-            <div className="flex items-center gap-3 mb-5">
-              <img src="/logo-icon.jpg" alt="Cherubim" className="h-10 w-auto object-contain" />
+      <div className="px-6 md:px-10 lg:px-16 xl:px-20 pt-12 md:pt-16 pb-6 md:pb-8">
+
+        {/* Main grid */}
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10 mb-10 md:mb-14">
+
+          {/* Brand — full width on mobile, 2 cols on desktop */}
+          <div className="col-span-2 lg:col-span-2">
+            <div className="flex items-center gap-3 mb-4">
+              <img src="/logo-icon.jpg" alt="Cherubim" className="h-9 w-auto object-contain" />
               <div>
-                <div className="font-black text-base" style={{ fontFamily: 'Outfit, sans-serif', color: '#E8187A' }}>
+                <div className="font-black text-sm" style={{ fontFamily: 'Outfit, sans-serif', color: '#E8187A' }}>
                   CHERUBIM AI INFOSOFT
                 </div>
-                <div className="text-[10px] font-bold tracking-widest uppercase" style={{ color: '#2BA4D4' }}>
+                <div className="text-[9px] font-bold tracking-widest uppercase mt-0.5" style={{ color: '#2BA4D4' }}>
                   Let's AImagine Together!
                 </div>
               </div>
             </div>
-            <p className="text-sm leading-relaxed mb-6" style={{ color: '#c9d6df' }}>
-              Cherubim AI Infosoft Pvt Ltd is a Chennai-based technology company building AI-powered software, automation workflows, and digital products since 2019.
+            <p className="text-xs md:text-sm leading-relaxed mb-5 max-w-sm" style={{ color: '#c9d6df' }}>
+              Chennai-based AI & software company building intelligent products, automation workflows, and digital solutions since 2019.
             </p>
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-2">
               {[
                 { label: 'LinkedIn', href: '#', icon: 'in' },
                 { label: 'Twitter', href: '#', icon: 'X' },
                 { label: 'WhatsApp', href: 'https://wa.me/919384888421', icon: 'W' },
               ].map(s => (
                 <a key={s.label} href={s.href} aria-label={s.label}
-                  className="w-9 h-9 rounded-full flex items-center justify-center text-xs font-bold transition-all duration-200 hover:opacity-80 cursor-pointer"
-                  style={{ background: 'rgba(255,255,255,0.12)', color: 'rgba(255,255,255,0.85)' }}>
+                  className="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold transition-all duration-200 hover:scale-110 cursor-pointer"
+                  style={{ background: 'rgba(255,255,255,0.1)', color: 'rgba(255,255,255,0.85)', border: '1px solid rgba(255,255,255,0.08)' }}>
                   {s.icon}
                 </a>
               ))}
@@ -47,11 +52,11 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h4 className="text-xs font-bold tracking-widest uppercase mb-4" style={{ color: '#E8187A' }}>Services</h4>
-            <ul className="space-y-3">
+            <h4 className="text-[10px] font-bold tracking-widest uppercase mb-4" style={{ color: '#E8187A' }}>Services</h4>
+            <ul className="space-y-2.5">
               {services.map(s => (
                 <li key={s}>
-                  <Link to="/services" className="text-sm transition-colors duration-200 cursor-pointer hover:text-white"
+                  <Link to="/services" className="text-xs md:text-sm transition-colors duration-200 cursor-pointer hover:text-white"
                     style={{ color: '#c9d6df' }}>
                     {s}
                   </Link>
@@ -60,36 +65,41 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Company */}
+          {/* Company + Contact */}
           <div>
-            <h4 className="text-xs font-bold tracking-widest uppercase mb-4" style={{ color: '#E8187A' }}>Company</h4>
-            <ul className="space-y-3 mb-6">
+            <h4 className="text-[10px] font-bold tracking-widest uppercase mb-4" style={{ color: '#E8187A' }}>Company</h4>
+            <ul className="space-y-2.5 mb-6">
               {company.map(c => (
                 <li key={c.label}>
-                  <Link to={c.to} className="text-sm transition-colors duration-200 cursor-pointer hover:text-white"
+                  <Link to={c.to} className="text-xs md:text-sm transition-colors duration-200 cursor-pointer hover:text-white"
                     style={{ color: '#c9d6df' }}>
                     {c.label}
                   </Link>
                 </li>
               ))}
             </ul>
-            <div className="space-y-2 text-sm" style={{ color: '#c9d6df' }}>
-              <a href="tel:+919384888421" className="block hover:text-white transition-colors cursor-pointer">+91 93848 88421</a>
-              <a href="mailto:info@cherubim.in" className="block hover:text-white transition-colors cursor-pointer">info@cherubim.in</a>
-              <p>Chennai, Tamil Nadu, India</p>
+            <div className="space-y-2">
+              <a href="tel:+919384888421" className="block text-xs hover:text-white transition-colors cursor-pointer" style={{ color: '#c9d6df' }}>
+                +91 93848 88421
+              </a>
+              <a href="mailto:info@cherubim.in" className="block text-xs hover:text-white transition-colors cursor-pointer" style={{ color: '#c9d6df' }}>
+                info@cherubim.in
+              </a>
+              <p className="text-xs" style={{ color: '#c9d6df' }}>Chennai, Tamil Nadu, India</p>
             </div>
           </div>
         </div>
 
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4"
-          style={{ borderTop: '1px solid rgba(255,255,255,0.22)' }}>
-          <p className="text-xs" style={{ color: '#94a3b8' }}>
+        {/* Bottom bar */}
+        <div className="pt-5 md:pt-6 flex flex-col sm:flex-row items-center justify-between gap-3"
+          style={{ borderTop: '1px solid rgba(255,255,255,0.08)' }}>
+          <p className="text-xs" style={{ color: '#64748b' }}>
             © {new Date().getFullYear()} Cherubim AI Infosoft Pvt Ltd · All rights reserved
           </p>
           <div className="flex items-center gap-4">
             {['Privacy Policy', 'Terms of Service'].map(l => (
               <a key={l} href="#" className="text-xs transition-colors cursor-pointer hover:text-white"
-                style={{ color: '#94a3b8' }}>
+                style={{ color: '#64748b' }}>
                 {l}
               </a>
             ))}

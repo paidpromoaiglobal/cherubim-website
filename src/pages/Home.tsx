@@ -122,21 +122,21 @@ export default function Home() {
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
           {services.map((s, i) => (
             <motion.div key={s.title}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.07 }}
-              className="pt-8 px-6 pb-10 md:pt-12 md:px-10 md:pb-14 rounded-3xl cursor-pointer group transition-all duration-300 hover:-translate-y-2 hover:shadow-xl flex flex-col items-center text-center"
-              style={{ background: 'white', border: '1px solid rgba(0,0,0,0.06)', boxShadow: '0 4px 20px rgba(0,0,0,0.05)' }}>
-              <div className="w-16 h-16 md:w-24 md:h-24 rounded-2xl flex items-center justify-center mb-5 md:mb-7 text-3xl md:text-5xl"
+              className="p-5 md:p-8 rounded-2xl cursor-pointer group transition-all duration-300 hover:-translate-y-1 hover:shadow-lg flex flex-col"
+              style={{ background: 'white', border: '1px solid rgba(0,0,0,0.07)', boxShadow: '0 2px 12px rgba(0,0,0,0.04)', borderTop: '3px solid #E8187A' }}>
+              <div className="w-10 h-10 md:w-14 md:h-14 rounded-xl flex items-center justify-center mb-4 text-xl md:text-3xl"
                 style={{ background: 'rgba(232,24,122,0.08)' }}>
                 {s.icon}
               </div>
-              <h3 className="font-black text-xl md:text-2xl mb-3 md:mb-4" style={{ color: '#0A0A0A', fontFamily: 'Outfit, sans-serif' }}>{s.title}</h3>
-              <p className="text-sm md:text-base leading-relaxed" style={{ color: '#64748b' }}>{s.desc}</p>
+              <h3 className="font-bold text-sm md:text-lg mb-2" style={{ color: '#0A0A0A', fontFamily: 'Outfit, sans-serif', lineHeight: 1.3 }}>{s.title}</h3>
+              <p className="text-xs md:text-sm leading-relaxed" style={{ color: '#64748b' }}>{s.desc}</p>
             </motion.div>
           ))}
         </div>
