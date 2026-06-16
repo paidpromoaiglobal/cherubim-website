@@ -1,4 +1,4 @@
-﻿import { motion } from 'motion/react';
+import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 
@@ -65,62 +65,60 @@ const projects = [
   },
 ];
 
-const tagColors: Record<string, { bg: string; color: string }> = {
-  Education:     { bg: 'rgba(27,57,144,0.1)',   color: '#1B3990' },
-  Retail:        { bg: 'rgba(232,24,122,0.1)',   color: '#E8187A' },
-  Construction:  { bg: 'rgba(43,164,212,0.1)',   color: '#2BA4D4' },
-  EdTech:        { bg: 'rgba(27,57,144,0.1)',    color: '#1B3990' },
-  'AI Automation': { bg: 'rgba(232,24,122,0.1)', color: '#E8187A' },
-};
-
 const allTags = ['All', ...Array.from(new Set(projects.map(p => p.tag)))];
+
+const stats = [
+  { n: '6+', l: 'Completed Projects' },
+  { n: '5', l: 'Industries Served' },
+  { n: '100%', l: 'Client Satisfaction' },
+  { n: '2025–26', l: 'Active Projects' },
+];
+
+const testimonials = [
+  { text: 'Cherubim built our enrollment system in under 2 weeks. The team was responsive and delivered exactly what we needed.', author: 'Sakthi Yogalaya', role: 'Summer Camp 2026' },
+  { text: 'The AI website builder they created for us generates full deployments in minutes. Genuinely impressive engineering.', author: 'PaidPromo AI', role: 'Internal Product' },
+  { text: 'Our website now ranks #1 for local search terms. The Cherubim team understood our business, not just the tech.', author: 'Raj Construction', role: 'Business Website' },
+];
 
 export default function Portfolio() {
   const [active, setActive] = useState('All');
-
   const filtered = active === 'All' ? projects : projects.filter(p => p.tag === active);
 
   return (
     <>
       {/* Hero */}
-      <section className="pt-14 md:pt-20 pb-12 md:pb-24 px-8 md:px-14 xl:px-20 relative overflow-hidden" style={{ background: '#0A0A0A' }}>
+      <section style={{ background: '#0A0A0A', position: 'relative', overflow: 'hidden' }}>
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full opacity-10"
             style={{ background: 'radial-gradient(circle, #E8187A, transparent)' }} />
           <div className="absolute bottom-0 left-0 w-[500px] h-[500px] rounded-full opacity-10"
             style={{ background: 'radial-gradient(circle, #1B3990, transparent)' }} />
         </div>
-
-        <div className="relative z-10 flex flex-col items-center text-center">
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', padding: '5rem 1.5rem 2rem', maxWidth: '900px', margin: '0 auto', position: 'relative', zIndex: 10 }}>
           <motion.h1
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.1 }}
-            className="font-black text-white mb-6"
-            style={{ fontFamily: 'Outfit, sans-serif', fontSize: 'clamp(2rem, 4vw, 3.5rem)', letterSpacing: '-0.03em' }}>
+            style={{ fontFamily: 'Outfit, sans-serif', fontSize: 'clamp(2.2rem, 5vw, 3.8rem)', fontWeight: 800, lineHeight: 1.2, color: 'white', margin: 0 }}>
             Work we're{' '}
             <span style={{ background: 'linear-gradient(135deg, #E8187A, #2BA4D4)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
               proud of.
             </span>
           </motion.h1>
-
           <motion.p
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.2 }}
-            className="text-lg max-w-2xl mb-12" style={{ color: '#d1d5db', lineHeight: 1.8 }}>
+            style={{ fontSize: 'clamp(1rem, 2vw, 1.15rem)', maxWidth: '580px', margin: '1rem auto 0', lineHeight: 1.7, color: '#d1d5db', opacity: 0.8 }}>
             Real projects. Real clients. Real results — across education, retail, construction, and AI.
           </motion.p>
-
-          {/* Stats */}
           <motion.div
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.3 }}
-            className="flex flex-wrap justify-center gap-8 sm:gap-12">
-            {[
-              { n: '6+', l: 'Completed Projects' },
-              { n: '5', l: 'Industries Served' },
-              { n: '100%', l: 'Client Satisfaction' },
-              { n: '2025–26', l: 'Active Projects' },
-            ].map(s => (
-              <div key={s.n} className="text-center">
-                <div className="font-black text-4xl" style={{ fontFamily: 'Outfit, sans-serif', color: '#E8187A' }}>{s.n}</div>
-                <div className="text-sm mt-1 font-semibold" style={{ color: '#d1d5db' }}>{s.l}</div>
+            className="portfolio-stats">
+            {stats.map(s => (
+              <div key={s.n} className="portfolio-stat">
+                <div style={{ fontFamily: 'Outfit, sans-serif', fontSize: 'clamp(2rem, 4vw, 2.8rem)', fontWeight: 800, color: '#ff007a', lineHeight: 1 }}>
+                  {s.n}
+                </div>
+                <div style={{ fontSize: '0.8rem', color: 'rgba(255,255,255,0.6)', marginTop: '0.35rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                  {s.l}
+                </div>
               </div>
             ))}
           </motion.div>
@@ -128,22 +126,23 @@ export default function Portfolio() {
       </section>
 
       {/* Filter + Projects */}
-      <section className="py-10 md:py-20 px-8 md:px-14 xl:px-20" style={{ background: '#F7F8FF' }}>
-
+      <section style={{ background: '#F7F8FF' }}>
         {/* Filter tabs */}
         <motion.div
           initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}
-          className="flex flex-wrap justify-center gap-3 mb-8 md:mb-16">
+          style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '8px', padding: '1.5rem 1rem', margin: '0 auto' }}>
           {allTags.map(tag => (
-            <button
-              key={tag}
-              onClick={() => setActive(tag)}
-              className="px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-200 cursor-pointer"
+            <button key={tag} onClick={() => setActive(tag)}
               style={{
-                background: active === tag ? 'linear-gradient(135deg, #E8187A, #1B3990)' : 'white',
-                color: active === tag ? 'white' : '#374151',
-                border: active === tag ? 'none' : '1px solid rgba(0,0,0,0.1)',
-                boxShadow: active === tag ? '0 4px 12px rgba(232,24,122,0.3)' : 'none',
+                padding: '0.45rem 1.1rem',
+                borderRadius: '999px',
+                fontSize: '0.875rem',
+                fontWeight: 500,
+                border: active === tag ? '1px solid #ff007a' : '1px solid rgba(0,0,0,0.15)',
+                background: active === tag ? '#ff007a' : 'white',
+                color: active === tag ? '#fff' : '#374151',
+                cursor: 'pointer',
+                transition: 'all 0.2s',
               }}>
               {tag}
             </button>
@@ -151,69 +150,63 @@ export default function Portfolio() {
         </motion.div>
 
         {/* Cards grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+        <div className="portfolio-grid">
           {filtered.map((p, i) => (
-            <motion.div
-              key={p.name}
-              layout
+            <motion.div key={p.name} layout
               initial={{ opacity: 0, y: 28 }}
               animate={{ opacity: 1, y: 0 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.07 }}
-              className="rounded-3xl overflow-hidden group hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 cursor-pointer"
-              style={{ background: 'white', border: '1px solid rgba(0,0,0,0.06)', boxShadow: '0 4px 24px rgba(0,0,0,0.06)' }}>
-
-              {/* Card image banner */}
-              <div className="relative overflow-hidden" style={{ height: '220px' }}>
-                <img
-                  src={p.image}
-                  alt={p.name}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
-                <div className="absolute top-4 right-4">
-                  <span className="text-xs font-mono px-2.5 py-1 rounded-lg"
-                    style={{ background: 'rgba(255,255,255,0.85)', color: '#374151', backdropFilter: 'blur(6px)' }}>
-                    {p.year}
-                  </span>
-                </div>
+              className="portfolio-card"
+              style={{
+                background: 'white',
+                borderRadius: '16px',
+                overflow: 'hidden',
+                border: '1px solid rgba(0,0,0,0.08)',
+                display: 'flex',
+                flexDirection: 'column',
+                cursor: 'pointer',
+              }}>
+              {/* Image */}
+              <div style={{ position: 'relative' }}>
+                <img src={p.image} alt={p.name}
+                  style={{ width: '100%', aspectRatio: '16/10', objectFit: 'cover', display: 'block' }} />
+                <span style={{
+                  position: 'absolute',
+                  top: '12px',
+                  right: '12px',
+                  background: 'rgba(255,255,255,0.9)',
+                  color: '#111',
+                  fontSize: '0.7rem',
+                  fontWeight: 700,
+                  padding: '3px 10px',
+                  borderRadius: '999px',
+                }}>
+                  {p.year}
+                </span>
               </div>
 
               {/* Card body */}
-              <div className="p-8">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="text-xs font-bold px-3 py-1 rounded-full"
-                    style={tagColors[p.tag] ?? { background: 'rgba(0,0,0,0.06)', color: '#555' }}>
-                    {p.tag}
-                  </span>
-                </div>
-
-                <h3 className="font-black text-2xl mb-1" style={{ fontFamily: 'Outfit, sans-serif', color: '#0A0A0A' }}>
+              <div style={{ padding: '1.25rem 1.25rem 1rem', display: 'flex', flexDirection: 'column', gap: '0.4rem', flex: 1 }}>
+                <span style={{ fontSize: '0.72rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#ff007a' }}>
+                  {p.tag}
+                </span>
+                <h3 style={{ fontFamily: 'Outfit, sans-serif', fontSize: '1.1rem', fontWeight: 700, margin: 0, color: '#0A0A0A' }}>
                   {p.name}
                 </h3>
-                <p className="text-sm font-semibold mb-4" style={{ color: '#E8187A' }}>{p.type}</p>
-                <p className="text-base leading-relaxed mb-6" style={{ color: '#64748b' }}>{p.desc}</p>
-
-                {/* Tech stack */}
-                <div className="flex flex-wrap gap-2 mb-6">
+                <p style={{ fontSize: '0.82rem', color: '#ff007a', fontWeight: 500, margin: 0 }}>
+                  {p.type}
+                </p>
+                <p style={{ fontSize: '0.875rem', lineHeight: 1.6, opacity: 0.75, margin: '0.3rem 0', color: '#374151' }}>
+                  {p.desc}
+                </p>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px', marginTop: '0.5rem' }}>
                   {p.services.map(s => (
-                    <span key={s} className="text-xs px-3 py-1 rounded-full font-medium"
-                      style={{ background: 'rgba(0,0,0,0.04)', color: '#374151', border: '1px solid rgba(0,0,0,0.06)' }}>
-                      {s}
-                    </span>
+                    <span key={s} style={{ fontSize: '0.72rem', color: '#555' }}>{s}</span>
                   ))}
                 </div>
-
-                {/* Highlight */}
-                <div className="flex items-center gap-2 pt-4" style={{ borderTop: '1px solid rgba(0,0,0,0.06)' }}>
-                  <div className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0"
-                    style={{ background: 'rgba(232,24,122,0.1)' }}>
-                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#E8187A" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
-                      <polyline points="20 6 9 17 4 12"/>
-                    </svg>
-                  </div>
-                  <span className="text-sm font-semibold" style={{ color: '#E8187A' }}>{p.highlight}</span>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '0.82rem', fontWeight: 600, color: '#ff007a', marginTop: '0.75rem' }}>
+                  <span>✓</span>
+                  <span>{p.highlight}</span>
                 </div>
               </div>
             </motion.div>
@@ -222,74 +215,77 @@ export default function Portfolio() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-12 md:py-24 px-8 md:px-14 xl:px-20" style={{ background: 'white' }}>
-        <div className="text-center mb-8 md:mb-16">
-          <p className="text-sm font-bold tracking-widest uppercase mb-4" style={{ color: '#E8187A' }}>What clients say</p>
-          <h2 className="font-black" style={{ fontFamily: 'Outfit, sans-serif', fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)', letterSpacing: '-0.03em', color: '#0A0A0A' }}>
+      <section style={{ background: 'white' }}>
+        <div style={{ textAlign: 'center', padding: '4rem 2rem', maxWidth: '1200px', margin: '0 auto' }}>
+          <span style={{ fontSize: '0.75rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: '#ff007a', fontWeight: 600, display: 'block', marginBottom: '0.5rem' }}>
+            What clients say
+          </span>
+          <h2 style={{ fontFamily: 'Outfit, sans-serif', fontSize: 'clamp(1.8rem, 4vw, 2.6rem)', fontWeight: 800, color: '#0A0A0A', marginBottom: '2.5rem' }}>
             Words from our clients
           </h2>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {[
-            { text: 'Cherubim built our enrollment system in under 2 weeks. The team was responsive and delivered exactly what we needed.', author: 'Sakthi Yogalaya', role: 'Summer Camp 2026' },
-            { text: 'The AI website builder they created for us generates full deployments in minutes. Genuinely impressive engineering.', author: 'PaidPromo AI', role: 'Internal Product' },
-            { text: 'Our website now ranks #1 for local search terms. The Cherubim team understood our business, not just the tech.', author: 'Raj Construction', role: 'Business Website' },
-          ].map((t, i) => (
-            <motion.div key={i}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.12 }}
-              className="p-10 rounded-3xl flex flex-col"
-              style={{ background: '#F7F8FF', border: '1px solid rgba(0,0,0,0.07)', boxShadow: '0 4px 20px rgba(0,0,0,0.05)' }}>
-              {/* Stars */}
-              <div className="flex gap-1.5 mb-6">
-                {[1,2,3,4,5].map(s => (
-                  <svg key={s} width="22" height="22" viewBox="0 0 24 24" fill="#E8187A" stroke="none">
-                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
-                  </svg>
-                ))}
-              </div>
-              {/* Quote */}
-              <p className="text-lg font-medium leading-relaxed mb-8 flex-1" style={{ color: '#1a1a1a', lineHeight: 1.75 }}>
-                "{t.text}"
-              </p>
-              {/* Author */}
-              <div className="flex items-center gap-3 pt-6" style={{ borderTop: '1px solid rgba(0,0,0,0.08)' }}>
-                <div className="w-11 h-11 rounded-full flex items-center justify-center flex-shrink-0 font-black text-white text-base"
-                  style={{ background: 'linear-gradient(135deg, #E8187A, #1B3990)', fontFamily: 'Outfit, sans-serif' }}>
-                  {t.author[0]}
+          <div className="testimonials-grid">
+            {testimonials.map((t, i) => (
+              <motion.div key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.12 }}
+                style={{
+                  border: '1px solid rgba(0,0,0,0.08)',
+                  borderRadius: '16px',
+                  padding: '1.5rem',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '0.75rem',
+                  textAlign: 'left',
+                  background: 'white',
+                }}>
+                <div style={{ color: '#ff007a', fontSize: '1rem' }}>★★★★★</div>
+                <p style={{ fontSize: '0.95rem', lineHeight: 1.65, opacity: 0.85, fontStyle: 'italic', margin: 0, color: '#1a1a1a', flex: 1 }}>
+                  "{t.text}"
+                </p>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                  <div style={{
+                    width: '38px',
+                    height: '38px',
+                    borderRadius: '50%',
+                    background: '#ff007a',
+                    color: '#fff',
+                    fontWeight: 700,
+                    fontFamily: 'Outfit, sans-serif',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    flexShrink: 0,
+                    fontSize: '1rem',
+                  }}>
+                    {t.author[0]}
+                  </div>
+                  <div>
+                    <div style={{ fontSize: '0.9rem', fontWeight: 700, color: '#0A0A0A', fontFamily: 'Outfit, sans-serif' }}>{t.author}</div>
+                    <div style={{ fontSize: '0.78rem', opacity: 0.6, color: '#374151' }}>{t.role}</div>
+                  </div>
                 </div>
-                <div>
-                  <div className="font-black text-base" style={{ color: '#0A0A0A', fontFamily: 'Outfit, sans-serif' }}>{t.author}</div>
-                  <div className="text-sm mt-0.5 font-medium" style={{ color: '#94a3b8' }}>{t.role}</div>
-                </div>
-              </div>
-            </motion.div>
-          ))}
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="py-12 md:py-24 px-8 md:px-14 xl:px-20" style={{ background: 'linear-gradient(135deg, #1B3990 0%, #0A0A0A 60%, #E8187A 100%)' }}>
-        <div className="flex flex-col items-center text-center">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-            <h2 className="font-black text-white mb-4"
-              style={{ fontFamily: 'Outfit, sans-serif', fontSize: 'clamp(1.8rem, 4vw, 3rem)', letterSpacing: '-0.03em' }}>
-              Ready to be our next success story?
-            </h2>
-            <p className="text-lg mb-10 max-w-xl mx-auto" style={{ color: '#d1d5db' }}>
-              Tell us about your project and let's figure out how we can help.
-            </p>
-            <Link to="/contact"
-              className="inline-flex items-center gap-2 px-10 py-4 rounded-full font-bold text-base text-white transition-all duration-200 hover:opacity-90 hover:scale-105"
-              style={{ background: '#E8187A', boxShadow: '0 4px 20px rgba(232,24,122,0.4)' }}>
-              Start your project →
-            </Link>
-          </motion.div>
-        </div>
+      <section style={{ background: 'linear-gradient(135deg, #1B3990 0%, #0A0A0A 60%, #E8187A 100%)', textAlign: 'center', padding: '5rem 1.5rem' }}>
+        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+          <h2 style={{ fontFamily: 'Outfit, sans-serif', fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', fontWeight: 800, color: '#fff' }}>
+            Ready to be our next success story?
+          </h2>
+          <p style={{ fontSize: '1rem', opacity: 0.8, margin: '0.75rem auto', maxWidth: '520px', color: '#d1d5db', lineHeight: 1.7 }}>
+            Tell us about your project and let's figure out how we can help.
+          </p>
+          <Link to="/contact" className="cta-btn-outline">
+            Start your project →
+          </Link>
+        </motion.div>
       </section>
     </>
   );
 }
-
