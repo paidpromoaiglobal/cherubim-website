@@ -20,7 +20,7 @@ export default function Navbar() {
         zIndex: 1000,
         background: '#0d0d0d',
         padding: '0 2rem',
-        height: '70px',
+        height: '72px',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
@@ -32,7 +32,7 @@ export default function Navbar() {
         <img
           src="/logo-icon.jpg"
           alt="Cherubim"
-          style={{ width: '36px', height: '36px', objectFit: 'contain', flexShrink: 0, background: 'transparent', mixBlendMode: 'normal' }}
+          style={{ width: '48px', height: '48px', objectFit: 'contain', flexShrink: 0, background: 'transparent', mixBlendMode: 'normal' }}
         />
         <div className="logo-text">
           <div style={{ fontFamily: 'Outfit, sans-serif', fontSize: '1rem', fontWeight: 700, color: '#ff007a', lineHeight: 1.2 }}>

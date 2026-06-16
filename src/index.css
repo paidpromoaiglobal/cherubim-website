@@ -135,10 +135,15 @@ input:focus, textarea:focus { outline: none; }
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 2.5rem;
-  padding: 0 2rem;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 0 1.5rem;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
 }
+.trusted-clients::-webkit-scrollbar { display: none; }
 .trusted-client {
   font-size: 0.95rem;
   font-weight: 600;

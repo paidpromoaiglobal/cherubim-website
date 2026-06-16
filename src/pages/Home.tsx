@@ -223,7 +223,7 @@ export default function Home() {
 
       {/* Trusted by */}
       <section style={{ background: 'white', borderTop: '1px solid rgba(0,0,0,0.08)', padding: '2.5rem 0' }}>
-        <span style={{ display: 'block', textAlign: 'center', fontSize: '0.7rem', letterSpacing: '0.15em', textTransform: 'uppercase', opacity: 0.45, marginBottom: '1.25rem', color: '#374151' }}>
+        <span style={{ display: 'block', textAlign: 'center', fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.15em', textTransform: 'uppercase', background: 'linear-gradient(90deg, #1a1a6e 0%, #ff007a 50%, #00c8ff 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', color: 'transparent', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', width: '100%', marginBottom: '1.25rem' }}>
           Trusted by businesses across India & beyond
         </span>
         <div className="trusted-clients">
