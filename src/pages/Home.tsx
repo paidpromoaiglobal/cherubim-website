@@ -108,37 +108,63 @@ export default function Home() {
       </section>
 
       {/* Services preview */}
-      <section className="py-12 md:py-24 px-8 md:px-14 xl:px-20" style={{ background: '#F7F8FF' }}>
-        <div className="text-center mb-8 md:mb-16">
-          <p className="text-sm font-bold tracking-widest uppercase mb-4" style={{ color: '#E8187A' }}>What we do</p>
-          <h2 className="font-black mb-6" style={{ fontFamily: 'Outfit, sans-serif', fontSize: 'clamp(2rem, 4.5vw, 3.5rem)', letterSpacing: '-0.03em', color: '#0A0A0A' }}>
-            Services built for<br />
-            <span style={{ color: '#1B3990' }}>the intelligent era.</span>
-          </h2>
-          <Link to="/services"
-            className="inline-block text-base font-semibold cursor-pointer transition-colors hover:opacity-70"
-            style={{ color: '#E8187A' }}>
-            All services →
-          </Link>
-        </div>
+      <section style={{ background: '#F7F8FF', padding: '4rem 2rem' }}>
+        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+          <div className="text-center mb-8 md:mb-12">
+            <p className="text-sm font-bold tracking-widest uppercase mb-4" style={{ color: '#E8187A' }}>What we do</p>
+            <h2 className="font-black mb-6" style={{ fontFamily: 'Outfit, sans-serif', fontSize: 'clamp(2rem, 4.5vw, 3.5rem)', letterSpacing: '-0.03em', color: '#0A0A0A' }}>
+              Services built for<br />
+              <span style={{ color: '#1B3990' }}>the intelligent era.</span>
+            </h2>
+            <Link to="/services"
+              className="inline-block text-base font-semibold cursor-pointer transition-colors hover:opacity-70"
+              style={{ color: '#E8187A' }}>
+              All services →
+            </Link>
+          </div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-          {services.map((s, i) => (
-            <motion.div key={s.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.07 }}
-              className="p-5 md:p-8 rounded-2xl cursor-pointer group transition-all duration-300 hover:-translate-y-1 hover:shadow-lg flex flex-col"
-              style={{ background: 'white', border: '1px solid rgba(0,0,0,0.07)', boxShadow: '0 2px 12px rgba(0,0,0,0.04)', borderTop: '3px solid #E8187A' }}>
-              <div className="w-10 h-10 md:w-14 md:h-14 rounded-xl flex items-center justify-center mb-4 text-xl md:text-3xl"
-                style={{ background: 'rgba(232,24,122,0.08)' }}>
-                {s.icon}
-              </div>
-              <h3 className="font-bold text-sm md:text-lg mb-2" style={{ color: '#0A0A0A', fontFamily: 'Outfit, sans-serif', lineHeight: 1.3 }}>{s.title}</h3>
-              <p className="text-xs md:text-sm leading-relaxed" style={{ color: '#64748b' }}>{s.desc}</p>
-            </motion.div>
-          ))}
+          <div className="services-grid">
+            {services.map((s, i) => (
+              <motion.div key={s.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.07 }}
+                className="services-card"
+                style={{
+                  background: 'white',
+                  border: '1px solid #e0e0e0',
+                  borderRadius: '12px',
+                  padding: '2rem',
+                  height: '100%',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  transition: 'all 0.2s ease',
+                  cursor: 'pointer',
+                }}>
+                <div style={{
+                  width: '48px',
+                  height: '48px',
+                  borderRadius: '10px',
+                  background: 'rgba(232,24,122,0.08)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  fontSize: '1.5rem',
+                  marginBottom: '1rem',
+                  flexShrink: 0,
+                }}>
+                  {s.icon}
+                </div>
+                <h3 style={{ fontFamily: 'Outfit, sans-serif', fontSize: '1.25rem', fontWeight: 600, color: '#0A0A0A', marginBottom: '0.5rem', lineHeight: 1.3 }}>
+                  {s.title}
+                </h3>
+                <p style={{ fontSize: '1rem', lineHeight: 1.6, color: '#64748b', margin: 0 }}>
+                  {s.desc}
+                </p>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 

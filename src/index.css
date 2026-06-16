@@ -30,3 +30,23 @@ body {
 input:focus, textarea:focus { outline: none; }
 
 ::selection { background: #E8187A; color: white; }
+
+/* Services grid — responsive 1 / 2 / 3 columns */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+  align-items: stretch;
+}
+@media (min-width: 768px) {
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1024px) {
+  .services-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* Service card hover */
+.services-card:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+}
