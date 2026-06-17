@@ -123,7 +123,7 @@ export default function Home() {
           {/* Paragraph — text-base (16px) on mobile, text-lg on md+ */}
           <motion.p
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.2 }}
-            className="text-base md:text-lg mb-5 md:mb-8"
+            className="text-base md:text-lg mb-8 md:mb-12"
             style={{ color: '#d1d5db', lineHeight: 1.7, textAlign: 'center', maxWidth: '42rem', marginLeft: 'auto', marginRight: 'auto', display: 'block' }}>
             We build intelligent software — AI models, automation workflows, and digital products — that help businesses grow faster and work smarter.
           </motion.p>
@@ -131,7 +131,7 @@ export default function Home() {
           {/* CTA buttons — stack on mobile */}
           <motion.div
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.3 }}
-            className="hero-cta-buttons">
+            className="hero-cta-buttons mb-8 md:mb-12">
             <Link to="/contact"
               className="home-cta-primary rounded-full font-bold cursor-pointer transition-all duration-200 hover:opacity-90 hover:scale-105"
               style={{ background: 'linear-gradient(135deg, #E8187A, #C41060)', textDecoration: 'none', color: '#fff', border: '1px solid transparent' }}>
