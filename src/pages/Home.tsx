@@ -123,8 +123,8 @@ export default function Home() {
           {/* Paragraph — text-base (16px) on mobile, text-lg on md+ */}
           <motion.p
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.2 }}
-            className="text-base md:text-lg mb-5 md:mb-8 mx-auto max-w-2xl text-center"
-            style={{ color: '#d1d5db', lineHeight: 1.7, textAlign: 'center' }}>
+            className="text-base md:text-lg mb-5 md:mb-8"
+            style={{ color: '#d1d5db', lineHeight: 1.7, textAlign: 'center', maxWidth: '42rem', marginLeft: 'auto', marginRight: 'auto', display: 'block' }}>
             We build intelligent software — AI models, automation workflows, and digital products — that help businesses grow faster and work smarter.
           </motion.p>
 
