@@ -134,7 +134,7 @@ export default function Home() {
             className="hero-cta-buttons">
             <Link to="/contact"
               className="home-cta-primary px-7 py-3.5 md:px-8 md:py-4 rounded-full font-bold text-white text-sm md:text-base cursor-pointer transition-all duration-200 hover:opacity-90 hover:scale-105"
-              style={{ background: 'linear-gradient(135deg, #E8187A, #C41060)', textDecoration: 'none' }}>
+              style={{ background: 'linear-gradient(135deg, #E8187A, #C41060)', textDecoration: 'none', border: '1px solid transparent' }}>
               Start Your Project →
             </Link>
             <Link to="/work"
