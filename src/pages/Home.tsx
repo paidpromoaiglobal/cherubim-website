@@ -133,12 +133,12 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.3 }}
             className="hero-cta-buttons">
             <Link to="/contact"
-              className="home-cta-primary px-7 py-3.5 md:px-8 md:py-4 rounded-full font-bold text-white text-sm md:text-base cursor-pointer transition-all duration-200 hover:opacity-90 hover:scale-105"
-              style={{ background: 'linear-gradient(135deg, #E8187A, #C41060)', textDecoration: 'none', border: '1px solid transparent' }}>
+              className="home-cta-primary rounded-full font-bold cursor-pointer transition-all duration-200 hover:opacity-90 hover:scale-105"
+              style={{ background: 'linear-gradient(135deg, #E8187A, #C41060)', textDecoration: 'none', color: '#fff', border: '1px solid transparent' }}>
               Start Your Project →
             </Link>
             <Link to="/work"
-              className="home-cta-secondary px-7 py-3.5 md:px-8 md:py-4 rounded-full font-bold text-sm md:text-base cursor-pointer transition-all duration-200 hover:bg-white/10"
+              className="home-cta-secondary rounded-full font-bold cursor-pointer transition-all duration-200 hover:bg-white/10"
               style={{ border: '1px solid rgba(255,255,255,0.2)', color: '#d1d5db', textDecoration: 'none' }}>
               See Our Work
             </Link>
