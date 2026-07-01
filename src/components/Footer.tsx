@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-const serviceLinks = ['AI & Machine Learning', 'Web Development', 'n8n Automation', 'Chatbot & Voicebot', 'Mobile Apps', 'Digital Transformation'];
+const serviceLinks = ['Social Media Marketing', 'WhatsApp Automation', 'Complete Business Solution', 'Website Design'];
 const companyLinks = [
   { label: 'About Us', to: '/about' },
   { label: 'Our Work', to: '/work' },
@@ -35,10 +35,10 @@ export default function Footer() {
           </p>
           <div style={{ display: 'flex', alignItems: 'center' }}>
             {[
-              { label: 'Instagram', href: 'https://www.instagram.com/cherubim_in555/?hl=en', icon: 'IG' },
-              { label: 'Facebook', href: 'https://www.facebook.com/profile.php?id=61583900161151', icon: 'f' },
-              { label: 'YouTube', href: 'https://www.youtube.com/', icon: '▶' },
-              { label: 'WhatsApp', href: 'https://wa.me/917869729829', icon: 'W' },
+              { label: 'Instagram', href: 'https://www.instagram.com/cherubim_in555/?hl=en', icon: 'ti ti-brand-instagram' },
+              { label: 'Facebook', href: 'https://www.facebook.com/profile.php?id=61583900161151', icon: 'ti ti-brand-facebook' },
+              { label: 'YouTube', href: 'https://www.youtube.com/', icon: 'ti ti-brand-youtube' },
+              { label: 'WhatsApp', href: 'https://wa.me/917869729829', icon: 'ti ti-brand-whatsapp' },
             ].map(s => (
               <a key={s.label} href={s.href} aria-label={s.label} className="footer-social"
                 style={{
@@ -51,13 +51,12 @@ export default function Footer() {
                   border: '1px solid rgba(255,255,255,0.25)',
                   marginRight: '8px',
                   color: 'rgba(255,255,255,0.85)',
-                  fontSize: '0.75rem',
-                  fontWeight: 700,
+                  fontSize: '1.1rem',
                   textDecoration: 'none',
                   cursor: 'pointer',
                   transition: 'border-color 0.2s, color 0.2s',
                 }}>
-                {s.icon}
+                <i className={s.icon} />
               </a>
             ))}
           </div>

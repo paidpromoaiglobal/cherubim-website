@@ -1,72 +1,84 @@
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
 
-const services = [
+const whatWeDo = [
   {
-    icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2z"/><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/>
-      </svg>
-    ),
-    title: 'AI & Machine Learning',
-    desc: 'Custom AI models, NLP pipelines, computer vision, and intelligent automation solutions tailored to your business needs.',
-    detail: 'We design and train machine learning models for classification, prediction, anomaly detection, and more. From data collection through model deployment, we handle every step — including MLOps for ongoing model performance.',
-    tags: ['TensorFlow', 'PyTorch', 'OpenAI API', 'LangChain', 'HuggingFace'],
+    color: '#993556',
+    bg: '#FBEAF0',
+    icon: 'ti ti-speakerphone',
+    title: 'Social Media Marketing',
+    badge: '',
+    features: [
+      'Branded posters & reels every week',
+      'AI-powered promotional videos',
+      'Facebook & Instagram ad campaigns',
+      'Smart audience targeting & retargeting',
+      'Caption & hashtag strategy',
+      'Google Ads management',
+      'Competitor analysis & trend tracking',
+      'Monthly performance report & insights',
+      'Dedicated account manager',
+    ],
+    tags: ['Instagram', 'Facebook', 'YouTube Shorts', 'Google Ads', '100% branded'],
   },
   {
-    icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
-      </svg>
-    ),
-    title: 'Web Development',
-    desc: 'Modern, performant web applications built with React, Next.js, and Node.js — from landing pages to enterprise platforms.',
-    detail: 'Full-stack web development with a focus on performance, accessibility, and scale. We build everything from marketing sites and SaaS dashboards to complex multi-tenant platforms.',
-    tags: ['React', 'Next.js', 'Node.js', 'TypeScript', 'PostgreSQL'],
+    color: '#0F6E56',
+    bg: '#E1F5EE',
+    icon: 'ti ti-brand-whatsapp',
+    title: 'WhatsApp Automation',
+    badge: '',
+    features: [
+      'Instant AI-powered auto-replies',
+      'Automated lead capture & follow-up',
+      'Bulk broadcast & promotional campaigns',
+      'Order & appointment confirmations',
+      'Payment reminders & invoice sharing',
+      'Customer support chatbot',
+      'CRM & Google Sheets sync',
+      'Multi-agent team inbox',
+      'Detailed chat analytics & reports',
+    ],
+    tags: ['WhatsApp Business API', 'Chatbot', 'CRM sync', '24/7 active'],
   },
   {
-    icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-      </svg>
-    ),
-    title: 'n8n Automation',
-    desc: 'End-to-end workflow automation connecting your tools — CRM, email, databases, and APIs — with zero manual effort.',
-    detail: 'We implement self-hosted n8n workflows that replace repetitive manual processes. Connect Slack, Google Sheets, Notion, Airtable, Stripe, and hundreds of other tools in automated pipelines that run 24/7.',
-    tags: ['n8n', 'Zapier', 'Make', 'REST APIs', 'Webhooks'],
+    color: '#534AB7',
+    bg: '#EEEDFE',
+    icon: 'ti ti-building-store',
+    title: 'Complete Business Solution',
+    badge: 'All-in-one',
+    features: [
+      'Website, landing pages & branding',
+      'Backend systems & database setup',
+      'End-to-end workflow & task automation',
+      'CRM, lead & pipeline management',
+      'WhatsApp & email automation',
+      'Invoicing, billing & payment systems',
+      'Social media & content marketing',
+      'Team collaboration & project tools',
+      'AI tools & smart integrations',
+      'Analytics dashboard & growth reports',
+      'Ongoing support & system maintenance',
+    ],
+    tags: ['Website', 'Backend', 'Automation', 'CRM', 'AI tools', 'Marketing', 'Support'],
   },
   {
-    icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-      </svg>
-    ),
-    title: 'Chatbot & Voicebot',
-    desc: 'Intelligent conversational agents for customer support, lead generation, and internal operations across all channels.',
-    detail: 'We build AI-powered chatbots using GPT-4, Claude, and custom fine-tuned models. Deployed on your website, WhatsApp, Telegram, or voice channels — with live handoff, analytics, and CRM integration.',
-    tags: ['GPT-4', 'Dialogflow', 'WhatsApp API', 'Twilio', 'RAG'],
-  },
-  {
-    icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/>
-      </svg>
-    ),
-    title: 'Mobile Apps',
-    desc: 'Cross-platform mobile applications for iOS and Android with seamless UX and robust backend infrastructure.',
-    detail: 'React Native and Flutter apps that feel native. We cover the full lifecycle — UX design, development, App Store submission, and post-launch maintenance. Backend APIs included.',
-    tags: ['React Native', 'Flutter', 'Expo', 'Firebase', 'App Store'],
-  },
-  {
-    icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
-      </svg>
-    ),
-    title: 'Digital Transformation',
-    desc: 'End-to-end strategy and execution for businesses moving to digital-first operations — from cloud migration to process re-engineering.',
-    detail: 'We audit your existing operations, map the digital opportunity, and execute the transformation. This includes cloud infrastructure, data pipelines, team training, and change management.',
-    tags: ['AWS', 'GCP', 'DevOps', 'CI/CD', 'Cloud Migration'],
+    color: '#185FA5',
+    bg: '#E6F1FB',
+    icon: 'ti ti-layout-2',
+    title: 'Website Design',
+    badge: '',
+    features: [
+      'Custom design tailored to your brand',
+      '100% mobile & tablet responsive',
+      'SEO-optimised from day one',
+      'WhatsApp & contact form integration',
+      'Google Maps & social media links',
+      'E-commerce & payment gateway ready',
+      'Speed optimised & SSL secured',
+      '1 year free hosting & domain',
+      'Live in just 3–5 business days',
+    ],
+    tags: ['Mobile-first', 'E-commerce', 'SEO-ready', 'Fast delivery', 'SSL secured'],
   },
 ];
 
@@ -107,57 +119,58 @@ export default function Services() {
 
       {/* Services grid */}
       <section style={{ background: '#F7F8FF' }}>
-        <div className="services-page-grid">
-          {services.map((s, i) => (
+        <div className="services-grid">
+          {whatWeDo.map((s, i) => (
             <motion.div key={s.title}
-              initial={{ opacity: 0, y: 24 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.07 }}
-              className="services-page-card"
               style={{
                 background: 'white',
-                border: '1px solid rgba(0,0,0,0.08)',
+                border: s.badge ? `2px solid ${s.color}` : '1px solid #e0e0e0',
                 borderRadius: '16px',
-                padding: '1.75rem',
+                padding: '1.5rem',
                 display: 'flex',
                 flexDirection: 'column',
-                gap: '0.75rem',
-                height: '100%',
-                cursor: 'pointer',
+                gap: '1rem',
               }}>
-              <div style={{
-                width: '52px',
-                height: '52px',
-                borderRadius: '12px',
-                background: '#ff007a',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                marginBottom: '0.5rem',
-                flexShrink: 0,
-              }}>
-                {s.icon}
-              </div>
-              <h3 style={{ fontFamily: 'Outfit, sans-serif', fontSize: '1.15rem', fontWeight: 700, color: '#0A0A0A', margin: 0 }}>
-                {s.title}
-              </h3>
-              <p style={{ fontSize: '0.95rem', lineHeight: 1.65, color: '#374151', margin: 0 }}>
-                {s.desc}
-              </p>
-              <p style={{ fontSize: '0.85rem', lineHeight: 1.6, color: '#64748b', margin: 0, opacity: 0.7 }}>
-                {s.detail}
-              </p>
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px', marginTop: 'auto', paddingTop: '1rem' }}>
-                {s.tags.map(t => (
-                  <span key={t} style={{
-                    fontSize: '0.75rem',
-                    fontWeight: 600,
-                    color: '#ff007a',
-                    background: 'rgba(255,0,122,0.08)',
-                    padding: '3px 10px',
-                    borderRadius: '999px',
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '0.75rem' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+                  <div style={{
+                    width: '44px',
+                    height: '44px',
+                    borderRadius: '10px',
+                    background: s.bg,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    flexShrink: 0,
                   }}>
+                    <i className={s.icon} style={{ fontSize: '22px', color: s.color }} />
+                  </div>
+                  <h3 style={{ fontFamily: 'Outfit, sans-serif', fontSize: '1rem', fontWeight: 700, color: '#0A0A0A', margin: 0, lineHeight: 1.3 }}>
+                    {s.title}
+                  </h3>
+                </div>
+                {s.badge && (
+                  <span style={{ fontSize: '0.65rem', fontWeight: 700, color: s.color, background: s.bg, border: `1px solid ${s.color}`, borderRadius: '4px', padding: '2px 7px', whiteSpace: 'nowrap' }}>
+                    {s.badge}
+                  </span>
+                )}
+              </div>
+              <div style={{ height: '2px', background: s.color, borderRadius: '2px', opacity: 0.25 }} />
+              <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.4rem', flex: 1 }}>
+                {s.features.map(f => (
+                  <li key={f} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.5rem', fontSize: '0.83rem', color: '#374151', lineHeight: 1.5 }}>
+                    <span style={{ color: s.color, fontWeight: 700, flexShrink: 0, marginTop: '1px' }}>✓</span>
+                    {f}
+                  </li>
+                ))}
+              </ul>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.4rem' }}>
+                {s.tags.map(t => (
+                  <span key={t} style={{ fontSize: '0.68rem', fontWeight: 600, color: s.color, background: s.bg, borderRadius: '4px', padding: '2px 7px' }}>
                     {t}
                   </span>
                 ))}
