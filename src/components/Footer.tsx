@@ -31,13 +31,14 @@ export default function Footer() {
             </div>
           </div>
           <p style={{ fontSize: '0.875rem', lineHeight: 1.7, color: 'rgba(255,255,255,0.6)', maxWidth: '320px', marginBottom: '1.25rem' }}>
-            Chennai-based AI & software company building intelligent products, automation workflows, and digital solutions since 2019.
+            Chennai-based AI & software company building intelligent digital solutions, WhatsApp automation, and social media marketing since 2024.
           </p>
           <div style={{ display: 'flex', alignItems: 'center' }}>
             {[
-              { label: 'LinkedIn', href: '#', icon: 'in' },
-              { label: 'Twitter', href: '#', icon: 'X' },
-              { label: 'WhatsApp', href: 'https://wa.me/919384888421', icon: 'W' },
+              { label: 'Instagram', href: 'https://www.instagram.com/cherubim_in555/?hl=en', icon: 'IG' },
+              { label: 'Facebook', href: 'https://www.facebook.com/profile.php?id=61583900161151', icon: 'f' },
+              { label: 'YouTube', href: 'https://www.youtube.com/', icon: '▶' },
+              { label: 'WhatsApp', href: 'https://wa.me/917869729829', icon: 'W' },
             ].map(s => (
               <a key={s.label} href={s.href} aria-label={s.label} className="footer-social"
                 style={{
@@ -88,13 +89,13 @@ export default function Footer() {
               </Link>
             ))}
           </div>
-          <a href="tel:+919384888421" className="footer-link"
+          <a href="tel:+917869729829" className="footer-link"
             style={{ fontSize: '0.875rem', lineHeight: 2.2, display: 'block', color: 'rgba(255,255,255,0.85)', textDecoration: 'none', opacity: 0.75, transition: 'opacity 0.2s' }}>
-            +91 93848 88421
+            +91 78697 29829
           </a>
-          <a href="mailto:info@cherubim.in" className="footer-link"
+          <a href="mailto:support@cherubim.in" className="footer-link"
             style={{ fontSize: '0.875rem', lineHeight: 2.2, display: 'block', color: 'rgba(255,255,255,0.85)', textDecoration: 'none', opacity: 0.75, transition: 'opacity 0.2s' }}>
-            info@cherubim.in
+            support@cherubim.in
           </a>
           <p style={{ fontSize: '0.875rem', lineHeight: 2.2, color: 'rgba(255,255,255,0.5)', margin: 0 }}>Chennai, Tamil Nadu, India</p>
         </div>

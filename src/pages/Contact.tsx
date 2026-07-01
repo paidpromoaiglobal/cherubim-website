@@ -16,8 +16,8 @@ const contactItems = [
       </svg>
     ),
     label: 'Phone / WhatsApp',
-    value: '+91 93848 88421',
-    href: 'https://wa.me/919384888421',
+    value: '+91 78697 29829',
+    href: 'https://wa.me/917869729829',
   },
   {
     icon: (
@@ -26,8 +26,8 @@ const contactItems = [
       </svg>
     ),
     label: 'Email',
-    value: 'info@cherubim.in',
-    href: 'mailto:info@cherubim.in',
+    value: 'support@cherubim.in',
+    href: 'mailto:support@cherubim.in',
   },
   {
     icon: (

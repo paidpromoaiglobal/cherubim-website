@@ -2,8 +2,8 @@ import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
 
 const stats = [
-  { n: '6+', l: 'Years' },
-  { n: '80+', l: 'Projects' },
+  { n: '3+', l: 'Years' },
+  { n: '50+', l: 'Projects' },
   { n: '40+', l: 'Clients' },
   { n: '15+', l: 'Experts' },
 ];
@@ -27,21 +27,13 @@ const values = [
   },
 ];
 
-const team = [
-  { name: 'Vivek M', role: 'Founder & CEO', focus: 'AI Strategy, Product', avatarColor: '#7c3aed' },
-  { name: 'Tech Lead', role: 'Lead Engineer', focus: 'Full-Stack, Cloud', avatarColor: '#9333ea' },
-  { name: 'AI Team', role: 'ML Engineers', focus: 'Models, Pipelines', avatarColor: '#a855f7' },
-  { name: 'Design Team', role: 'UI/UX Designers', focus: 'Product, Visual', avatarColor: '#c084fc' },
-];
-
 const milestones = [
-  { year: '2019', event: 'Founded in Chennai, first project delivered' },
-  { year: '2020', event: 'Expanded into AI/ML services and automation' },
-  { year: '2021', event: 'Built our first chatbot platform for enterprise clients' },
-  { year: '2022', event: 'Crossed 30 clients across India, UAE, and the US' },
-  { year: '2023', event: 'Launched PaidPromo AI — our own AI SaaS product' },
-  { year: '2024', event: 'Team of 15, 70+ projects delivered' },
-  { year: '2025', event: 'Incorporated as Cherubim AI Infosoft Pvt Ltd' },
+  { year: '2024', event: 'Cherubim AI Infosoft Pvt Ltd founded and incorporated in Chennai' },
+  { year: '2024', event: 'Launched website design and WhatsApp automation services' },
+  { year: '2024', event: 'First 10 projects delivered across e-commerce and real estate' },
+  { year: '2025', event: 'Introduced social media marketing and Complete Business Solution packages' },
+  { year: '2025', event: 'Crossed 30+ clients and 50+ projects delivered across India' },
+  { year: '2026', event: 'Expanded AI tool integrations and launched ongoing support services' },
 ];
 
 export default function About() {
@@ -69,7 +61,7 @@ export default function About() {
             <motion.p
               initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.2 }}
               style={{ fontSize: '1rem', lineHeight: 1.75, opacity: 0.8, maxWidth: '480px', color: '#d1d5db', marginTop: '1.25rem' }}>
-              Since 2019, we've been building AI-powered software, automation workflows, and digital products that help businesses grow faster and work smarter.
+              Since 2024, we've been building AI-powered digital solutions, WhatsApp automation, social media marketing, and complete business systems that help businesses grow faster.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.3 }}
@@ -92,10 +84,10 @@ export default function About() {
             initial={{ opacity: 0, x: 30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8, delay: 0.2 }}
             style={{ display: 'flex', flexDirection: 'column', gap: '1rem', borderRadius: '16px', padding: '2rem', background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.12)' }}>
             <p style={{ fontSize: '1rem', lineHeight: 1.8, opacity: 0.75, color: '#d1d5db', margin: 0 }}>
-              Cherubim AI Infosoft Pvt Ltd is a Chennai-based technology company specialising in AI-driven software solutions, workflow automation, and digital product development.
+              Cherubim AI Infosoft Pvt Ltd is a Chennai-based technology company specialising in AI-driven digital solutions, smart automation, and end-to-end business transformation.
             </p>
             <p style={{ fontSize: '1rem', lineHeight: 1.8, opacity: 0.75, color: '#d1d5db', margin: 0 }}>
-              We partner with startups, SMEs, and enterprises to build intelligent systems that reduce manual effort, improve decision-making, and accelerate growth — from first prototype to production at scale.
+              We partner with startups, SMEs, and enterprises to build powerful online presences — from high-converting websites and AI-powered WhatsApp automation to full-scale social media marketing and complete business systems that run themselves.
             </p>
             <p style={{ fontSize: '1rem', lineHeight: 1.8, opacity: 0.75, color: '#d1d5db', margin: 0 }}>
               Our team of engineers, designers, and AI specialists has delivered 80+ projects across e-commerce, education, real estate, healthcare, and SaaS — and we've built our own AI products along the way.
@@ -174,55 +166,6 @@ export default function About() {
         </div>
       </section>
 
-      {/* Team */}
-      <section style={{ background: '#F7F8FF' }}>
-        <div className="page-section-inner" style={{ maxWidth: '1200px', margin: '0 auto' }}>
-          <div style={{ marginBottom: '2rem' }}>
-            <span style={{ fontSize: '0.75rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: '#ff007a', fontWeight: 600, display: 'block', marginBottom: '0.5rem' }}>
-              The team
-            </span>
-            <h2 style={{ fontFamily: 'Outfit, sans-serif', fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', fontWeight: 800, color: '#0A0A0A', margin: 0 }}>
-              People behind the work
-            </h2>
-          </div>
-          <div className="about-team-grid">
-            {team.map((t, i) => (
-              <motion.div key={t.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
-                style={{ background: 'white', border: '1px solid rgba(0,0,0,0.08)', borderRadius: '16px', padding: '1.5rem' }}>
-                <div style={{
-                  width: '56px',
-                  height: '56px',
-                  borderRadius: '50%',
-                  background: t.avatarColor,
-                  color: '#fff',
-                  fontFamily: 'Outfit, sans-serif',
-                  fontSize: '1.2rem',
-                  fontWeight: 700,
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  marginBottom: '1rem',
-                }}>
-                  {t.name.charAt(0)}
-                </div>
-                <div style={{ fontFamily: 'Outfit, sans-serif', fontSize: '1rem', fontWeight: 700, color: '#0A0A0A', marginBottom: '0.25rem' }}>
-                  {t.name}
-                </div>
-                <div style={{ fontSize: '0.82rem', color: '#ff007a', fontWeight: 600, marginBottom: '0.35rem' }}>
-                  {t.role}
-                </div>
-                <div style={{ fontSize: '0.78rem', opacity: 0.6, color: '#374151' }}>
-                  {t.focus}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* CTA */}
       <section style={{ background: 'linear-gradient(135deg, #1B3990 0%, #0A0A0A 60%, #E8187A 100%)', textAlign: 'center', padding: '4rem 1.5rem' }}>

@@ -1,71 +1,90 @@
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
 
-const services = [
+const whatWeDo = [
   {
-    icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E8187A" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="12" cy="4" r="2"/><circle cx="4" cy="20" r="2"/><circle cx="20" cy="20" r="2"/><circle cx="12" cy="13" r="2"/>
-        <line x1="12" y1="6" x2="12" y2="11"/><line x1="10.3" y1="14.3" x2="5.7" y2="18.3"/><line x1="13.7" y1="14.3" x2="18.3" y2="18.3"/><line x1="6" y1="20" x2="18" y2="20"/>
-      </svg>
-    ),
-    title: 'AI & Machine Learning',
-    desc: 'Custom models, NLP, computer vision and intelligent automation.',
+    color: '#993556',
+    bg: '#FBEAF0',
+    icon: 'ti ti-speakerphone',
+    title: 'Social Media Marketing',
+    badge: '',
+    features: [
+      'Branded posters & reels every week',
+      'AI-powered promotional videos',
+      'Facebook & Instagram ad campaigns',
+      'Smart audience targeting & retargeting',
+      'Caption & hashtag strategy',
+      'Google Ads management',
+      'Competitor analysis & trend tracking',
+      'Monthly performance report & insights',
+      'Dedicated account manager',
+    ],
+    tags: ['Instagram', 'Facebook', 'YouTube Shorts', 'Google Ads', '100% branded'],
   },
   {
-    icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E8187A" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-        <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
-      </svg>
-    ),
-    title: 'Web Development',
-    desc: 'React, Next.js and Node.js — from startups to enterprise scale.',
+    color: '#0F6E56',
+    bg: '#E1F5EE',
+    icon: 'ti ti-brand-whatsapp',
+    title: 'WhatsApp Automation',
+    badge: '',
+    features: [
+      'Instant AI-powered auto-replies',
+      'Automated lead capture & follow-up',
+      'Bulk broadcast & promotional campaigns',
+      'Order & appointment confirmations',
+      'Payment reminders & invoice sharing',
+      'Customer support chatbot',
+      'CRM & Google Sheets sync',
+      'Multi-agent team inbox',
+      'Detailed chat analytics & reports',
+    ],
+    tags: ['WhatsApp Business API', 'Chatbot', 'CRM sync', '24/7 active'],
   },
   {
-    icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E8187A" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/>
-        <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
-      </svg>
-    ),
-    title: 'n8n Automation',
-    desc: 'Connect your tools and eliminate repetitive manual work entirely.',
+    color: '#534AB7',
+    bg: '#EEEDFE',
+    icon: 'ti ti-building-store',
+    title: 'Complete Business Solution',
+    badge: 'All-in-one',
+    features: [
+      'Website, landing pages & branding',
+      'Backend systems & database setup',
+      'End-to-end workflow & task automation',
+      'CRM, lead & pipeline management',
+      'WhatsApp & email automation',
+      'Invoicing, billing & payment systems',
+      'Social media & content marketing',
+      'Team collaboration & project tools',
+      'AI tools & smart integrations',
+      'Analytics dashboard & growth reports',
+      'Ongoing support & system maintenance',
+    ],
+    tags: ['Website', 'Backend', 'Automation', 'CRM', 'AI tools', 'Marketing', 'Support'],
   },
   {
-    icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E8187A" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-        <line x1="8" y1="10" x2="16" y2="10"/><line x1="8" y1="14" x2="12" y2="14"/>
-      </svg>
-    ),
-    title: 'Chatbot & Voicebot',
-    desc: 'Conversational AI for support, sales and internal operations.',
-  },
-  {
-    icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E8187A" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-        <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
-        <line x1="12" y1="18" x2="12.01" y2="18"/>
-      </svg>
-    ),
-    title: 'Mobile Apps',
-    desc: 'Cross-platform iOS & Android apps with seamless backend.',
-  },
-  {
-    icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E8187A" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-        <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
-        <polyline points="17 6 23 6 23 12"/>
-      </svg>
-    ),
-    title: 'Digital Transformation',
-    desc: 'End-to-end strategy and execution for going digital-first.',
+    color: '#185FA5',
+    bg: '#E6F1FB',
+    icon: 'ti ti-layout-2',
+    title: 'Website Design',
+    badge: '',
+    features: [
+      'Custom design tailored to your brand',
+      '100% mobile & tablet responsive',
+      'SEO-optimised from day one',
+      'WhatsApp & contact form integration',
+      'Google Maps & social media links',
+      'E-commerce & payment gateway ready',
+      'Speed optimised & SSL secured',
+      '1 year free hosting & domain',
+      'Live in just 3–5 business days',
+    ],
+    tags: ['Mobile-first', 'E-commerce', 'SEO-ready', 'Fast delivery', 'SSL secured'],
   },
 ];
 
 const stats = [
-  { n: '6+', l: 'Years' },
-  { n: '80+', l: 'Projects' },
+  { n: '3+', l: 'Years' },
+  { n: '50+', l: 'Projects' },
   { n: '40+', l: 'Clients' },
   { n: '15+', l: 'Experts' },
 ];
@@ -183,42 +202,61 @@ export default function Home() {
           </div>
 
           <div className="services-grid">
-            {services.map((s, i) => (
+            {whatWeDo.map((s, i) => (
               <motion.div key={s.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.07 }}
-                className="services-card home-service-card"
                 style={{
                   background: 'white',
-                  border: '1px solid #e0e0e0',
-                  borderRadius: '12px',
-                  height: '100%',
+                  border: s.badge ? `2px solid ${s.color}` : '1px solid #e0e0e0',
+                  borderRadius: '16px',
+                  padding: '1.5rem',
                   display: 'flex',
                   flexDirection: 'column',
-                  transition: 'all 0.2s ease',
-                  cursor: 'pointer',
+                  gap: '1rem',
                 }}>
-                <div style={{
-                  width: '48px',
-                  height: '48px',
-                  borderRadius: '10px',
-                  background: 'rgba(232,24,122,0.08)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  marginBottom: '1rem',
-                  flexShrink: 0,
-                }}>
-                  {s.icon}
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '0.75rem' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+                    <div style={{
+                      width: '44px',
+                      height: '44px',
+                      borderRadius: '10px',
+                      background: s.bg,
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      flexShrink: 0,
+                    }}>
+                      <i className={s.icon} style={{ fontSize: '22px', color: s.color }} />
+                    </div>
+                    <h3 style={{ fontFamily: 'Outfit, sans-serif', fontSize: '1rem', fontWeight: 700, color: '#0A0A0A', margin: 0, lineHeight: 1.3 }}>
+                      {s.title}
+                    </h3>
+                  </div>
+                  {s.badge && (
+                    <span style={{ fontSize: '0.65rem', fontWeight: 700, color: s.color, background: s.bg, border: `1px solid ${s.color}`, borderRadius: '4px', padding: '2px 7px', whiteSpace: 'nowrap' }}>
+                      {s.badge}
+                    </span>
+                  )}
                 </div>
-                <h3 style={{ fontFamily: 'Outfit, sans-serif', fontSize: '1.15rem', fontWeight: 600, color: '#0A0A0A', marginBottom: '0.5rem', lineHeight: 1.3 }}>
-                  {s.title}
-                </h3>
-                <p style={{ fontSize: '0.95rem', lineHeight: 1.6, color: '#64748b', margin: 0 }}>
-                  {s.desc}
-                </p>
+                <div style={{ height: '2px', background: s.color, borderRadius: '2px', opacity: 0.25 }} />
+                <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.4rem', flex: 1 }}>
+                  {s.features.map(f => (
+                    <li key={f} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.5rem', fontSize: '0.83rem', color: '#374151', lineHeight: 1.5 }}>
+                      <span style={{ color: s.color, fontWeight: 700, flexShrink: 0, marginTop: '1px' }}>✓</span>
+                      {f}
+                    </li>
+                  ))}
+                </ul>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.4rem' }}>
+                  {s.tags.map(t => (
+                    <span key={t} style={{ fontSize: '0.68rem', fontWeight: 600, color: s.color, background: s.bg, borderRadius: '4px', padding: '2px 7px' }}>
+                      {t}
+                    </span>
+                  ))}
+                </div>
               </motion.div>
             ))}
           </div>
