@@ -119,7 +119,7 @@ export default function Services() {
 
       {/* Services grid */}
       <section style={{ background: '#F7F8FF' }}>
-        <div className="services-grid">
+        <div className="services-page-grid">
           {whatWeDo.map((s, i) => (
             <motion.div key={s.title}
               initial={{ opacity: 0, y: 20 }}

@@ -228,17 +228,14 @@ input:focus, textarea:focus { outline: none; }
 /* Services page grid */
 .services-page-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem 2rem 4rem;
-}
-@media (max-width: 900px) {
-  .services-page-grid { grid-template-columns: repeat(2, 1fr); }
+  padding: 3rem 2rem 4rem;
 }
 @media (max-width: 600px) {
-  .services-page-grid { grid-template-columns: 1fr; }
+  .services-page-grid { grid-template-columns: 1fr; padding: 2rem 1.25rem 3rem; }
 }
 .services-page-card { transition: all 0.2s ease; }
 .services-page-card:hover {

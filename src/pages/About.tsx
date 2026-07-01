@@ -142,14 +142,14 @@ export default function About() {
           </div>
           <div>
             {milestones.map((m, i) => (
-              <motion.div key={m.year}
+              <motion.div key={i}
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.07 }}
                 className="timeline-row">
                 <span style={{ fontSize: '0.9rem', fontWeight: 700, color: '#ff007a', textAlign: 'right', paddingTop: '2px' }}>
-                  {m.year}
+                  {i === 0 || milestones[i - 1].year !== m.year ? m.year : ''}
                 </span>
                 <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                   <div style={{ width: '10px', height: '10px', borderRadius: '50%', background: '#ff007a', flexShrink: 0 }} />
