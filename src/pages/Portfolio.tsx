@@ -12,6 +12,7 @@ const projects = [
     services: ['Next.js', 'MySQL', 'Razorpay', 'Vercel'],
     highlight: '40+ enrollments in first week',
     image: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&h=380&fit=crop&auto=format&q=80',
+    link: 'https://www.sakthiyogalaya.com/',
   },
   {
     name: 'Petal & Pin',
@@ -22,6 +23,7 @@ const projects = [
     services: ['React', 'Tailwind CSS', 'Vercel'],
     highlight: '3x inquiry conversion rate',
     image: 'https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=800&h=380&fit=crop&auto=format&q=80',
+    link: 'https://www.petalnpin.com/',
   },
   {
     name: 'Sri Hayagreeva Coaching',
@@ -32,16 +34,18 @@ const projects = [
     services: ['HTML', 'CSS', 'JavaScript', 'GitHub Pages'],
     highlight: 'Live student results showcase',
     image: 'https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=800&h=380&fit=crop&auto=format&q=80',
+    link: 'https://www.hayagreevatuitioncenter.co.in/',
   },
   {
-    name: 'Raj Construction',
+    name: 'Nalam Yogaa',
     type: 'Business Website',
-    tag: 'Construction',
+    tag: 'Yoga',
     year: '2026',
-    desc: 'Professional business website for a construction firm featuring project portfolio, service listings, and client testimonials.',
+    desc: 'Professional wellness website for a yoga centre featuring class schedules, service listings, and client testimonials.',
     services: ['HTML', 'CSS', 'Vercel'],
     highlight: 'SEO-optimised local presence',
-    image: 'https://images.unsplash.com/photo-1590674899484-d5640e854abe?w=800&h=380&fit=crop&auto=format&q=80',
+    image: 'https://images.unsplash.com/photo-1588286840104-8957b019727f?w=800&h=380&fit=crop&auto=format&q=80',
+    link: 'https://www.nalamyogaa.in/',
   },
   {
     name: 'Guruji Platform',
@@ -52,6 +56,7 @@ const projects = [
     services: ['Next.js', 'Node.js', 'PostgreSQL', 'Stripe'],
     highlight: '500+ active users at launch',
     image: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?w=800&h=380&fit=crop&auto=format&q=80',
+    link: 'https://guruji.support/',
   },
   {
     name: 'PaidPromo AI',
@@ -62,6 +67,7 @@ const projects = [
     services: ['n8n', 'LLMs', 'GitHub API', 'Vercel API'],
     highlight: 'Built by Cherubim internally',
     image: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&h=380&fit=crop&auto=format&q=80',
+    link: 'https://www.paidpromo.ai/',
   },
 ];
 
@@ -77,7 +83,7 @@ const stats = [
 const testimonials = [
   { text: 'Cherubim built our enrollment system in under 2 weeks. The team was responsive and delivered exactly what we needed.', author: 'Sakthi Yogalaya', role: 'Summer Camp 2026' },
   { text: 'The AI website builder they created for us generates full deployments in minutes. Genuinely impressive engineering.', author: 'PaidPromo AI', role: 'Internal Product' },
-  { text: 'Our website now ranks #1 for local search terms. The Cherubim team understood our business, not just the tech.', author: 'Raj Construction', role: 'Business Website' },
+  { text: 'Our website now ranks #1 for local search terms. The Cherubim team understood our business, not just the tech.', author: 'Nalam Yogaa', role: 'Yoga · Business Website' },
 ];
 
 export default function Portfolio() {
@@ -208,6 +214,15 @@ export default function Portfolio() {
                   <span>✓</span>
                   <span>{p.highlight}</span>
                 </div>
+                <a href={p.link} target="_blank" rel="noopener noreferrer"
+                  style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', fontSize: '0.82rem', fontWeight: 700, color: '#E8187A', textDecoration: 'none', borderTop: '1px solid rgba(0,0,0,0.06)', paddingTop: '0.8rem', marginTop: '0.4rem', width: '100%' }}>
+                  View Live Site
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                    <polyline points="15 3 21 3 21 9" />
+                    <line x1="10" y1="14" x2="21" y2="3" />
+                  </svg>
+                </a>
               </div>
             </motion.div>
           ))}
