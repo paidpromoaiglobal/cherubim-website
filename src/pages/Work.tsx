@@ -12,6 +12,7 @@ const projects = [
     services: ['Next.js', 'MySQL', 'Razorpay', 'Vercel'],
     highlight: '40+ enrollments in first week',
     initials: 'SY',
+    link: 'https://www.sakthiyogalaya.com/',
   },
   {
     name: 'Petal & Pin',
@@ -22,6 +23,7 @@ const projects = [
     services: ['React', 'Tailwind CSS', 'Vercel'],
     highlight: '3× inquiry conversion rate',
     initials: 'PP',
+    link: 'https://www.petalnpin.com/',
   },
   {
     name: 'Sri Hayagreeva Coaching',
@@ -32,16 +34,18 @@ const projects = [
     services: ['HTML', 'CSS', 'JavaScript', 'GitHub Pages'],
     highlight: 'Live student results showcase',
     initials: 'SH',
+    link: 'https://www.hayagreevatuitioncenter.co.in/',
   },
   {
-    name: 'Raj Construction',
+    name: 'Nalam Yogaa',
     type: 'Business Website',
-    tag: 'Construction',
+    tag: 'Yoga',
     year: '2026',
-    desc: 'Professional business website for a construction firm featuring project portfolio, service listings, and client testimonials.',
+    desc: 'Professional wellness website for a yoga centre featuring class schedules, service listings, and client testimonials.',
     services: ['HTML', 'CSS', 'Vercel'],
     highlight: 'SEO-optimised local presence',
-    initials: 'RC',
+    initials: 'NY',
+    link: 'https://www.nalamyogaa.in/',
   },
   {
     name: 'Guruji Platform',
@@ -52,6 +56,7 @@ const projects = [
     services: ['Next.js', 'Node.js', 'PostgreSQL', 'Stripe'],
     highlight: '500+ active users at launch',
     initials: 'GP',
+    link: 'https://guruji.support/',
   },
   {
     name: 'PaidPromo AI',
@@ -62,13 +67,14 @@ const projects = [
     services: ['n8n', 'LLMs', 'GitHub API', 'Vercel API'],
     highlight: 'Built by Cherubim internally',
     initials: 'PA',
+    link: 'https://www.paidpromo.ai/',
   },
 ];
 
 const tagMeta: Record<string, { gradient: string; color: string; bg: string }> = {
   'Education':     { gradient: 'linear-gradient(135deg, #1B3990, #2BA4D4)', color: '#1B3990', bg: 'rgba(27,57,144,0.08)' },
   'Retail':        { gradient: 'linear-gradient(135deg, #E8187A, #FF4DA6)', color: '#E8187A', bg: 'rgba(232,24,122,0.08)' },
-  'Construction':  { gradient: 'linear-gradient(135deg, #2BA4D4, #1B3990)', color: '#2BA4D4', bg: 'rgba(43,164,212,0.08)' },
+  'Yoga':          { gradient: 'linear-gradient(135deg, #2C6B5A, #4CAF82)', color: '#2C6B5A', bg: 'rgba(44,107,90,0.08)' },
   'EdTech':        { gradient: 'linear-gradient(135deg, #7c3aed, #1B3990)', color: '#7c3aed', bg: 'rgba(124,58,237,0.08)' },
   'AI Automation': { gradient: 'linear-gradient(135deg, #E8187A, #1B3990)', color: '#E8187A', bg: 'rgba(232,24,122,0.08)' },
 };
@@ -95,8 +101,8 @@ const testimonials = [
   },
   {
     text: 'Our website now ranks #1 for local search terms. The Cherubim team understood our business, not just the tech.',
-    author: 'Raj Construction',
-    role: 'Construction · Business Website',
+    author: 'Nalam Yogaa',
+    role: 'Yoga · Business Website',
   },
 ];
 
@@ -239,12 +245,21 @@ export default function Work() {
                     </div>
 
                     {/* Result highlight */}
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px', padding: '0.6rem 0.85rem', background: 'rgba(232,24,122,0.06)', borderRadius: '8px', borderLeft: '3px solid #E8187A' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px', padding: '0.6rem 0.85rem', background: 'rgba(232,24,122,0.06)', borderRadius: '8px', borderLeft: '3px solid #E8187A', marginBottom: '0.9rem' }}>
                       <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#E8187A" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                         <polyline points="20 6 9 17 4 12"/>
                       </svg>
                       <span style={{ fontSize: '0.8rem', fontWeight: 700, color: '#E8187A' }}>{p.highlight}</span>
                     </div>
+
+                    {/* Live link */}
+                    <a href={p.link} target="_blank" rel="noopener noreferrer"
+                      style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', fontSize: '0.82rem', fontWeight: 700, color: '#E8187A', textDecoration: 'none', borderTop: '1px solid rgba(0,0,0,0.06)', paddingTop: '0.8rem', width: '100%' }}>
+                      View Live Site
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
+                      </svg>
+                    </a>
                   </div>
                 </motion.div>
               );
